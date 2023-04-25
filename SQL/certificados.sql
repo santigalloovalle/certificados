@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3307
--- Tiempo de generación: 24-04-2023 a las 18:55:03
+-- Tiempo de generación: 25-04-2023 a las 22:52:14
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.0.28
 
@@ -20,6 +20,30 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `certificados`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `contracts`
+--
+
+CREATE TABLE `contracts` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `contracts` varchar(255) NOT NULL,
+  `id_people` bigint(20) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `documents`
+--
+
+CREATE TABLE `documents` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `id_people` bigint(20) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -60,10 +84,11 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
 (5, '2023_04_24_163516_personas', 1),
 (6, '2023_04_24_163922_t_doc', 2),
-(7, '2023_04_24_164252_rol', 3),
-(8, '2023_04_24_164453_t_contrato', 4),
-(9, '2023_04_24_164643_t_pago', 5),
-(10, '2023_04_24_164759_salario', 6);
+(11, '2023_04_24_163516_people', 7),
+(12, '2023_04_24_163922_documents', 7),
+(15, '2023_04_24_164453_contracts', 9),
+(16, '2023_04_24_164643_payments', 9),
+(19, '2023_04_25_201239_roles', 10);
 
 -- --------------------------------------------------------
 
@@ -75,6 +100,34 @@ CREATE TABLE `password_resets` (
   `email` varchar(255) NOT NULL,
   `token` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `payments`
+--
+
+CREATE TABLE `payments` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `pay` varchar(255) NOT NULL,
+  `id_people` bigint(20) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `people`
+--
+
+CREATE TABLE `people` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `doc` varchar(255) NOT NULL,
+  `salary` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -99,76 +152,13 @@ CREATE TABLE `personal_access_tokens` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `personas`
+-- Estructura de tabla para la tabla `roles`
 --
 
-CREATE TABLE `personas` (
+CREATE TABLE `roles` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `nombre` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `doc` varchar(255) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `rol`
---
-
-CREATE TABLE `rol` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `rol` varchar(255) NOT NULL,
-  `id_personas` bigint(20) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `salario`
---
-
-CREATE TABLE `salario` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `salario` varchar(255) NOT NULL,
-  `id_personas` bigint(20) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `t_contrato`
---
-
-CREATE TABLE `t_contrato` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `t_contrato` varchar(255) NOT NULL,
-  `id_personas` bigint(20) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `t_doc`
---
-
-CREATE TABLE `t_doc` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `t_doc` varchar(255) NOT NULL,
-  `id_personas` bigint(20) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `t_pago`
---
-
-CREATE TABLE `t_pago` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `t_pago` varchar(255) NOT NULL,
-  `id_personas` bigint(20) UNSIGNED NOT NULL
+  `role` varchar(255) NOT NULL,
+  `id_people` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -189,8 +179,29 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Cristian Guasca', 'mauricioguasca11@gmail.com', NULL, '$2y$10$shJ7TRrcaO4Gc.yW2veAB.UDTXd.cBZYTnvG.Fb9Dc02N4Qa9/deW', NULL, '2023-04-25 21:56:03', '2023-04-25 21:56:03');
+
+--
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `contracts`
+--
+ALTER TABLE `contracts`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `contracts_id_people_foreign` (`id_people`);
+
+--
+-- Indices de la tabla `documents`
+--
+ALTER TABLE `documents`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `documents_id_people_foreign` (`id_people`);
 
 --
 -- Indices de la tabla `failed_jobs`
@@ -212,6 +223,19 @@ ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
+-- Indices de la tabla `payments`
+--
+ALTER TABLE `payments`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `payments_id_people_foreign` (`id_people`);
+
+--
+-- Indices de la tabla `people`
+--
+ALTER TABLE `people`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
@@ -220,45 +244,11 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
--- Indices de la tabla `personas`
+-- Indices de la tabla `roles`
 --
-ALTER TABLE `personas`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `rol`
---
-ALTER TABLE `rol`
+ALTER TABLE `roles`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `rol_id_personas_foreign` (`id_personas`);
-
---
--- Indices de la tabla `salario`
---
-ALTER TABLE `salario`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `salario_id_personas_foreign` (`id_personas`);
-
---
--- Indices de la tabla `t_contrato`
---
-ALTER TABLE `t_contrato`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `t_contrato_id_personas_foreign` (`id_personas`);
-
---
--- Indices de la tabla `t_doc`
---
-ALTER TABLE `t_doc`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `t_doc_id_personas_foreign` (`id_personas`);
-
---
--- Indices de la tabla `t_pago`
---
-ALTER TABLE `t_pago`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `t_pago_id_personas_foreign` (`id_personas`);
+  ADD KEY `roles_id_people_foreign` (`id_people`);
 
 --
 -- Indices de la tabla `users`
@@ -272,6 +262,18 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `contracts`
+--
+ALTER TABLE `contracts`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `documents`
+--
+ALTER TABLE `documents`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
@@ -281,7 +283,19 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT de la tabla `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT de la tabla `payments`
+--
+ALTER TABLE `payments`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `people`
+--
+ALTER TABLE `people`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `personal_access_tokens`
@@ -290,80 +304,44 @@ ALTER TABLE `personal_access_tokens`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `personas`
+-- AUTO_INCREMENT de la tabla `roles`
 --
-ALTER TABLE `personas`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `rol`
---
-ALTER TABLE `rol`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `salario`
---
-ALTER TABLE `salario`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `t_contrato`
---
-ALTER TABLE `t_contrato`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `t_doc`
---
-ALTER TABLE `t_doc`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `t_pago`
---
-ALTER TABLE `t_pago`
+ALTER TABLE `roles`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas
 --
 
 --
--- Filtros para la tabla `rol`
+-- Filtros para la tabla `contracts`
 --
-ALTER TABLE `rol`
-  ADD CONSTRAINT `rol_id_personas_foreign` FOREIGN KEY (`id_personas`) REFERENCES `personas` (`id`);
+ALTER TABLE `contracts`
+  ADD CONSTRAINT `contracts_id_people_foreign` FOREIGN KEY (`id_people`) REFERENCES `people` (`id`);
 
 --
--- Filtros para la tabla `salario`
+-- Filtros para la tabla `documents`
 --
-ALTER TABLE `salario`
-  ADD CONSTRAINT `salario_id_personas_foreign` FOREIGN KEY (`id_personas`) REFERENCES `personas` (`id`);
+ALTER TABLE `documents`
+  ADD CONSTRAINT `documents_id_people_foreign` FOREIGN KEY (`id_people`) REFERENCES `people` (`id`);
 
 --
--- Filtros para la tabla `t_contrato`
+-- Filtros para la tabla `payments`
 --
-ALTER TABLE `t_contrato`
-  ADD CONSTRAINT `t_contrato_id_personas_foreign` FOREIGN KEY (`id_personas`) REFERENCES `personas` (`id`);
+ALTER TABLE `payments`
+  ADD CONSTRAINT `payments_id_people_foreign` FOREIGN KEY (`id_people`) REFERENCES `people` (`id`);
 
 --
--- Filtros para la tabla `t_doc`
+-- Filtros para la tabla `roles`
 --
-ALTER TABLE `t_doc`
-  ADD CONSTRAINT `t_doc_id_personas_foreign` FOREIGN KEY (`id_personas`) REFERENCES `personas` (`id`);
-
---
--- Filtros para la tabla `t_pago`
---
-ALTER TABLE `t_pago`
-  ADD CONSTRAINT `t_pago_id_personas_foreign` FOREIGN KEY (`id_personas`) REFERENCES `personas` (`id`);
+ALTER TABLE `roles`
+  ADD CONSTRAINT `roles_id_people_foreign` FOREIGN KEY (`id_people`) REFERENCES `people` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
