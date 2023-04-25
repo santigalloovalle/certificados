@@ -6,10 +6,9 @@
       <img src="./img/LogoUECCB.png" alt="Logo Uniempresarial y logo Cámara de comercio">
     </div>
   </div>
-<div class="container">
     <!--encabezado titulo-->
     <section class="backTitle">
-        <div class="title1">
+        <div class="col-md-4 col-form-label text-md-end bg-danger p-3 w-50 text-light">
           <h2>Obtén ahora tu</h2>
         </div>
         <div class="title2">
