@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('t_pago', function (Blueprint $table) {
+        Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->string('t_pago');
-            $table->foreignId('id_personas')->constrained('personas');
+            $table->string('pay');
+            $table->foreignId('id_people')->constrained('people');
         });
     }
 
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('t_pago');
+        Schema::dropIfExists('payments');
     }
 };
