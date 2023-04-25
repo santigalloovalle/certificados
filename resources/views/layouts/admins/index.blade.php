@@ -1,5 +1,3 @@
-@extends('layouts.app')
-
 @section('content')
     <div>
         <section class="sectionTitulo2">
