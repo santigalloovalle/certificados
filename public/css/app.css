@@ -37,6 +37,8 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
+  --bs-red-rgb: 221, 0, 52;
+  --bs-blue-rgb:22, 26, 74;
   --bs-primary-rgb: 13, 110, 253;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
@@ -2203,7 +2205,7 @@ textarea.form-control-lg {
 }
 .form-check .form-check-input {
   float: left;
-  margin-left: -1.5em;
+  margin-left: 5em;
 }
 
 .form-check-reverse {
@@ -2218,8 +2220,8 @@ textarea.form-control-lg {
 }
 
 .form-check-input {
-  width: 1em;
-  height: 1em;
+  width: 2.5vw;
+  height: 2.5vh;
   margin-top: 0.3em;
   vertical-align: top;
   background-color: #f8fafc;
@@ -2836,6 +2838,40 @@ textarea.form-control-lg {
   background-color: var(--bs-btn-disabled-bg);
   border-color: var(--bs-btn-disabled-border-color);
   opacity: var(--bs-btn-disabled-opacity);
+}
+
+.btn-blue {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #161a4a;
+  --bs-btn-border-color: #161a4a;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #161a4a;
+  --bs-btn-hover-border-color: #161a4a;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #161a4a;
+  --bs-btn-active-border-color: #161a4a;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #161a4a;
+  --bs-btn-disabled-border-color: #161a4a;
+}
+
+.btn-red {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #dd0034;
+  --bs-btn-border-color: #dd0034;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #dd0034;
+  --bs-btn-hover-border-color: #dd0034;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #dd0034;
+  --bs-btn-active-border-color: #dd0034;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #dd0034;
+  --bs-btn-disabled-border-color: #dd0034;
 }
 
 .btn-primary {
@@ -8071,6 +8107,16 @@ textarea.form-control-lg {
 .bg-primary {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-red {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-red-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-blue {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-blue-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .bg-secondary {

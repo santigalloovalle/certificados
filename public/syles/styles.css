@@ -648,7 +648,7 @@ td{
 }
 
 .inicioSesion{
-  margin: 55vh 30vw 3vh 30vw;
+  margin: 35vh 30vw 3vh 30vw;
   padding: 20px;
   border: 40px solid #dd0034;
   border-radius: 10px;
@@ -3378,7 +3378,7 @@ h1{
   }
    
   .inicioSesion{
-    width:50%;
+    width:90%;
     height: 18%;
     margin: 50vh auto 5vh auto;
   }

@@ -8,10 +8,10 @@
   </div>
     <!--encabezado titulo-->
     <section class="backTitle">
-        <div class="col-md-4 col-form-label text-md-end bg-danger p-3 w-50 text-light">
+        <div class="col-md-4 col-form-label text-md-end bg-blue p-3 w-50 text-light">
           <h2>Obtén ahora tu</h2>
         </div>
-        <div class="title2">
+        <div class="col-md-4 col-form-label text-md-end bg-red p-3 m-3 w-25 text-light">
           <h2>Certificado laboral</h2>
         </div>
       </section>
@@ -20,16 +20,14 @@
       <section class="inicioSesion">
         <h3>Iniciar sesión</h3>
         <br><br>
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+    <div class="d-flex justify-content-center">
+        <div class="col-md-12">
             <div class="card">
-
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
-
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Usuario') }}</label>
+                            <label for="email" class="col-md-6 col-form-label text-md-start">{{ __('Usuario') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -43,7 +41,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Contraseña') }}</label>
+                            <label for="password" class="col-md-6 col-form-label text-md-start">{{ __('Contraseña') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
@@ -56,8 +54,9 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label><i class="fa-solid fa-briefcase"></i> Rol </label><br>
-                            <select id="iRol">
+                            <label for="password" class="col-md-6 col-form-label text-md-start">{{ __('Rol') }}</label>
+                            <div class="col-md-6">
+                            <select id="iRol" >
                               <option value="0">Seleccione Cargo</option>
                               <option value="1">Administrativos</option>
                               <option value="2">Profesores de planta</option>
@@ -68,7 +67,7 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="col-md-6 col-form-label text-md-start">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
@@ -81,9 +80,10 @@
 
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="button1">
-                                    {{ __('Login') }}
+                                <button type="submit" class="btn btn-blue">
+                                    {{ __('Iniciar Sesión') }}
                                 </button>
+                                <br>
 
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">

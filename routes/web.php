@@ -28,20 +28,5 @@ Route::resource('/salaries', App\Http\Controllers\SalaryController::class)->name
 Route::get('/historial', [App\Http\Controllers\HomeController::class, 'historial'])->name('historial');
 
 Route::get('/prueba', function () {
-    return view('historial');
+    return view('admins');
 });
-
-Route::resource('/users', App\Http\Controllers\UserController::class)->names('users');
-Route::resource('/admins', App\Http\Controllers\AdminController::class)->names('admins');
-Route::resource('/salaries', App\Http\Controllers\SalaryController::class)->names('salaries');
-
-Route::get('/historial', [App\Http\Controllers\HomeController::class, 'historial'])->name('historial');
-
-Route::get('/prueba', function () {
-    return view('historial');
-});
-
-Route::resource('/users', App\Http\Controllers\UserController::class)->names('users');
-Route::resource('/admins', App\Http\Controllers\AdminController::class)->names('admins');
-
-Route::get('/historial', [App\Http\Controllers\HomeController::class, 'historial'])->name('historial');
