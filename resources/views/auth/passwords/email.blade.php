@@ -3,12 +3,11 @@
 @section('content')
 <div class="container">
     <section class="inicioSesion">
-        <h3>Recuperar contraseña</h3>
+        <h3 class="d-flex justify-content-center">Recuperar contraseña</h3>
         <br><br>
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">>
-
+            <div class="card">
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
@@ -35,7 +34,7 @@
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="botonGuardar">
+                                <button type="submit" class="btn btn-blue">
                                     {{ __('Enviar link de recuperación') }}
                                 </button>
                             </div>
