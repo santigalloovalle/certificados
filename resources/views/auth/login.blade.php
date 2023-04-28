@@ -18,7 +18,7 @@
       <br><br><br>
       <!--formulario inicio sesión-->
       <section class="inicioSesion">
-        <h3>Iniciar sesión</h3>
+        <h3 class="d-flex justify-content-center">Iniciar sesión</h3>
         <br><br>
     <div class="d-flex justify-content-center">
         <div class="col-md-12">
