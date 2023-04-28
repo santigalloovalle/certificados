@@ -1824,6 +1824,19 @@ progress {
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color);
 }
+.table-blue {
+  --bs-table-color: #000;
+  --bs-table-bg: #161a4a;
+  --bs-table-border-color: #161a4a;
+  --bs-table-striped-bg: #161a4a;
+  --bs-table-striped-color: #000;
+  --bs-table-active-bg: #161a4a;
+  --bs-table-active-color: #000;
+  --bs-table-hover-bg: #161a4a;
+  --bs-table-hover-color: #000;
+  color: var(--bs-table-color);
+  border-color: var(--bs-table-border-color);
+}
 
 .table-secondary {
   --bs-table-color: #000;

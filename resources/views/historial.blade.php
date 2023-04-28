@@ -1,15 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card"></div>
-                <div class="card-body">
-                    <!--encabezado titulo-->
+    <!--encabezado titulo-->
     <section class="sectionTitulo">
-        <div class="divTitulo">
-        Historial Certificados
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>        
+        <br>
+        <br>
+        <div class="col-md-4 col-form-label text-md-end bg-red p-3 w-50 text-light ">
+            <h3>Historial<br>Certificados</h3>
         </div>
     </section> 
   <!--Filtros de búsqueda-->
@@ -28,78 +30,22 @@
     <button id="back" onclick="redirigir14()"><i class="fa-solid fa-arrow-left"></i></button>
     </section>
   <!--Tabla de historial de los certificados imprimidos o descargados-->
-    <table class="tableHistorial">
+    <table class="table table-primary ">
+        <thead>
+            <tr>
+                <td scope="col">Certificados Laborales</td>
+                <td cscope="col"></td>
+                <td colspan="2" scope="col">Fecha/Hora</td>
+            </tr>
+        </thead>
+        <tbody>
         <tr>
-            <td class="tdTitulo">Certificados Laborales</td>
-            <td class="tdInvisible"></td>
-            <td class="tdTitulo">Fecha/Hora</td>
+            <td scope="col">Nombre Completo</td>
+            <td scope="col">Rol</td>
+            <td scope="col">Fecha</td>
+            <td scope="col">Hora</td>
         </tr>
-        <tr>
-            <td class="tdNombre">Nombre Completo</td>
-            <td class="tdRol">Rol</td>
-            <td class="tdFecha">Fecha</td>
-            <td class="tdHora">Hora</td>
-        </tr>
-        <tr>
-            <td class="tdNombre">Nombre Completo</td>
-            <td class="tdRol">Rol</td>
-            <td class="tdFecha">Fecha</td>
-            <td class="tdHora">Hora</td>
-        </tr>
-        <tr>
-             <td class="tdNombre">Nombre Completo</td>
-            <td class="tdRol">Rol</td>
-            <td class="tdFecha">Fecha</td>
-            <td class="tdHora">Hora</td>
-        </tr>
-        <tr>
-            <td class="tdNombre">Nombre Completo</td>
-            <td class="tdRol">Rol</td>
-            <td class="tdFecha">Fecha</td>
-            <td class="tdHora">Hora</td>
-        </tr>
-        <tr>
-            <td class="tdNombre">Nombre Completo</td>
-            <td class="tdRol">Rol</td>
-            <td class="tdFecha">Fecha</td>
-            <td class="tdHora">Hora</td>
-        </tr>
-        <tr>
-            <td class="tdNombre">Nombre Completo</td>
-            <td class="tdRol">Rol</td>
-            <td class="tdFecha">Fecha</td>
-            <td class="tdHora">Hora</td>
-        </tr>
-        <tr>
-            <td class="tdNombre">Nombre Completo</td>
-            <td class="tdRol">Rol</td>
-            <td class="tdFecha">Fecha</td>
-            <td class="tdHora">Hora</td>
-        </tr>
-        <tr>
-            <td class="tdNombre">Nombre Completo</td>
-            <td class="tdRol">Rol</td>
-            <td class="tdFecha">Fecha</td>
-            <td class="tdHora">Hora</td>
-        </tr>
-        <tr>
-            <td class="tdNombre">Nombre Completo</td>
-            <td class="tdRol">Rol</td>
-            <td class="tdFecha">Fecha</td>
-            <td class="tdHora">Hora</td>
-        </tr>
-        <tr>
-            <td class="tdNombre">Nombre Completo</td>
-            <td class="tdRol">Rol</td>
-            <td class="tdFecha">Fecha</td>
-            <td class="tdHora">Hora</td>
-        </tr>
-        <tr>
-            <td class="tdNombre">Nombre Completo</td>
-            <td class="tdRol">Rol</td>
-            <td class="tdFecha">Fecha</td>
-            <td class="tdHora">Hora</td>
-        </tr>
+    </tbody>
     </table>
                 </div>
             </div>
