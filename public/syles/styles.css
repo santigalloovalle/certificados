@@ -224,7 +224,6 @@ footer{
     background-size: cover;
     background-position: center;
     box-shadow: 2px 2px 3px gray;
-    position: absolute;
     display: inline-block;
 }
 
@@ -402,7 +401,6 @@ td{
     background-size: cover;
     background-position: center;
     box-shadow: 2px 2px 3px gray;
-    position: absolute;
     display: inline-block;
 }
 
@@ -1206,6 +1204,15 @@ h1{
   color: white;
   background-color: grey;
 }
+.card-title{
+  color: #ffffff;
+}
+.col-6 i{
+  color: #ffffff;
+  width: 23vw;
+  height: 10vh;
+}
+
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
 .headerIng{
@@ -1415,7 +1422,6 @@ h1{
     background-size: cover;
     background-position: center;
     box-shadow: 2px 2px 3px gray;
-    position: absolute;
     display: inline-block;
 }
 
