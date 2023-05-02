@@ -143,6 +143,9 @@ h1{
   margin-top: 4vh;
   margin-bottom: 3vh;
 }
+.divTitulo{
+  margin-top: 200px;
+}
 
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
@@ -255,6 +258,9 @@ h1{
 .inicioSesion option{
   font-size: 25px;
 }
+.divTitulo{
+  margin-top: 10vh;
+}
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px){
@@ -312,6 +318,9 @@ h1{
 
   .sectionTitulo2{
     height: 30vh;
+  }
+  .divTitulo{
+    margin-top: 10vh;
   }
 }
   
@@ -426,6 +435,9 @@ h1{
 .inicioSesion option{
   font-size: 25px;
 }
+.divTitulo{
+  margin-top: 12vh;
+}
 }
 
 @media only screen and (min-device-width: 736px) and (max-device-height: 1200px){
@@ -468,4 +480,7 @@ h1{
     height: 55vh;
     margin-top: 10px;
   }
+  .divTitulo{
+    margin-top: 25vh;
+}
 }

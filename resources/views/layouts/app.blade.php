@@ -20,7 +20,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <!-- Styles -->
+    <script src="{{ asset('js/Redirigir.js') }}"></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 </head>
@@ -37,10 +37,10 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <div class="">
-                            <a onclick="redirigir01()"><i class="text-light fa-brands fa-whatsapp"></i></a>
-                            <a onclick="redirigir02()"><i class="text-light fa-brands fa-instagram"></i></a>
-                            <a onclick="redirigir03()"><i class="text-light fa-brands fa-facebook-f"></i></a>
-                            <a onclick="redirigir04()"><i class="text-light fa-brands fa-twitter"></i></a>
+                            <a onclick="redirigir01()"><i class="text-light fa-brands fa-whatsapp m-1"></i></a>
+                            <a onclick="redirigir02()"><i class="text-light fa-brands fa-instagram m-1"></i></a>
+                            <a onclick="redirigir03()"><i class="text-light fa-brands fa-facebook-f m-1"></i></a>
+                            <a onclick="redirigir04()"><i class="text-light fa-brands fa-twitter m-1"></i></a>
                         </div>
    
 
