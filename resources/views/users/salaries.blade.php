@@ -10,7 +10,7 @@
     </div>
     <!--encabezado titulo -->
     <section class="sectionTitulo">
-        <div class="col-md-4 col-form-label text-md-end bg-red p-3 w-50 text-light">
+        <div class="col-md-4 col-form-label text-md-end bg-red p-3 w-50 mt- text-light">
           <h3>
           Editar Salario
           </h3>
