@@ -53,10 +53,10 @@
                             </div> 
                         </div> 
                         <div class="row mb-3">
-                            <label for="rol" class="col-md-4 col-form-label text-md-end">{{ __('Rol') }}</label>
+                            <label for="role" class="col-md-4 col-form-label text-md-end">{{ __('Rol') }}</label>
                             
                             <div class="col-md-6"> 
-                            <select id="rol" class="form-control @error('') is-invalid @enderror" name="rol" value="{{ old('rol') }}" required autocomplete="rol" autofocus>  
+                            <select id="role" class="form-control @error('') is-invalid @enderror" name="role" value="{{ old('role') }}" required autocomplete="role" autofocus>  
                                 <option value="0"></option>
                                 <option value="1">Administrativos</option>
                                 <option value="2">Profesores de planta</option>
