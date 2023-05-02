@@ -27,8 +27,8 @@
               <option value="5">Aprendices</option>          
           </select>
     <!--Se renderiza el rol seleccionado-->
-        <p class="d-flex justify-content-center font-weight-bold">Rol Seleccionado:</p>
-        <p id="rolSalario" class="d-flex justify-content-center">Ninguno</p>
+        <p class="d-flex justify-content-center font-weight-bold fs-1">Rol Seleccionado:</p>
+        <p id="rolSalario" class="d-flex justify-content-center fs-2">Ninguno</p>
     <!--Formulario de esditar salario-->
     <div class="container">
       <div class="row justify-content-center">
