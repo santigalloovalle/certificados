@@ -81,4 +81,8 @@ class AdminController extends Controller
     {
         //
     }
+    public function salaries()
+    {
+        return view('admins.salaries');
+    }
 }
