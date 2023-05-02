@@ -85,4 +85,8 @@ class AdminController extends Controller
     {
         return view('admins.salaries');
     }
+    public function histories()
+    {
+        return view('admins.histories');
+    }
 }

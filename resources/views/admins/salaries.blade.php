@@ -15,7 +15,6 @@
           Editar Salario
           </h3>
       </section>
-      </section>
     <!--Editar salarios dependiendo el cargo elegido-->
     <!--Selección de cargo-->
           <select class="mt-5 m-5">

@@ -2,18 +2,18 @@
 
 @section('content')
     <!--encabezado titulo-->
-    <section class="sectionTitulo">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>        
-        <br>
-        <br>
-        <div class="col-md-4 col-form-label text-md-end bg-red p-3 w-50 text-light ">
-            <h3>Historial<br>Certificados</h3>
+    <div class="headerIng">
+        <div>
+          <img src="/img/LogoUECCB.png" alt="Logo Uniempresarial y logo Cámara de comercio">
         </div>
-    </section> 
+    </div>
+    <!--encabezado titulo -->
+    <section class="sectionTitulo">
+        <div class="divTitulo col-md-4 col-form-label text-md-end bg-red p-3 w-50 mt- text-light">
+          <h3 >
+          Historial Certificados
+          </h3>
+      </section>
   <!--Filtros de búsqueda-->
     <section class="sectionBotones">
       <!--Filtro selección de cargo-->
