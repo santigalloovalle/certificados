@@ -29,7 +29,46 @@
         <p class="d-flex justify-content-center font-weight-bold">Rol Seleccionado:</p>
         <p id="rolSalario" class="d-flex justify-content-center">Ninguno</p>
     <!--Formulario de esditar salario-->
-        <form class="editarSalario">
+    <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-md-8">
+              <div class="card">
+                  <div class="card-body">
+                  
+                  <div class="row mb-3">
+                    <label for="" class="col-md-2 col-form-label text-md-end">{{ __('Nuevo salario') }}</label>
+                    <div class="col-md-8">    
+                        <input id="#" type="number" class="form-control required autocomplete=" autofocus>
+                    </div> 
+                  </div> 
+
+                  <label for="#" class="col-md-2 col-form-label text-md-end">{{ __('Este cambio se verá reflejado a partir de:') }}</label>
+                  
+                  <div class="col-md-12">    
+                      <input id="#" type="number" class="form-control required autocomplete=" autofocus>
+                  </div> 
+                </div>
+              </section>
+              <!--Botones para guardar o cancelar los cambios a los usuarios -->
+              <div class="row mb-3">
+                <div class="col-md-2 offset-md-4 h-75">
+                    <button type="submit" class="btn btn-blue btn-group-lg">
+                        {{ __('Registrar') }}
+                    </button>
+                </div>
+                <div class="col-md-4">
+                  <button type="submit" class="btn btn-danger ">
+                      {{ __('Cancelar') }}
+                  </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>    
+    
+    <form class="editarSalario">
           <section class="infoSalario">
           <p class="pSalario">Nuevo Salario:</p>
           <input type="number" id="nuevoSalario">
