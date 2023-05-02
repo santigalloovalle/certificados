@@ -33,17 +33,30 @@
                             </div>
                         </div>
                         <div class="row mb-3">
+                            <label for="t_doc" class="col-md-4 col-form-label text-md-end">{{ __('Tipo de Dcoumento') }}</label>
+                            
+                            <div class="col-md-6"> 
+                            <select class="form-control" id="t_doc" type="t_doc" class="form-control @error('name') is-invalid @enderror" name="t_doc" value="{{ old('t_doc') }}" required autocomplete="t_doc" autofocus>  
+                                <option value="0"></option>
+                                <option value="1">Tarjeta de Identidad</option>
+                                <option value="2">Cedula de Ciudadania</option>
+                                <option value="3">Tarjeta de Extranjeria</option>
+                                <option value="4">Cedula de Extranjeria</option>
+                             </select>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
                             <label for="CC" class="col-md-4 col-form-label text-md-end">{{ __('Cédula de ciudadania') }}</label>
                             
                             <div class="col-md-6">    
-                                <input id="CC" type="number" class="form-control @error('') is-invalid @enderror" name="" value="{{ old('') }}" required autocomplete="" autofocus>
+                                <input id="doc" type="number" class="form-control @error('') is-invalid @enderror" name="doc" value="{{ old('doc') }}" required autocomplete="doc" autofocus>
                             </div> 
                         </div> 
                         <div class="row mb-3">
-                            <label for="" class="col-md-4 col-form-label text-md-end">{{ __('Rol') }}</label>
+                            <label for="rol" class="col-md-4 col-form-label text-md-end">{{ __('Rol') }}</label>
                             
                             <div class="col-md-6"> 
-                            <select class="form-control">  
+                            <select id="rol" class="form-control @error('') is-invalid @enderror" name="rol" value="{{ old('rol') }}" required autocomplete="rol" autofocus>  
                                 <option value="0"></option>
                                 <option value="1">Administrativos</option>
                                 <option value="2">Profesores de planta</option>
@@ -80,18 +93,18 @@
                             <div class="form-check col-md-2">
                             <input type="checkbox" class="form-check-input">
                             </div>
-                            <label for="" class="col-md-2 col-form-label text-md-end">{{ __('Salario') }}</label>
+                            <label for="salary" class="col-md-2 col-form-label text-md-end">{{ __('Salario') }}</label>
                             <div class="col-md-6">
-                            <input type="number" class="form-control">
+                            <input id="salary" type="number" class="form-control @error('') is-invalid @enderror" name="salary" value="{{ old('salary') }}" required autocomplete="salary" autofocus>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="form-check col-md-2">
                                 <input type="checkbox" class="form-check-input">
                                 </div>
-                                <label for="" class="col-md-2 col-form-label text-md-end">{{ __('Pago por hora') }}</label>
+                                <label for="pay_per_hour" class="col-md-2 col-form-label text-md-end">{{ __('Pago por hora') }}</label>
                                 <div class="col-md-6">
-                                <input type="number" class="form-control">
+                                <input id="pay_per_hour" type="number" class="form-control @error('') is-invalid @enderror" name="pay_per_hour" value="{{ old('pay_per_hour') }}" required autocomplete="pay_per_hour" autofocus>
                                 </div>
                         </div>
                         <div class="row mb-3">

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreignId('email')->constrained('email');
             $table->string('doc');
             $table->string('salary');
+            $table->string('pay_per_hour');
             $table->timestamps();
         });
     }
