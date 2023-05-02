@@ -1,0 +1,70 @@
+.alerta{
+  height: 25%;
+  width:30%; 
+  margin: 2vh 40%;
+  border: 20px solid #0e2b49;
+  border-radius: 10px;
+  background-color: white;
+  position: fixed;
+  top: calc(80vh - 400px);
+  left: 1vw;
+  overflow: hidden;  
+  padding: 2% 2%;
+} 
+.textAlerta{
+  text-align: center;
+  font-size: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.btnAlerta{
+  color: white;
+  background-color: #dd0034;
+  text-align: center;
+  height: 50%;
+  width: 35%;
+  font-size: 15px;
+  border-radius: 5px;
+  margin-left: 30%;
+  font-weight: bold;
+}
+input:focus{
+    outline: 2px outset #dd0034;
+}
+
+.header1{
+    background-color: #0e2b49;
+    height: 5vh;
+    width: 100%;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+.divHeader{
+    width: 13vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header1 a{
+    text-decoration: none;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.divHeader i:hover{
+    color: #c6c6c6;
+}
+
+.header1 i{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.mail i{
+    font-size: 15px;
+}
