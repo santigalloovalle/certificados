@@ -27,7 +27,7 @@
      
     </select>
       <!--Botón para volver-->
-    <button id="back" onclick="redirigir14()"><i class="fa-solid fa-arrow-left"></i></button>
+    <button id=""><i class="fa-solid fa-arrow-left"></i></button>
     </section>
   <!--Tabla de historial de los certificados imprimidos o descargados-->
     <table class="table table-primary ">

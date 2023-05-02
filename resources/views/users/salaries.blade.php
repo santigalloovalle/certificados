@@ -10,9 +10,10 @@
     </div>
     <!--encabezado titulo -->
     <section class="sectionTitulo">
-        <div class="divTitulo">
+        <div class="col-md-4 col-form-label text-md-end bg-red p-3 w-50 text-light">
+          <h3>
           Editar Salario
-        </div>
+          </h3>
       </section>
       </section>
     <!--Editar salarios dependiendo el cargo elegido-->
@@ -77,8 +78,8 @@
           </section>
         </form>
       <section class="sectionBotones2"> <!--Contenedor de botones-->
-          <button class="botonVolver" onclick="redirigir14()"> Volver</button>
-          <button class="botonGuardar" onclick="redirigir14()">Guardar</button>
+          <button class="botonVolver"> Volver</button>
+          <button class="botonGuardar">Guardar</button>
       </section>
   </main>
     
