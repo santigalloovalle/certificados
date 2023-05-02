@@ -44,8 +44,8 @@
 
                   <label for="#" class="col-md-2 col-form-label text-md-end">{{ __('Este cambio se verá reflejado a partir de:') }}</label>
                   
-                  <div class="col-md-12">    
-                      <input id="#" type="number" class="form-control required autocomplete=" autofocus>
+                  <div class="col-md-5">    
+                      <input id="#" type="date" class="form-control required autocomplete=" autofocus>
                   </div> 
                 </div>
               </section>
