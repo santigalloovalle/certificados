@@ -66,7 +66,34 @@
                                 @enderror
                             </div>
                         </div>
-
+                        <div class="row mb-3">
+                            <label class="col-md-4 col-form-label text-md-end"> Tipo de Contrato </label><br>
+                            <div class="col-md-6"> 
+                            <select required class="form-control">
+                              <option value="" selected>Seleccione una opción</option>
+                              <option value="Tiempo Completo">Tiempo completo</option>
+                              <option value="Medio Tiempo">Medio tiempo</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="form-check col-md-2">
+                            <input type="checkbox" class="form-check-input">
+                            </div>
+                            <label for="" class="col-md-2 col-form-label text-md-end">{{ __('Salario') }}</label>
+                            <div class="col-md-6">
+                            <input type="number" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="form-check col-md-2">
+                                <input type="checkbox" class="form-check-input">
+                                </div>
+                                <label for="" class="col-md-2 col-form-label text-md-end">{{ __('Pago por hora') }}</label>
+                                <div class="col-md-6">
+                                <input type="number" class="form-control">
+                                </div>
+                        </div>
                         <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Contraseña') }}</label>
 
@@ -80,7 +107,6 @@
                                 @enderror
                             </div>
                         </div>
-
                         <div class="row mb-3">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirmar Contraseña') }}</label>
 

@@ -224,6 +224,7 @@ footer{
     background-size: cover;
     background-position: center;
     box-shadow: 2px 2px 3px gray;
+    position: absolute;
     display: inline-block;
 }
 

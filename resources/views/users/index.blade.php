@@ -9,32 +9,49 @@
         </div>
         <!--encabezado titulo-->
         <section class="sectionTitulo">
-            <div class="divTitulo">
-            Genera tu certificado
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>        
+            <br>
+            <br>
+            <div class="col-md-4 col-form-label text-md-end bg-red p-3 w-50 text-light">
+                <h3>Genera tu certificado</h3>
             </div>
         </section> 
-        <section class="certificados">
+        <br><br><br>
+        <section class="inicioSesion">
         <br>
-        <!--Generar certificado docentes planta-->
-        <p>El certificado contendrá su nombre y documento de identidad. En caso de requerir algún dato adicional, seleccione a continuación.</p><br>
+        <!--Generar certificado-->
+        <h4 class=" d-flex justify-content-center">El certificado contendrá su nombre y documento de identidad. En caso de requerir algún dato adicional, seleccione a continuación.</h4><br>
         <!--Opciones a elegir en el certificado-->
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
         <form method="post" action="Docente.php">
-        <div class="chetCerti">
+            <div class="row mb-3">
+        <div class="form-check">
         <input class="form-check-input" type="checkbox" id="salario">
-        <label for="salario">Salario</label>
+        <label class="form-check-label" for="salario">Salario</label>
         </div>
             <br>
-        <div class="chetCerti">  
+            <div class="row mb-3">
+        <div class="form-check">  
         <input class="form-check-input" type="checkbox" id="tipoContrato">
-        <label for="tipoContrato">Tipo de Contrato</label>
+        <label for="form-check-label">Tipo de Contrato</label>
         </div>
             <br>
-        <div class="chetCerti">
+            <div class="row mb-3">
+        <div class="form-check">
         <input class="form-check-input" type="checkbox" id="fechaIngreso">
-        <label for="fechaIngreso">Fecha de Ingreso</label><br>
+        <label for="form-check-label">Fecha de Ingreso</label><br>
         </div>
         <br>
-    <button class="button1" type="submit" id="btn-abrir-modal">Generar</button>
+        
+        <div class="row mb-0">
+            <div class="col-md-8 offset-md-5">
+    <button class="btn btn-blue w-25" type="submit" id="btn-abrir-modal">Generar</button>
         <!--Confirmación de fecha de documento antes de descargar el certificado por seguridad-->
         <dialog id="modal" class="descargar">
             <h2>Para continuar, valida la fecha de expedición de tu documento.</h2>
