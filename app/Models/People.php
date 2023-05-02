@@ -9,7 +9,19 @@ class Estado extends Model
 {
     use HasFactory;
 
-    public function works(){
-        return $this->hasMany(Work::class, 'id');
+    public function contracts(){
+        return $this->hasMany(Contract::class, 'id');
+    }
+    public function documents(){
+        return $this->hasMany(Document::class, 'id');
+    }
+    public function payments(){
+        return $this->hasMany(Payment::class, 'id');
+    }
+    public function roles(){
+        return $this->hasMany(Rol::class, 'id');
+    }
+    public function users(){
+        return $this->hasMany(User::class, 'id');
     }
 }

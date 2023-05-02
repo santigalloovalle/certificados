@@ -78,7 +78,7 @@
               </div>
             </div>
             <section class="sectionBotones2">
-              <button class="botonVolver" onclick="redirigir09()">Volver</button>
+              <button class="botonVolver">Volver</button>
               <button class="botonGuardar" type="submit">Guardar</button>
             </section>
           </form>
