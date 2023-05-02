@@ -10,8 +10,8 @@
     </div>
     <!--encabezado titulo -->
     <section class="sectionTitulo">
-        <div class="col-md-4 col-form-label text-md-end bg-red p-3 w-50 mt- text-light">
-          <h3>
+        <div class="divTitulo col-md-4 col-form-label text-md-end bg-red p-3 w-50 mt- text-light">
+          <h3 >
           Editar Salario
           </h3>
       </section>
@@ -68,19 +68,6 @@
       </div>
     </div>
   </div>    
-    
-    <form class="editarSalario">
-          <section class="infoSalario">
-          <p class="pSalario">Nuevo Salario:</p>
-          <input type="number" id="nuevoSalario">
-          <p class="pSalario">Este cambio se verá reflejado a partir de:</p>
-          <input type="date" id="cambSalario">
-          </section>
-        </form>
-      <section class="sectionBotones2"> <!--Contenedor de botones-->
-          <button class="botonVolver"> Volver</button>
-          <button class="botonGuardar">Guardar</button>
-      </section>
-  </main>
+</main>
     
 @endsection
