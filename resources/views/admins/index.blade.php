@@ -20,7 +20,7 @@
         <section class="menuAdministrador">
         <div class="divAdministrador">
             <button class="w-50 btn btn-red fa-solid fa-clock-rotate-left">
-                <a href="./Historial.html"></a>
+                <a href="./histories.blade.php"></a>
             </button>
             <p class="bs-black text-blue font-weight-bold">Historial de certificados</p>
         </div>
@@ -36,13 +36,13 @@
         </div>
         <!--Botón menú-->
         <div class="divAdministrador">
-            <button class="w-50 btn btn-red h-5 fa-solid fa-solid fa-pen-to-square"><a href="./ESalario.html"></a></button>
+            <button class="w-50 btn btn-red h-5 fa-solid fa-solid fa-pen-to-square"><a href="./salaries.blade.php"></a></button>
             <p class="bs-black text-blue font-weight-bold">Editar salarios por cargo</p>
         </div>
         </section>
         <!--Modal que permite eligir al usuario si se quiere generar un certificado para alguien más o para si mismo-->
         <dialog id="selecC" class="modulCer">
-        <a href="./perfiladministrador.html"><i class="fa-solid fa-rectangle-xmark"></i></a>
+        <a href="./index.blade.php"><i class="fa-solid fa-rectangle-xmark"></i></a>
         <h2>El certificado es para:</h2>
         <button class="paraMi" onclick="redirigir10()"> Para mí </button>
         <button class="otraP" onclick="redirigir13()"> Para otra persona</button>
