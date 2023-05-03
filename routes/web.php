@@ -28,5 +28,5 @@ Route::get('/salaries', [App\Http\Controllers\AdminController::class, 'salaries'
 Route::get('/histories', [App\Http\Controllers\AdminController::class, 'histories'])->name('histories');
 
 Route::get('/prueba', function () {
-    return view('admins');
+    return view('form');
 });

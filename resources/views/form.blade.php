@@ -80,6 +80,28 @@
                             </div>
                         </div>
                         <div class="row mb-3">
+                            <label class="col-md-4 col-form-label text-md-end"> Tipo de Contrato </label><br>
+                            <div class="col-md-6"> 
+                            <select required class="form-control">
+                              <option value="" selected>Seleccione una opción</option>
+                              <option value="Tiempo Completo">Tiempo completo</option>
+                              <option value="Medio Tiempo">Medio tiempo</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="salary" class="col-md-4 col-form-label text-md-end">{{ __('Salario') }}</label>
+                            <div class="col-md-6">
+                            <input id="salary" type="number" class="form-control @error('') is-invalid @enderror" name="salary" value="{{ old('salary') }}" required autocomplete="salary" autofocus>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                                <label for="pay_per_hour" class="col-md-4 col-form-label text-md-end">{{ __('Pago por hora') }}</label>
+                                <div class="col-md-6">
+                                <input id="pay_per_hour" type="number" class="form-control @error('') is-invalid @enderror" name="pay_per_hour" value="{{ old('pay_per_hour') }}" required autocomplete="pay_per_hour" autofocus>
+                                </div>
+                        </div>
+                        <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Contraseña') }}</label>
 
                             <div class="col-md-6">
