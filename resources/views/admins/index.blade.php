@@ -15,67 +15,38 @@
           <h2>Perfil administrador</h2>
         </div>
       </section>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br> <!--Corregir Front-->
         <!--Menú perfil administrador-->
-
-
-        <div class="container">
-          <div class="row justify-content-center">
-              <div class="col-md-8">
-                  <div class="card">
-                      <div class="card-body">
-                                <button class="btn btn-red col-md-4 m-5 justify-content-end fa-solid fa-clock-rotate-left">
-                                <button class="btn btn-lg btn-red col-md-4 m-5 justify-content-end fa-solid fa-clock-rotate-left"> 
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-
-
-
-
-
-{{-- 
-        <div class="d-flex justify-content-center">
-          <div class="col-md-12">
-              <div class="card">
-                  <div class="card-body">
         <!--Botón menú-->
-        <div class="row mb-0">
-            <div class="col-md-4 offset-md-8">
-            <button class="btn btn-red h-5 fa-solid fa-clock-rotate-left">
-                <a href="./Historial.html"></a>
+        <section class="menuAdministrador">
+        <div class="divAdministrador">
+            <button class="w-50 btn btn-red fa-solid fa-clock-rotate-left">
+                <a href="./histories.blade.php"></a>
             </button>
             <p class="bs-black text-blue font-weight-bold">Historial de certificados</p>
-            </div>
         </div>
         <!--Botón menú-->
-        <div class="row mb-0">
-          <div class="col-md-4 offset-md-8">
-            <button class="btn btn-red h-5 fa-solid fa-solid fa-users"><a href=""></a></button>
+        <div class="divAdministrador">
+            <button class="w-50 btn btn-red fa-solid fa-solid fa-users"><a href=""></a></button>
             <p class="bs-black text-blue font-weight-bold">Usuarios registrados</p>
-            </div>
         </div>
     <!--Botón menú-->
-    <div class="row mb-0">
-      <div class="col-md-4 offset-md-8">
-            <button class="btn btn-red h-5 fa-solid fa-solid fa-file" onclick="window.selecC.showModal();"></button>
+      <div class="divAdministrador">
+            <button class="w-50 btn btn-red h-5 fa-solid fa-solid fa-file" onclick="window.selecC.showModal();"></button>
             <p class="bs-black text-blue font-weight-bold">Generar certificado</p>
-            </div>
+        </div>
         <!--Botón menú-->
-        <div class="row mb-0"></div>
-          <div class="col-md-4 offset-md-8">
-            <button class="btn btn-red h-5 fa-solid fa-solid fa-pen-to-square"><a href="./ESalario.html"></a></button>
+        <div class="divAdministrador">
+            <button class="w-50 btn btn-red h-5 fa-solid fa-solid fa-pen-to-square"><a href="./salaries.blade.php"></a></button>
             <p class="bs-black text-blue font-weight-bold">Editar salarios por cargo</p>
-            </div>
+        </div>
         </section>
         <!--Modal que permite eligir al usuario si se quiere generar un certificado para alguien más o para si mismo-->
         <dialog id="selecC" class="modulCer">
-        <a href="./perfiladministrador.html"><i class="fa-solid fa-rectangle-xmark"></i></a>
+        <a href="./index.blade.php"><i class="fa-solid fa-rectangle-xmark"></i></a>
         <h2>El certificado es para:</h2>
         <button class="paraMi" onclick="redirigir10()"> Para mí </button>
         <button class="otraP" onclick="redirigir13()"> Para otra persona</button>
         </dialog>
-    </div>--}}
+    </div>
+
 @endsection

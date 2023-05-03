@@ -92,12 +92,12 @@
     </div>
       <!--footer-->
   <footer>
-    <div class="footer1">
+    <div class="footer1 bg-blue">
       <img src="{{asset('img/LogoFooter.png')}}" alt="Logo uniempresarial y cámara de comercio">
       <p>Institución de educación superior sujeta a la inspección y vigilancia del Ministerio de Educación / SNIES 2738
       </p>
     </div>
-    <div class="footer2">
+    <div class="footer2 ">
       <p>Todos los derechos reservados © 2020 -2022 Fundación Universitaria de la Cámara de Comercio de Bogotá
         Uniempresarial | Términos, politicas y Condiciones de Servicio Resolución 598 del Ministerio de Educación.
         Registro Icfes 2738.

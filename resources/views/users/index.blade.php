@@ -56,7 +56,7 @@
             
             </form>
             
-            <button id="btn-cerrar-modal" class="cancel1"><a href="Docente.html">Cerrar</a></button>
+            <button id="btn-cerrar-modal" class="cancel1"><a href="">Cerrar</a></button>
         </dialog>
         </form>
         </section>
