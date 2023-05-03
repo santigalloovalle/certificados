@@ -33,11 +33,11 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="t_doc" class="col-md-4 col-form-label text-md-end">{{ __('Tipo de Dcoumento') }}</label>
+                            <label for="t_doc" class="col-md-4 col-form-label text-md-end">{{ __('Tipo de Documento') }}</label>
                             
                             <div class="col-md-6"> 
                             <select class="form-control" id="t_doc" type="t_doc" class="form-control @error('name') is-invalid @enderror" name="t_doc" value="{{ old('t_doc') }}" required autocomplete="t_doc" autofocus>  
-                                <option value="0"></option>
+                                <option value="" selected>Seleccione una opción</option>
                                 <option value="TI">Tarjeta de Identidad</option>
                                 <option value="CC">Cedula de Ciudadania</option>
                                 <option value="TE">Tarjeta de Extranjeria</option>
@@ -56,14 +56,14 @@
                             <label for="role" class="col-md-4 col-form-label text-md-end">{{ __('Rol') }}</label>
                             
                             <div class="col-md-6"> 
-                            <select id="role" class="form-control @error('') is-invalid @enderror" name="role" value="{{ old('role') }}" required autocomplete="role" autofocus>  
-                                <option value="0"></option>
-                                <option value="AD">Administrativos</option>
-                                <option value="PP">Profesores de planta</option>
-                                <option value="PC">Profesores de catedra</option>
-                                <option value="A">Aprendices</option>
-                                <option value="TB">Talleristas bienestar</option>
-                             </select>
+                                <select id="role" class="form-control @error('') is-invalid @enderror" name="role" value="{{ old('role') }}" required autocomplete="role" autofocus>  
+                                    <option value="" selected>Seleccione una opción</option>
+                                    <option value="AD">Administrativos</option>
+                                    <option value="PP">Profesores de planta</option>
+                                    <option value="PC">Profesores de catedra</option>
+                                    <option value="A">Aprendices</option>
+                                    <option value="TB">Talleristas bienestar</option>
+                                </select>
                             </div>
                         </div>
                         <div class="row mb-3">
