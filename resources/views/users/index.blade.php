@@ -9,18 +9,11 @@
         </div>
         <!--encabezado titulo-->
         <section class="sectionTitulo">
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>        
-            <br>
-            <br>
-            <div class="col-md-4 col-form-label text-md-end bg-red p-3 w-50 text-light">
-                <h3>Genera tu certificado</h3>
-            </div>
-        </section> 
-        <br><br><br>
+            <div class="divTitulo col-md-4 col-form-label text-md-end bg-red p-3 w-50 mt- text-light">
+              <p class="fs-1" >
+              Genera tu certificado
+              </p>
+          </section>
         <section class="inicioSesion">
         <br>
         <!--Generar certificado-->
