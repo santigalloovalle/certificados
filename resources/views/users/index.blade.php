@@ -9,13 +9,13 @@
         </div>
         <!--encabezado titulo-->
         <section class="sectionTitulo">
-            <div class="divTitulo col-md-4 col-form-label text-md-end bg-red p-3 w-50 mt- text-light">
+            <div class="divTitulo col-md-4 col-form-label text-md-end bg-red p-3 w-50 text-light">
               <p class="fs-1" >
               Genera tu certificado
               </p>
           </section>
-        <section class="inicioSesion">
-        <br>
+        <section class="inicioSesion container mt-5">
+    
         <!--Generar certificado-->
         <h4 class=" d-flex justify-content-center">El certificado contendrá su nombre y documento de identidad. En caso de requerir algún dato adicional, seleccione a continuación.</h4><br>
         <!--Opciones a elegir en el certificado-->
