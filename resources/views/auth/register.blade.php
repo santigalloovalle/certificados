@@ -38,10 +38,10 @@
                             <div class="col-md-6"> 
                             <select class="form-control" id="t_doc" type="t_doc" class="form-control @error('name') is-invalid @enderror" name="t_doc" value="{{ old('t_doc') }}" required autocomplete="t_doc" autofocus>  
                                 <option value="0"></option>
-                                <option value="1">Tarjeta de Identidad</option>
-                                <option value="2">Cedula de Ciudadania</option>
-                                <option value="3">Tarjeta de Extranjeria</option>
-                                <option value="4">Cedula de Extranjeria</option>
+                                <option value="TI">Tarjeta de Identidad</option>
+                                <option value="CC">Cedula de Ciudadania</option>
+                                <option value="TE">Tarjeta de Extranjeria</option>
+                                <option value="CE">Cedula de Extranjeria</option>
                              </select>
                             </div>
                         </div>
@@ -58,11 +58,11 @@
                             <div class="col-md-6"> 
                             <select id="role" class="form-control @error('') is-invalid @enderror" name="role" value="{{ old('role') }}" required autocomplete="role" autofocus>  
                                 <option value="0"></option>
-                                <option value="1">Administrativos</option>
-                                <option value="2">Profesores de planta</option>
-                                <option value="3">Profesores de catedra</option>
-                                <option value="4">Aprendices</option>
-                                <option value="5">Talleristas bienestar</option>
+                                <option value="AD">Administrativos</option>
+                                <option value="PP">Profesores de planta</option>
+                                <option value="PC">Profesores de catedra</option>
+                                <option value="A">Aprendices</option>
+                                <option value="TB">Talleristas bienestar</option>
                              </select>
                             </div>
                         </div>
@@ -90,18 +90,12 @@
                           </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="form-check col-md-2">
-                            <input type="checkbox" class="form-check-input">
-                            </div>
                             <label for="salary" class="col-md-2 col-form-label text-md-end">{{ __('Salario') }}</label>
                             <div class="col-md-6">
                             <input id="salary" type="number" class="form-control @error('') is-invalid @enderror" name="salary" value="{{ old('salary') }}" required autocomplete="salary" autofocus>
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="form-check col-md-2">
-                                <input type="checkbox" class="form-check-input">
-                                </div>
                                 <label for="pay_per_hour" class="col-md-2 col-form-label text-md-end">{{ __('Pago por hora') }}</label>
                                 <div class="col-md-6">
                                 <input id="pay_per_hour" type="number" class="form-control @error('') is-invalid @enderror" name="pay_per_hour" value="{{ old('pay_per_hour') }}" required autocomplete="pay_per_hour" autofocus>
