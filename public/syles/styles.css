@@ -109,7 +109,6 @@ footer{
 
 .inicioSesion{
   padding: 20px;
-  /* border: 40px solid #dd0034; */
   border-radius: 10px;
   box-shadow: 2px 2px 10px grey;
 }
@@ -233,7 +232,6 @@ h1{
 }
   .inicioSesion{
   padding: 4%;
-  border: 30px solid #dd0034;
   border-radius: 10px;
 }
 .inicioSesion h3{
