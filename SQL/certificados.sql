@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-05-2023 a las 18:58:00
+-- Tiempo de generación: 04-05-2023 a las 19:46:27
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -135,6 +135,23 @@ CREATE TABLE `people` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `people`
+--
+
+INSERT INTO `people` (`id`, `name`, `id_documents`, `doc`, `id_roles`, `id_contracts`, `salary`, `pay_per_hour`, `id_users`, `created_at`, `updated_at`) VALUES
+(1, 'Test', 2, '123', 2, 1, '123', '123', 1, '2023-05-04 23:18:39', '2023-05-04 23:18:39'),
+(2, 'Elsie Vandervort Sr.', 1, '21565', 1, 1, '85780', '22926', 1, '2023-05-04 23:45:43', '2023-05-04 23:45:43'),
+(3, 'Autumn Schuppe', 1, '10310', 1, 1, '44141', '47181', 1, '2023-05-04 23:45:43', '2023-05-04 23:45:43'),
+(4, 'Roderick Daniel', 1, '22158', 1, 1, '47864', '44086', 1, '2023-05-04 23:45:43', '2023-05-04 23:45:43'),
+(5, 'Katlyn Schneider', 1, '38977', 1, 1, '38514', '38214', 1, '2023-05-04 23:45:43', '2023-05-04 23:45:43'),
+(6, 'Joaquin Zemlak', 1, '64764', 1, 1, '19799', '51897', 1, '2023-05-04 23:45:43', '2023-05-04 23:45:43'),
+(7, 'Freida Corwin', 1, '47218', 1, 1, '22254', '87720', 1, '2023-05-04 23:45:43', '2023-05-04 23:45:43'),
+(8, 'Prof. Tremaine Waelchi PhD', 1, '22682', 1, 1, '54478', '27741', 1, '2023-05-04 23:45:43', '2023-05-04 23:45:43'),
+(9, 'Mr. Jocelyn Gorczany', 1, '19848', 1, 1, '14068', '37316', 1, '2023-05-04 23:45:43', '2023-05-04 23:45:43'),
+(10, 'Nola Volkman', 1, '64198', 1, 1, '82347', '16014', 1, '2023-05-04 23:45:43', '2023-05-04 23:45:43'),
+(11, 'Dr. Dion Kovacek PhD', 1, '85456', 1, 1, '93192', '83131', 1, '2023-05-04 23:45:43', '2023-05-04 23:45:43');
+
 -- --------------------------------------------------------
 
 --
@@ -191,6 +208,83 @@ CREATE TABLE `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'egallo@uniempresarial.edu.co', NULL, '$2y$10$mX3nFy57hjIM4CXu8iNh2Of2lRVZj5PPEfNc0l3jUsswzUakehGb2', NULL, '2023-05-04 23:02:10', '2023-05-04 23:02:10'),
+(2, 'ernest.wehner@example.org', '2023-05-04 23:42:11', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'B2vOtoQnW7', '2023-05-04 23:42:11', '2023-05-04 23:42:11'),
+(3, 'becker.ervin@example.com', '2023-05-04 23:42:11', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'vwWTmahN3o', '2023-05-04 23:42:11', '2023-05-04 23:42:11'),
+(4, 'cgislason@example.org', '2023-05-04 23:42:11', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'hY98h1GLx2', '2023-05-04 23:42:11', '2023-05-04 23:42:11'),
+(5, 'khalid08@example.net', '2023-05-04 23:42:11', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'q2wrtQkXhB', '2023-05-04 23:42:11', '2023-05-04 23:42:11'),
+(6, 'bmitchell@example.org', '2023-05-04 23:42:11', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '4t5MifOtTn', '2023-05-04 23:42:11', '2023-05-04 23:42:11'),
+(7, 'green.abdullah@example.net', '2023-05-04 23:42:11', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'xKLnHutY3b', '2023-05-04 23:42:11', '2023-05-04 23:42:11'),
+(8, 'eudora.kerluke@example.org', '2023-05-04 23:42:11', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'l8dTRa75UL', '2023-05-04 23:42:11', '2023-05-04 23:42:11'),
+(9, 'ashlee55@example.net', '2023-05-04 23:42:11', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '1uqdcki0yx', '2023-05-04 23:42:11', '2023-05-04 23:42:11'),
+(10, 'harvey.hilario@example.net', '2023-05-04 23:42:11', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'eblDVhpV5W', '2023-05-04 23:42:11', '2023-05-04 23:42:11'),
+(11, 'mossie15@example.net', '2023-05-04 23:42:11', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'HOz1QyXVvx', '2023-05-04 23:42:11', '2023-05-04 23:42:11'),
+(12, 'isadore78@example.org', '2023-05-04 23:43:03', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '1c6hD5AoTl', '2023-05-04 23:43:03', '2023-05-04 23:43:03'),
+(13, 'thurman.shanahan@example.net', '2023-05-04 23:43:03', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Cp5au3hSkD', '2023-05-04 23:43:03', '2023-05-04 23:43:03'),
+(14, 'cecelia.collier@example.org', '2023-05-04 23:43:03', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'ln8IQGkxtA', '2023-05-04 23:43:03', '2023-05-04 23:43:03'),
+(15, 'justina.becker@example.net', '2023-05-04 23:43:03', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '66t9YyJMRJ', '2023-05-04 23:43:03', '2023-05-04 23:43:03'),
+(16, 'francis.connelly@example.org', '2023-05-04 23:43:03', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'FMguZ3j1vS', '2023-05-04 23:43:03', '2023-05-04 23:43:03'),
+(17, 'ron.hermann@example.net', '2023-05-04 23:43:03', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Of3RsD8hIs', '2023-05-04 23:43:03', '2023-05-04 23:43:03'),
+(18, 'carter.willard@example.com', '2023-05-04 23:43:03', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'rezNfSnDrR', '2023-05-04 23:43:03', '2023-05-04 23:43:03'),
+(19, 'vhessel@example.org', '2023-05-04 23:43:03', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'gxz92OU5B9', '2023-05-04 23:43:03', '2023-05-04 23:43:03'),
+(20, 'ola95@example.com', '2023-05-04 23:43:03', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'gQqtzBH73R', '2023-05-04 23:43:03', '2023-05-04 23:43:03'),
+(21, 'mellie63@example.net', '2023-05-04 23:43:03', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'yBTnHOAOVB', '2023-05-04 23:43:03', '2023-05-04 23:43:03'),
+(22, 'payton86@example.net', '2023-05-04 23:43:33', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '7HSc81BjL3', '2023-05-04 23:43:33', '2023-05-04 23:43:33'),
+(23, 'keebler.verda@example.net', '2023-05-04 23:43:33', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'qXId7xmrNt', '2023-05-04 23:43:33', '2023-05-04 23:43:33'),
+(24, 'nikolas81@example.com', '2023-05-04 23:43:33', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'FUcRqS8Spr', '2023-05-04 23:43:33', '2023-05-04 23:43:33'),
+(25, 'terry19@example.org', '2023-05-04 23:43:33', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '8QyO44uyIC', '2023-05-04 23:43:33', '2023-05-04 23:43:33'),
+(26, 'probel@example.net', '2023-05-04 23:43:33', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Lg3x8BCfZ5', '2023-05-04 23:43:33', '2023-05-04 23:43:33'),
+(27, 'sarina21@example.com', '2023-05-04 23:43:33', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'FPzrUMy1Sx', '2023-05-04 23:43:33', '2023-05-04 23:43:33'),
+(28, 'pbailey@example.com', '2023-05-04 23:43:33', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '3aACLir0Dh', '2023-05-04 23:43:33', '2023-05-04 23:43:33'),
+(29, 'kirlin.brown@example.org', '2023-05-04 23:43:33', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'hDDSZcUhUD', '2023-05-04 23:43:33', '2023-05-04 23:43:33'),
+(30, 'emoore@example.com', '2023-05-04 23:43:33', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '5Y3uMVbWiD', '2023-05-04 23:43:33', '2023-05-04 23:43:33'),
+(31, 'yjast@example.com', '2023-05-04 23:43:33', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'UV5OC3E3PA', '2023-05-04 23:43:33', '2023-05-04 23:43:33'),
+(32, 'west.wava@example.net', '2023-05-04 23:43:58', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '9DPKNY965b', '2023-05-04 23:43:58', '2023-05-04 23:43:58'),
+(33, 'iborer@example.com', '2023-05-04 23:43:58', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'pJ8p0HOqAZ', '2023-05-04 23:43:58', '2023-05-04 23:43:58'),
+(34, 'elza88@example.net', '2023-05-04 23:43:58', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'ACerW4VMiL', '2023-05-04 23:43:58', '2023-05-04 23:43:58'),
+(35, 'dabshire@example.org', '2023-05-04 23:43:58', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'b5KSl4iXo5', '2023-05-04 23:43:58', '2023-05-04 23:43:58'),
+(36, 'barton.misty@example.com', '2023-05-04 23:43:58', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'IUmxhxwefA', '2023-05-04 23:43:58', '2023-05-04 23:43:58'),
+(37, 'moriah.cassin@example.org', '2023-05-04 23:43:58', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'vpcmQJMutK', '2023-05-04 23:43:58', '2023-05-04 23:43:58'),
+(38, 'wade31@example.org', '2023-05-04 23:43:58', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'V1kBfKOtA2', '2023-05-04 23:43:58', '2023-05-04 23:43:58'),
+(39, 'araynor@example.com', '2023-05-04 23:43:58', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'gO9aQt05lA', '2023-05-04 23:43:58', '2023-05-04 23:43:58'),
+(40, 'june.hermann@example.com', '2023-05-04 23:43:58', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'rYGsgfevcC', '2023-05-04 23:43:58', '2023-05-04 23:43:58'),
+(41, 'ydicki@example.org', '2023-05-04 23:43:58', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '6lMIdKTeug', '2023-05-04 23:43:58', '2023-05-04 23:43:58'),
+(42, 'streich.nyah@example.net', '2023-05-04 23:44:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'FeZennQn4T', '2023-05-04 23:44:27', '2023-05-04 23:44:27'),
+(43, 'skilback@example.net', '2023-05-04 23:44:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'u6ehASC9CV', '2023-05-04 23:44:27', '2023-05-04 23:44:27'),
+(44, 'frances92@example.com', '2023-05-04 23:44:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'LWsmmBdX6H', '2023-05-04 23:44:27', '2023-05-04 23:44:27'),
+(45, 'susan.ferry@example.org', '2023-05-04 23:44:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '8J4wgTqbMQ', '2023-05-04 23:44:27', '2023-05-04 23:44:27'),
+(46, 'esperanza.zulauf@example.net', '2023-05-04 23:44:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '8svNJmJqna', '2023-05-04 23:44:27', '2023-05-04 23:44:27'),
+(47, 'franecki.zachary@example.org', '2023-05-04 23:44:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '3nUQQFrXAr', '2023-05-04 23:44:27', '2023-05-04 23:44:27'),
+(48, 'howell.art@example.org', '2023-05-04 23:44:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'HCLha29juZ', '2023-05-04 23:44:27', '2023-05-04 23:44:27'),
+(49, 'kpadberg@example.net', '2023-05-04 23:44:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'xnO6pkRZd7', '2023-05-04 23:44:27', '2023-05-04 23:44:27'),
+(50, 'neva.dickens@example.com', '2023-05-04 23:44:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '0JZdawKhcd', '2023-05-04 23:44:27', '2023-05-04 23:44:27'),
+(51, 'walker.natalie@example.com', '2023-05-04 23:44:27', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '8hGzH5GNZt', '2023-05-04 23:44:27', '2023-05-04 23:44:27'),
+(52, 'wuckert.eliane@example.com', '2023-05-04 23:45:17', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '6iOquiCBFm', '2023-05-04 23:45:17', '2023-05-04 23:45:17'),
+(53, 'schinner.emilio@example.net', '2023-05-04 23:45:17', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'IAfxQqvyNu', '2023-05-04 23:45:17', '2023-05-04 23:45:17'),
+(54, 'adrien73@example.net', '2023-05-04 23:45:17', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'fLs3Zk7Q3f', '2023-05-04 23:45:17', '2023-05-04 23:45:17'),
+(55, 'littel.stephania@example.org', '2023-05-04 23:45:17', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'O1vJiVDHOW', '2023-05-04 23:45:17', '2023-05-04 23:45:17'),
+(56, 'brad.mills@example.net', '2023-05-04 23:45:17', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'udKUzouuG3', '2023-05-04 23:45:17', '2023-05-04 23:45:17'),
+(57, 'vdibbert@example.net', '2023-05-04 23:45:17', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'dtgiSRjlxQ', '2023-05-04 23:45:17', '2023-05-04 23:45:17'),
+(58, 'mdeckow@example.com', '2023-05-04 23:45:17', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'vhsOlKg6Nv', '2023-05-04 23:45:17', '2023-05-04 23:45:17'),
+(59, 'lauriane18@example.com', '2023-05-04 23:45:17', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '0Tpr2DX72O', '2023-05-04 23:45:17', '2023-05-04 23:45:17'),
+(60, 'ahegmann@example.net', '2023-05-04 23:45:17', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'FUZHQHRi2A', '2023-05-04 23:45:17', '2023-05-04 23:45:17'),
+(61, 'lcole@example.net', '2023-05-04 23:45:17', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Cbqe0IeBBl', '2023-05-04 23:45:17', '2023-05-04 23:45:17'),
+(62, 'violet19@example.net', '2023-05-04 23:45:43', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'cs1KDjDW3v', '2023-05-04 23:45:43', '2023-05-04 23:45:43'),
+(63, 'savannah84@example.org', '2023-05-04 23:45:43', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'H027ODzuWI', '2023-05-04 23:45:43', '2023-05-04 23:45:43'),
+(64, 'gregorio.klein@example.org', '2023-05-04 23:45:43', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'pwon57y1e5', '2023-05-04 23:45:43', '2023-05-04 23:45:43'),
+(65, 'julius.hills@example.com', '2023-05-04 23:45:43', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'yQhp4J0NUO', '2023-05-04 23:45:43', '2023-05-04 23:45:43'),
+(66, 'rey.kerluke@example.com', '2023-05-04 23:45:43', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'mNhy2gpSY1', '2023-05-04 23:45:43', '2023-05-04 23:45:43'),
+(67, 'zoey44@example.com', '2023-05-04 23:45:43', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '4kZLbdKf0R', '2023-05-04 23:45:43', '2023-05-04 23:45:43'),
+(68, 'haag.alvis@example.org', '2023-05-04 23:45:43', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'w2iiCfMB1j', '2023-05-04 23:45:43', '2023-05-04 23:45:43'),
+(69, 'medhurst.eliseo@example.org', '2023-05-04 23:45:43', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'ZFCUPWDx4X', '2023-05-04 23:45:43', '2023-05-04 23:45:43'),
+(70, 'rosalee44@example.org', '2023-05-04 23:45:43', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '3cRztFBIXC', '2023-05-04 23:45:43', '2023-05-04 23:45:43'),
+(71, 'kuphal.rosendo@example.net', '2023-05-04 23:45:43', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '2ZGjmyHCgZ', '2023-05-04 23:45:43', '2023-05-04 23:45:43');
 
 --
 -- Índices para tablas volcadas
@@ -290,7 +384,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `people`
 --
 ALTER TABLE `people`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `personal_access_tokens`
@@ -308,7 +402,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- Restricciones para tablas volcadas
