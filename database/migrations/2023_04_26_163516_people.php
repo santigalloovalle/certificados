@@ -16,14 +16,14 @@ return new class extends Migration
         Schema::create('people', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->foreignId('id_documents')->constrained('documents');
             $table->string('doc');
+            $table->foreignId('id_roles')->constrained('roles');
+            $table->foreignId('id_contracts')->constrained('contracts');
             $table->string('salary');
             $table->string('pay_per_hour');
             $table->foreignId('id_users')->constrained('users');
-            $table->foreignId('id_documents')->constrained('documents');
-            $table->foreignId('id_contracts')->constrained('contracts');
-            $table->foreignId('id_payments')->constrained('payments');
-            $table->foreignId('id_roles')->constrained('roles');
+;
             $table->timestamps();
         });
     }
