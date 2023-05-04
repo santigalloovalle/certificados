@@ -19,6 +19,11 @@ return new class extends Migration
             $table->string('doc');
             $table->string('salary');
             $table->string('pay_per_hour');
+            $table->foreignId('id_users')->constrained('users');
+            $table->foreignId('id_documents')->constrained('documents');
+            $table->foreignId('id_contracts')->constrained('contracts');
+            $table->foreignId('id_payments')->constrained('payments');
+            $table->foreignId('id_roles')->constrained('roles');
             $table->timestamps();
         });
     }
