@@ -13,7 +13,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admins.index');
+        return view('users.admins.index');
     }
 
     /**
@@ -83,10 +83,10 @@ class AdminController extends Controller
     }
     public function salaries()
     {
-        return view('admins.salaries');
+        return view('users.admins.salaries');
     }
     public function histories()
     {
-        return view('admins.histories');
+        return view('users.admins.histories');
     }
 }
