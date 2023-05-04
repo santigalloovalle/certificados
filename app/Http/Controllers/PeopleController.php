@@ -36,13 +36,14 @@ class PeopleController extends Controller
     public function store(Request $request)
     {
         $people = new People();
-        $people->name = $people->name;
-        $people->type = $id_document->type;
-        $people->doc = $people->doc;
-        $people->role = $id_roles->role; 
-        $people->contract = $id_contracs->contract;   
-        $people->salary = $people->salary;
-        $people->pay_per_hour = $people->pay_per_hour;
+        $people->name = $request->name;
+        $people->id_documents = $request->type;
+        $people->doc = $request->doc;
+        $people->id_roles = $request->role; 
+        $people->id_contracts = $request->contract;   
+        $people->salary = $request->salary;
+        $people->pay_per_hour = $request->pay_per_hour;
+        $people->id_users=$request->id_users;
 
         //$work->id_redes = $request->id_redes;
 

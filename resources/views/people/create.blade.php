@@ -31,15 +31,15 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="t_doc" class="col-md-4 col-form-label text-md-end">{{ __('Tipo de Documento') }}</label>
+                            <label for="type" class="col-md-4 col-form-label text-md-end">{{ __('Tipo de Documento') }}</label>
                             
                             <div class="col-md-6"> 
-                            <select class="form-control" id="t_doc" type="t_doc" class="form-control @error('name') is-invalid @enderror" name="t_doc" value="{{ old('t_doc') }}" required autocomplete="t_doc" autofocus>  
+                            <select class="form-control" id="type" type="type" class="form-control @error('type') is-invalid @enderror" name="type" value="{{ old('type') }}" required autocomplete="type" autofocus>  
                                 <option value="" selected>Seleccione una opción</option>
-                                <option value="TI">Tarjeta de Identidad</option>
-                                <option value="CC">Cedula de Ciudadania</option>
-                                <option value="TE">Tarjeta de Extranjeria</option>
-                                <option value="CE">Cedula de Extranjeria</option>
+                                <option value="1">Tarjeta de Identidad</option>
+                                <option value="2">Cedula de Ciudadania</option>
+                                <option value="3">Tarjeta de Extranjeria</option>
+                                <option value="4">Cedula de Extranjeria</option>
                              </select>
                             </div>
                         </div>
@@ -56,21 +56,21 @@
                             <div class="col-md-6"> 
                             <select id="role" class="form-control @error('') is-invalid @enderror" name="role" value="{{ old('role') }}" required autocomplete="role" autofocus>  
                                 <option value="" selected>Seleccione una opción</option>
-                                <option value="AD">Administrativos</option>
-                                <option value="PP">Profesores de planta</option>
-                                <option value="PC">Profesores de catedra</option>
-                                <option value="A">Aprendices</option>
-                                <option value="TB">Talleristas bienestar</option>
+                                <option value="1">Administrativos</option>
+                                <option value="2">Profesores de planta</option>
+                                <option value="3">Profesores de catedra</option>
+                                <option value="4">Aprendices</option>
+                                <option value="5">Talleristas bienestar</option>
                              </select>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label class="col-md-4 col-form-label text-md-end"> Tipo de Contrato </label><br>
                             <div class="col-md-6"> 
-                            <select required class="form-control">
+                            <select id="contract" class="form-control @error('') is-invalid @enderror" name="contract" value="{{ old('contract') }}" required autocomplete="contract" autofocus>
                               <option value="" selected>Seleccione una opción</option>
-                              <option value="Tiempo Completo">Tiempo completo</option>
-                              <option value="Medio Tiempo">Medio tiempo</option>
+                              <option value="1">Tiempo completo</option>
+                              <option value="2">Medio tiempo</option>
                             </select>
                           </div>
                         </div>

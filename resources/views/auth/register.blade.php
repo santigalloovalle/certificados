@@ -20,40 +20,6 @@
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
                         <div class="row mb-3">
-                            <label for="t_doc" class="col-md-4 col-form-label text-md-end">{{ __('Tipo de Dcoumento') }}</label>
-                            
-                            <div class="col-md-6"> 
-                            <select class="form-control" id="t_doc" type="t_doc" class="form-control @error('name') is-invalid @enderror" name="t_doc" value="{{ old('t_doc') }}" required autocomplete="t_doc" autofocus>  
-                                <option value="0"></option>
-                                <option value="TI">Tarjeta de Identidad</option>
-                                <option value="CC">Cedula de Ciudadania</option>
-                                <option value="TE">Tarjeta de Extranjeria</option>
-                                <option value="CE">Cedula de Extranjeria</option>
-                             </select>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="CC" class="col-md-4 col-form-label text-md-end">{{ __('Cédula de ciudadania') }}</label>
-                            
-                            <div class="col-md-6">    
-                                <input id="doc" type="number" class="form-control @error('') is-invalid @enderror" name="doc" value="{{ old('doc') }}" required autocomplete="doc" autofocus>
-                            </div> 
-                        </div> 
-                        <div class="row mb-3">
-                            <label for="role" class="col-md-4 col-form-label text-md-end">{{ __('Rol') }}</label>
-                            
-                            <div class="col-md-6"> 
-                            <select id="role" class="form-control @error('') is-invalid @enderror" name="role" value="{{ old('role') }}" required autocomplete="role" autofocus>  
-                                <option value="0"></option>
-                                <option value="AD">Administrativos</option>
-                                <option value="PP">Profesores de planta</option>
-                                <option value="PC">Profesores de catedra</option>
-                                <option value="A">Aprendices</option>
-                                <option value="TB">Talleristas bienestar</option>
-                             </select>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Correo Institucional') }}</label>
 
                             <div class="col-md-6">
