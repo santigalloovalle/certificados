@@ -51,20 +51,6 @@
                                     @enderror
                                 </div>
                             </div>
-
-                            <div class="row mb-3">
-                                <label for="password" class="col-md-3 col-form-label text-md-start">{{ __('Rol') }}</label>
-                                <div class="col-md-6">
-                                    <select class="form-control" id="{{-- iRol --}}" >
-                                        <option value="0">Seleccione Cargo</option>
-                                        <option value="1">Administrativos</option>
-                                        <option value="2">Profesores de planta</option>
-                                        <option value="3">Profesores de catedra</option>
-                                        <option value="4">Aprendices</option>
-                                        <option value="5">Talleristas bienestar</option>
-                                    </select>
-                                </div>
-                            </div>
                         <div class="row mb-3">
                             <div class="col-md-4 col-form-label text-md-end">
                                 <div class="form-check form-switch  ">

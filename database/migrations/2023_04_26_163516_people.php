@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('people', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
             $table->foreignId('id_documents')->constrained('documents');
             $table->string('doc');
             $table->foreignId('id_roles')->constrained('roles');
