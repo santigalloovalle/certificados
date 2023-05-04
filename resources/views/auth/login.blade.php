@@ -66,13 +66,13 @@
                                 </div>
                             </div>
                         <div class="row mb-3">
-                            <div class="col-md-6 col-form-label text-md-start">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                            <div class="col-md-4 col-form-label text-md-end">
+                                <div class="form-check form-switch  ">
 
-                                    <label class="form-check-label" for="remember">
+                                    <label class="form-check-label" for="flexCheckDefault">
                                         {{ __('Recuerdame') }}
                                     </label>
+                                    <input class="form-check-input" type="checkbox" name="checkbox" id="flexSwitchCheckDefault" {{ old('remember') ? 'checked' : '' }}>
                                 </div>
                             </div>
                         </div>
