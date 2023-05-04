@@ -37,7 +37,7 @@ class PeopleController extends Controller
     {
         $people = new People();
         $people->name = $people->name;
-        $people->email = $people->email;
+        $people->type = $id_document->type;
         $people->doc = $people->doc;
         $people->salary = $people->salary;
         $people->pay_per_hour = $people->pay_per_hour;
