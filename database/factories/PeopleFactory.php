@@ -19,7 +19,6 @@ class PeopleFactory extends Factory
     {
         $faker = \Faker\Factory::create();
         return [
-            'name' => $faker->name(),
             'id_documents' => $faker->randomElement([Document::all()->pluck('id')->first()]),
             'doc' => $faker->numberBetween(10000,99999),
             'id_roles' => $faker->randomElement([Role::all()->pluck('id')->first()]),
@@ -27,7 +26,6 @@ class PeopleFactory extends Factory
             'pay_per_hour' => $faker->numberBetween(10000,99999),
             'id_contracts' => $faker->randomElement([Contract::all()->pluck('id')->first()]),
             'id_users' => $faker->randomElement([User::all()->pluck('id')->first()]),
-            'name' => $faker->name(),
         ];
     }
 }
