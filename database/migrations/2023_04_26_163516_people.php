@@ -22,7 +22,6 @@ return new class extends Migration
             $table->string('salary');
             $table->string('pay_per_hour');
             $table->foreignId('id_users')->constrained('users');
-;
             $table->timestamps();
         });
     }

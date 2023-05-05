@@ -30,5 +30,38 @@ class DatabaseSeeder extends Seeder
         \App\Models\Contract::factory()->create([
             'contract' => 'Medio Tiempo', 
         ]);
+        \App\Models\Role::factory()->create([
+            'role' => 'Por definir', 
+        ]);
+        \App\Models\Role::factory()->create([
+            'role' => 'Administrativos', 
+        ]);
+        \App\Models\Role::factory()->create([
+            'role' => 'Profesores de planta', 
+        ]);
+        \App\Models\Role::factory()->create([
+            'role' => 'Profesores de catedra', 
+        ]);
+        \App\Models\Role::factory()->create([
+            'role' => 'Aprendices', 
+        ]);
+        \App\Models\Role::factory()->create([
+            'role' => 'Talleristas bienestar', 
+        ]);
+        \App\Models\Document::factory()->create([
+            'type' => 'Por definir', 
+        ]);
+        \App\Models\Document::factory()->create([
+            'type' => 'Tarjeta de Identidad', 
+        ]);
+        \App\Models\Document::factory()->create([
+            'type' => 'Cedula de Ciudadania', 
+        ]);
+        \App\Models\Document::factory()->create([
+            'type' => 'Tarjeta de Extranjeria', 
+        ]);
+        \App\Models\Document::factory()->create([
+            'type' => 'Cedula de Extranjeria', 
+        ]);
     }
 }
