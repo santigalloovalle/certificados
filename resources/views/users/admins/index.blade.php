@@ -17,41 +17,42 @@
       </section>
         <!--Menú perfil administrador-->
         <!--Botón menú-->
-        <div class="row row-cols-1 row-cols-md-2 g-4 m-5">
-          <div class="col">
-            <div class="card cardAdmin">
-              <a href="./histories">
-                <img src="img/Certificado.jpg" class="card-img-top imgAdmin" alt="Certificado">
+        <div class="container mt-5">  
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <div class="card {{-- cardAdmin --}}">
+              <a href="{{asset('./histories')}}">
+                <img src="{{asset('img/Certificado.jpg')}}" class="card-img-top imgAdmin" alt="Certificado">
               </a>
               <div class="card-body bg-red">
                 <h5 class="card-title text-light text-center">Historial de certificados</h5>
               </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col-md-6 col-sm-12">
             <div class="card cardAdmin">
-              <a href="./histories">
-                <img src="img/Usuarios.jpg" class="card-img-top imgAdmin" alt="Usuarios">
+              <a href="{{asset('./histories')}}">
+                <img src="{{asset('img/Usuarios.jpg')}}" class="card-img-top imgAdmin" alt="Usuarios">
               </a>              
               <div class="card-body bg-red">
                 <h5 class="card-title text-light text-center">Usuarios registrados</h5>
               </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col-md-6 col-sm-12">
             <div class="card cardAdmin">
-              <a href="./histories">
-                <img src="img/GenerarCerti.jpg" class="card-img-top imgAdmin" alt="Generando certificado">
+              <a href="{{asset('./histories')}}">
+                <img src="{{asset('img/GenerarCerti.jpg')}}" class="card-img-top imgAdmin" alt="Generando certificado">
               </a>
               <div class="card-body bg-red">
                 <h5 class="card-title text-light text-center">Generar certificado</h5>
               </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col-md-6 col-sm-12">
             <div class="card cardAdmin">
-              <a href="./histories">
-                <img src="img/Salario.jpg" class="card-img-top imgAdmin" alt="Salarios">
+              <a href="{{asset('./histories')}}">
+                <img src="{{asset('img/Salario.jpg')}}"   class="card-img-top imgAdmin" alt="Salarios">
               </a>
               <div class="card-body bg-red">
                 <h5 class="card-title text-light text-center">Editar salarios por cargo</h5>
@@ -59,5 +60,6 @@
             </div>
           </div>
         </div>
+      </div>
 
 @endsection
