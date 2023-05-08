@@ -146,14 +146,10 @@ h1{
 .contHome{
   height: 49vh;
 }
+
 .cardAdmin{
-  width: 32vw;
-  margin: 0 auto;
-  height: 30vh;
 }
 .imgAdmin{
-  background-image: linear-gradient(90deg, #ffc0cb4b 40%, white);
-  height: 300px;
   background-size: cover;
 }
 
