@@ -20,15 +20,6 @@ class DatabaseSeeder extends Seeder
             'email' => 'mauricioguasca11@gmail.com',
             'password' => '2060613cm', // password
         ]); 
-        \App\Models\People::factory()->create([
-            'doc' => 'Por definir', 
-        ]);
-        \App\Models\People::factory()->create([
-            'salary' => 'Por definir', 
-        ]);
-        \App\Models\People::factory()->create([
-            'pay_per_hour' => 'Por definir', 
-        ]);
         \App\Models\Contract::factory()->create([
             'contract' => 'Por definir', 
         ]);
@@ -71,6 +62,16 @@ class DatabaseSeeder extends Seeder
         \App\Models\Document::factory()->create([
             'type' => 'Cedula de Extranjeria', 
         ]);
+        \App\Models\People::factory()->create([
+            'doc' => 'Por definir', 
+        ]);
+        \App\Models\People::factory()->create([
+            'salary' => 'Por definir', 
+        ]);
+        \App\Models\People::factory()->create([
+            'pay_per_hour' => 'Por definir', 
+        ]);
         \App\Models\People::factory(10)->create();
+
     }
 }
