@@ -70,12 +70,13 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'id_roles' => 1
         ]);
 
         $people = new People();
         $people->id_documents = 1;
         $people->doc = 1;
-        $people->id_roles = 1; 
+        
         $people->id_contracts =1;   
         $people->salary = 1;
         $people->pay_per_hour = 1;

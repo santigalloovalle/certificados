@@ -19,6 +19,8 @@ class PeopleController extends Controller
      */
     public function index()
     {
+        $people = People::all();
+        return view('users.index', compact('users'));
     }
 
     /**
@@ -28,7 +30,6 @@ class PeopleController extends Controller
      */
     public function create()
     {
-        return view('people.create');
     }
 
     /**
@@ -51,6 +52,8 @@ class PeopleController extends Controller
         //$work->id_redes = $request->id_redes;
 
         $people->save();
+
+        return redirect(route('works.index'));
     }
 
     /**
@@ -59,7 +62,7 @@ class PeopleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(string $id)
     {
         $people = People::find($id);
         return view('users.show', compact('users'));
@@ -71,7 +74,7 @@ class PeopleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(string $id)
     {
         $people = People::find($id);
         return view('users.edit', compact('people'));
@@ -100,7 +103,7 @@ class PeopleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(string $id)
     {
         //
     }

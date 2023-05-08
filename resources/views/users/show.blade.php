@@ -20,6 +20,6 @@
         <h6><b>Rol:</b> {{$people->role}}</h6>
         <h6><b>Salario:</b> {{$people->salary}}</h6>
         <h6><b>Pago por Hora:</b> {{$people->pay_per_hour}}</h6>
-        <a name="" id="" class="btn btn-primary" href="{{route('user.people_edit', $people->id)}}" role="button">Editar</a>
+        <a name="" id="" class="btn btn-primary" href="{{route('user.edit', $people->id)}}" role="button">Editar</a>
     </div>
 @endsection

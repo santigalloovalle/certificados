@@ -14,12 +14,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\User::factory(10)->create();
-        \App\Models\User::factory()->create([
-            'name' => 'CGuasca',
-            'email' => 'mauricioguasca11@gmail.com',
-            'password' => '2060613cm', // password
-        ]); 
         \App\Models\Contract::factory()->create([
             'contract' => 'Por definir', 
         ]);
@@ -62,6 +56,7 @@ class DatabaseSeeder extends Seeder
         \App\Models\Document::factory()->create([
             'type' => 'Cedula de Extranjeria', 
         ]);
+        \App\Models\User::factory(10)->create();
         \App\Models\People::factory()->create([
             'doc' => 'Por definir', 
         ]);

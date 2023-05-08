@@ -75,6 +75,11 @@
                                         {{ __('Cerrar Sesión') }}
                                     </a>
 
+                                    <a class="dropdown-item" href="{{ route('users.show') }}"
+                                    onclick="event.preventDefault();
+                                     {{ __('Mi Info') }}
+                                 </a>
+
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
