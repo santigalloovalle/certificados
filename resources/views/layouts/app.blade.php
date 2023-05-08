@@ -92,7 +92,7 @@
     </div>
       <!--footer-->
   <footer>
-    <div class="footer1 bg-blue">
+    <div class="footer1 bg-blue text-center">
       <img src="{{asset('img/LogoFooter.png')}}" alt="Logo uniempresarial y cámara de comercio">
       <p>Institución de educación superior sujeta a la inspección y vigilancia del Ministerio de Educación / SNIES 2738
       </p>

@@ -43,7 +43,6 @@ footer{
 }
 
 .footer1 p{
-    margin-left: 300px;
     width: 50vw;
     color: white;
     text-decoration: none;
@@ -147,6 +146,16 @@ h1{
 .contHome{
   height: 49vh;
 }
+.cardAdmin{
+  width: 32vw;
+  margin: 0 auto;
+  height: 30vh;
+}
+.imgAdmin{
+  background-image: linear-gradient(90deg, #ffc0cb4b 40%, white);
+  height: 300px;
+  background-size: cover;
+}
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
 .headerIng{
@@ -176,7 +185,6 @@ h1{
 }
 
 .footer1 p{
-    margin-left: 200px;
     width: 30vw;
     color: white;
     text-decoration: none;
@@ -271,7 +279,6 @@ h1{
   }
 
   .footer1 p{
-    margin-left: -15vw;
     width: 80vw;
     font-size: 10px;
   }
@@ -348,10 +355,11 @@ h1{
 }
 
 .footer1 p{
-    margin-left: 200px;
+    /* margin-left: 200px; */
     width: 30vw;
     color: white;
     text-decoration: none;
+    font-size: 1rem;
 }
 
 .footer1 img{
@@ -440,8 +448,9 @@ h1{
   }
   
   .footer1 p{
-      width: 70vw;
-      margin-top: 2vh;
+
+    width: 100vw;
+    margin-top: 2vh;
   }
   
   .footer1 img{

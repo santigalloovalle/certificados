@@ -17,36 +17,47 @@
       </section>
         <!--Menú perfil administrador-->
         <!--Botón menú-->
-        <section class="menuAdministrador">
-        <div class="divAdministrador">
-            <button class="w-50 btn btn-red fa-solid fa-clock-rotate-left">
-                <a href="./histories.blade.php"></a>
-            </button>
-            <p class="bs-black text-blue font-weight-bold">Historial de certificados</p>
+        <div class="row row-cols-1 row-cols-md-2 g-4 m-5">
+          <div class="col">
+            <div class="card cardAdmin">
+              <a href="./histories">
+                <img src="img/Certificado.jpg" class="card-img-top imgAdmin" alt="Certificado">
+              </a>
+              <div class="card-body bg-red">
+                <h5 class="card-title text-light text-center">Historial de certificados</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card cardAdmin">
+              <a href="./histories">
+                <img src="img/Usuarios.jpg" class="card-img-top imgAdmin" alt="Usuarios">
+              </a>              
+              <div class="card-body bg-red">
+                <h5 class="card-title text-light text-center">Usuarios registrados</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card cardAdmin">
+              <a href="./histories">
+                <img src="img/GenerarCerti.jpg" class="card-img-top imgAdmin" alt="Generando certificado">
+              </a>
+              <div class="card-body bg-red">
+                <h5 class="card-title text-light text-center">Generar certificado</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card cardAdmin">
+              <a href="./histories">
+                <img src="img/Salario.jpg" class="card-img-top imgAdmin" alt="Salarios">
+              </a>
+              <div class="card-body bg-red">
+                <h5 class="card-title text-light text-center">Editar salarios por cargo</h5>
+              </div>
+            </div>
+          </div>
         </div>
-        <!--Botón menú-->
-        <div class="divAdministrador">
-            <button class="w-50 btn btn-red fa-solid fa-solid fa-users"><a href=""></a></button>
-            <p class="bs-black text-blue font-weight-bold">Usuarios registrados</p>
-        </div>
-    <!--Botón menú-->
-      <div class="divAdministrador">
-            <button class="w-50 btn btn-red h-5 fa-solid fa-solid fa-file" onclick="window.selecC.showModal();"></button>
-            <p class="bs-black text-blue font-weight-bold">Generar certificado</p>
-        </div>
-        <!--Botón menú-->
-        <div class="divAdministrador">
-            <button class="w-50 btn btn-red h-5 fa-solid fa-solid fa-pen-to-square"><a href="./salaries.blade.php"></a></button>
-            <p class="bs-black text-blue font-weight-bold">Editar salarios por cargo</p>
-        </div>
-        </section>
-        <!--Modal que permite eligir al usuario si se quiere generar un certificado para alguien más o para si mismo-->
-        <dialog id="selecC" class="modulCer">
-        <a href="./index.blade.php"><i class="fa-solid fa-rectangle-xmark"></i></a>
-        <h2>El certificado es para:</h2>
-        <button class="paraMi" onclick="redirigir10()"> Para mí </button>
-        <button class="otraP" onclick="redirigir13()"> Para otra persona</button>
-        </dialog>
-    </div>
 
 @endsection
