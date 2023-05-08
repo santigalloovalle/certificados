@@ -22,7 +22,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('/users', App\Http\Controllers\UserController::class)->names('users');
-Route::resource('/people', App\Http\Controllers\PeopleController::class)->names('people');
 Route::resource('/admins', App\Http\Controllers\AdminController::class)->names('admins');
 Route::get('/salaries', [App\Http\Controllers\AdminController::class, 'salaries'])->name('salaries');
 

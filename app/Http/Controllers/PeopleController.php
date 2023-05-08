@@ -61,7 +61,8 @@ class PeopleController extends Controller
      */
     public function show($id)
     {
-        //
+        $people = People::find($id);
+        return view('users.show', compact('users'));
     }
 
     /**
@@ -72,7 +73,8 @@ class PeopleController extends Controller
      */
     public function edit($id)
     {
-        //
+        $people = People::find($id);
+        return view('users.edit', compact('people'));
     }
 
     /**
@@ -82,9 +84,14 @@ class PeopleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,string $id)
     {
-        //
+        $people = People::find($id);
+        $people->doc = $request->doc;
+        $people->id_documents = $request->id_documents;
+        $people->save();
+
+        //return redirect(route('.show', $id));
     }
 
     /**
