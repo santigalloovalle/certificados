@@ -23,9 +23,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource('/users', App\Http\Controllers\UserController::class)->names('users');
 Route::resource('/admins', App\Http\Controllers\AdminController::class)->names('admins');
-Route::get('/salaries', [App\Http\Controllers\AdminController::class, 'salaries'])->name('salaries');
 
+Route::get('/salaries', [App\Http\Controllers\AdminController::class, 'salaries'])->name('salaries');
 Route::get('/histories', [App\Http\Controllers\AdminController::class, 'histories'])->name('histories');
+Route::get('/certificado', [App\Http\Controllers\AdminController::class, 'certificado'])->name('certificado');
 
 Route::get('/prueba', function () {
     return view('users.edit_people');

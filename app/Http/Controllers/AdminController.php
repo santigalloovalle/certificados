@@ -12,10 +12,10 @@ class AdminController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     public function __construct()
+     /* public function __construct()
      {
          $this->middleware('auth');
-     }
+     } */
      
     public function index()
     {
@@ -91,8 +91,15 @@ class AdminController extends Controller
     {
         return view('users.admins.salaries');
     }
+
     public function histories()
     {
         return view('users.admins.histories');
     }
+
+    public function certificado()
+    {
+        return view('users.admins.certificado');
+    }
+    
 }
