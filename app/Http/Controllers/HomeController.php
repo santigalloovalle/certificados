@@ -31,7 +31,8 @@ class HomeController extends Controller
                 break;
             
             default:
-            return view('users.show.index');
+            $user = DB::table('people')->where('id_users', $user->id)->first();
+            return view('users.show', compact('user'));
                 break;
         }
     }
