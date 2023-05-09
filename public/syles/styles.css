@@ -147,13 +147,15 @@ h1{
   height: 49vh;
 }
 
-.cardAdmin{
+/* .cardAdmin{
 }
 .imgAdmin{
   background-size: cover;
-}
+} */
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+
+
+/* @media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
 .headerIng{
     width: 100%;
     height: 15vh;
@@ -351,7 +353,6 @@ h1{
 }
 
 .footer1 p{
-    /* margin-left: 200px; */
     width: 30vw;
     color: white;
     text-decoration: none;
@@ -479,4 +480,4 @@ h1{
   .divTitulo{
     margin-top: 25vh;
 }
-}
+} */
