@@ -29,6 +29,10 @@ class HomeController extends Controller
             case '2':
                 return view('users.admins.index');
                 break;
+
+            case '':
+                return view('error', compact('error'));
+                break;
             
             default:
             $user = DB::table('people')->where('id_users', $user->id)->first();
