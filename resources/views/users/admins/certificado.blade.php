@@ -15,32 +15,32 @@
             </div>
         </section> 
 
-        <section class="container">
+        <section class="container w-50">
             <!--Generar certificado-->
             
             <!--Opciones a elegir en el certificado-->
             <div class="col-md-12">
                 <div class="card mt-5">
                     <div class="card-header">
-                        <h4 class=" d-flex justify-content-center">El certificado contendrá su nombre y documento de identidad. En caso de requerir algún dato adicional, seleccione a continuación.</h4>
+                        <h4 class=" d-flex text-center">El certificado contendrá su nombre y documento de identidad. En caso de requerir algún dato adicional, seleccione a continuación.</h4>
                     </div>
                     <div class="card-body">
                         <form method="post" action="Docente.php">
                             <div class="row mb-3">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="salario">
-                                    <label class="form-check-label" for="salario">Salario</label>
+                                    <input class="form-check-input m-2 rounded-pill" type="checkbox" id="salario">
+                                    <label class="form-check-label m-2" for="salario">Salario</label>
                                  </div>
                                 <div class="row mb-3">
 
                                     <div class="form-check">  
-                                    <input class="form-check-input" type="checkbox" id="tipoContrato">
-                                    <label for="form-check-label">Tipo de Contrato</label>
+                                    <input class="form-check-input m-2 rounded-pill" type="checkbox" id="tipoContrato">
+                                    <label class="form-check-label m-2" for="form-check-label">Tipo de Contrato</label>
                                     </div>              
                                     <div class="row mb-3">
                                         <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="fechaIngreso">
-                                        <label for="form-check-label">Fecha de Ingreso</label>
+                                        <input class="form-check-input m-2 rounded-pill" type="checkbox" id="fechaIngreso">
+                                        <label class="form-check-label m-2" for="form-check-label">Fecha de Ingreso</label>
                                         </div>
                                         <div class="row mb-0">
                                             <div class="col-md-8 offset-md-5">
