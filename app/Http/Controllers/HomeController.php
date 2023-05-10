@@ -42,7 +42,13 @@ class HomeController extends Controller
                 return view('users.edit', compact('people')); 
             }
             else{
-                return view('home');
+                if ($people->id_contracts == '1'){
+                    return view('home');
+                }
+                else{
+                    return view('users.index', compact('people'));
+                }
+
             }
             break;
         }

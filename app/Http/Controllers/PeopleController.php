@@ -38,7 +38,8 @@ class PeopleController extends Controller
      */
     public function store(Request $request)
     {
-        $people = new People();        
+        $people = new People();  
+        $people->id_users = $request->name;        
         $people->id_documents = $request->type;
         $people->doc = $request->doc;
         $people->id_roles = $request->role; 
@@ -88,8 +89,10 @@ class PeopleController extends Controller
     public function update(Request $request,string $id)
     {
         $people = People::find($id);
+
         $people->doc = $request->doc;
         $people->id_documents = $request->type;
+        
         $people->save();
 
         return redirect(route('home'));
