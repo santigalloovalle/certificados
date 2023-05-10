@@ -19,7 +19,7 @@ class UserController extends Controller
 
      public function index()
     {
-        return view('users.show');
+        return view('users.index');
     }
 
     /**

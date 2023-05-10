@@ -30,8 +30,9 @@ class HomeController extends Controller
                 return view('users.admins.index');
                 break;
 
-            case '':
-                return view('error', compact('error'));
+            case '1':
+                $error = ['name'=>"423",'desc'=>"Locked"];
+                return view('auth.error', compact('error'));
                 break;
             
             default:
@@ -43,5 +44,10 @@ class HomeController extends Controller
     public function historial()
     {
         return view('historial');
+    }
+
+    public function error()
+    {
+        return view('auth.error');
     }
 }
