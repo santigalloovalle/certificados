@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -24,8 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $user = Auth::user();
-        switch ($user->id_roles) {
+        $people = Auth::user();
+        switch ($people->id_roles) {
             case '2':
                 return view('users.admins.index');
                 break;
@@ -36,8 +37,8 @@ class HomeController extends Controller
                 break;
             
             default:
-            $user = DB::table('people')->where('id_users', $user->id)->first();
-            return view('users.show', compact('user'));
+            $people = DB::table('people')->where('id_users', $people->id)->first();
+            return view('users.show', compact('people'));
                 break;
         }
     }

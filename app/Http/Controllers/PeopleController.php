@@ -19,7 +19,6 @@ class PeopleController extends Controller
      */
     public function index()
     {
-            return redirect()->route('users.show', ['id' => 1]);
     }
 
     /**
