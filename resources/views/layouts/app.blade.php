@@ -75,8 +75,7 @@
                                         {{ __('Cerrar Sesión') }}
                                     </a>
 
-                                    <a class="dropdown-item" href="{{ route('users.show') }}"
-                                    onclick="event.preventDefault();
+                                    <a class="dropdown-item" href="{{ route('users.show', Auth::user()->id) }}">
                                      {{ __('Mi Info') }}
                                  </a>
 
