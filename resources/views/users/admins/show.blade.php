@@ -22,6 +22,7 @@
         <h4 class="py-2"><b class="pe-5">Rol:</b> {{$people->role}}</h4>
         <h4 class="py-2"><b class="pe-5">Salario:</b> {{$people->salary}}</h4>
         <h4 class="py-2"><b class="pe-5">Pago por Hora:</b> {{$people->pay_per_hour}}</h4>
+        <a name="" id="" class="btn btn-primary" href="{{route('admins.edit', $people->id)}}" role="button">Editar</a>
       </div>
     </div>
   </section>

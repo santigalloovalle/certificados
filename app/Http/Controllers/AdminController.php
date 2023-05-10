@@ -40,7 +40,21 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $people = new People();  
+        $people->id_users = $request->name;        
+        $people->id_documents = $request->type;
+        $people->doc = $request->doc;
+        $people->id_roles = $request->role; 
+        $people->id_contracts = $request->contract;   
+        $people->salary = $request->salary;
+        $people->pay_per_hour = $request->pay_per_hour;
+        $people->id_users=$request->id_users;
+
+        //$work->id_redes = $request->id_redes;
+
+        $people->save();
+
+        return redirect(route('admins.index'));
     }
 
     /**
@@ -51,7 +65,9 @@ class AdminController extends Controller
      */
     public function show($id)
     {
-        //
+        $people = People::find($id);
+        
+        return view('admins.show', compact('people'));
     }
 
     /**
@@ -62,7 +78,8 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
-        //
+        $people = People::find($id);
+        return view('admins.edit', compact('people'));
     }
 
     /**
@@ -74,7 +91,13 @@ class AdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $people = People::find($id);
+        
+        $people->doc = $request->doc;
+        $people->id_documents = $request->type;
+        $people->save();
+
+        return redirect(route('home'));
     }
 
     /**

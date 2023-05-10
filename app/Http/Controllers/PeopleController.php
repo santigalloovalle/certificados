@@ -64,6 +64,7 @@ class PeopleController extends Controller
     public function show(string $id)
     {
         $people = People::find($id);
+        
         return view('users.show', compact('people'));
     }
 
@@ -89,10 +90,9 @@ class PeopleController extends Controller
     public function update(Request $request,string $id)
     {
         $people = People::find($id);
-
+        
         $people->doc = $request->doc;
         $people->id_documents = $request->type;
-        
         $people->save();
 
         return redirect(route('home'));
