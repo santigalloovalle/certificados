@@ -38,8 +38,13 @@ class HomeController extends Controller
             
             default:
             $people = DB::table('people')->where('id_users', $people->id)->first();
-            return view('users.show', compact('people'));
-                break;
+            if ($people->doc == '1') {
+                return view('users.edit', compact('people')); 
+            }
+            else{
+                return view('home');
+            }
+            break;
         }
     }
     public function historial()

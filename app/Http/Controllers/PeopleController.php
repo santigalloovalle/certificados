@@ -89,10 +89,10 @@ class PeopleController extends Controller
     {
         $people = People::find($id);
         $people->doc = $request->doc;
-        $people->id_documents = $request->id_documents;
+        $people->id_documents = $request->type;
         $people->save();
 
-        //return redirect(route('.show', $id));
+        return redirect(route('home'));
     }
 
     /**
