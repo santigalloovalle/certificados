@@ -29,7 +29,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('users.create');
+        //return view('users.create');
     }
 
     /**
@@ -49,9 +49,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(string $id)
     {
-        //
+
     }
 
     /**
@@ -62,7 +62,6 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        return view('users.edit');
     }
 
     /**

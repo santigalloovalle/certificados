@@ -30,5 +30,5 @@ Route::get('/histories', [App\Http\Controllers\AdminController::class, 'historie
 Route::get('/certificado', [App\Http\Controllers\AdminController::class, 'certificado'])->name('certificado');
 
 Route::get('/prueba', function () {
-    return view('users.edit');
+    return view('users.show');
 });

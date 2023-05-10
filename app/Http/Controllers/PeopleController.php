@@ -19,8 +19,7 @@ class PeopleController extends Controller
      */
     public function index()
     {
-        $people = People::all();
-        return view('users.index', compact('users'));
+            return redirect()->route('users.show', ['id' => 1]);
     }
 
     /**
@@ -53,7 +52,7 @@ class PeopleController extends Controller
 
         $people->save();
 
-        return redirect(route('works.index'));
+        return redirect(route('users.index'));
     }
 
     /**
@@ -65,7 +64,7 @@ class PeopleController extends Controller
     public function show(string $id)
     {
         $people = People::find($id);
-        return view('users.show', compact('users'));
+        return view('users.show', compact('people'));
     }
 
     /**

@@ -30,7 +30,7 @@ class HomeController extends Controller
                 return view('users.admins.index');
                 break;
 
-            case '':
+            case '1':
                 return view('error', compact('error'));
                 break;
             
