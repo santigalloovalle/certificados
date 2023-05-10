@@ -20,7 +20,7 @@
         <div class="container mt-5">  
         <div class="row">
           <div class="col-md-6 col-sm-12">
-            <div class="card {{-- cardAdmin --}}">
+            <div class="card cardAdmin">
               <a href="{{asset('./histories')}}">
                 <img src="{{asset('img/Certificado.jpg')}}" class="card-img-top imgAdmin" alt="Certificado">
               </a>
@@ -40,8 +40,8 @@
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
-            <div class="card cardAdmin">
-              <a href="{{asset('./histories')}}">
+            <div class="card cardAdmin mt-5">
+              <a href="{{asset('./certificado')}}">
                 <img src="{{asset('img/GenerarCerti.jpg')}}" class="card-img-top imgAdmin" alt="Generando certificado">
               </a>
               <div class="card-body bg-red">
@@ -50,8 +50,8 @@
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
-            <div class="card cardAdmin">
-              <a href="{{asset('./histories')}}">
+            <div class="card cardAdmin mt-5">
+              <a href="{{asset('./salaries')}}">
                 <img src="{{asset('img/Salario.jpg')}}"   class="card-img-top imgAdmin" alt="Salarios">
               </a>
               <div class="card-body bg-red">

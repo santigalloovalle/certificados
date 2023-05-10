@@ -87,13 +87,6 @@ footer{
     display: inline-block;
 }
 
-.sectionBotones{
-    width: 90%;
-    height: 30px;
-    margin: 5vh 0px 30px 95px;
-    display: inline-block;
-}
-
 .sectionTitulo2{
     width: 100%;
     height: 55vh;
@@ -147,11 +140,11 @@ h1{
   height: 49vh;
 }
 
-/* .cardAdmin{
+.cardAdmin{
+  width: 33vw;
+  
 }
-.imgAdmin{
-  background-size: cover;
-} */
+
 
 
 
