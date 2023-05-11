@@ -24,7 +24,7 @@
                             
                             <div class="col-md-6"> 
                             <select class="form-control" id="type" type="type" class="form-control @error('type') is-invalid @enderror" name="type" value="{{ old('type') }}" required autocomplete="type" autofocus>  
-                                <option value="" selected>Seleccione una opción</option>
+                                <option value="{{$people->id_documents}}" selected>{{$people->documents->type}}</option>
                                 <option value="1">Tarjeta de Identidad</option>
                                 <option value="2">Cedula de Ciudadania</option>
                                 <option value="3">Tarjeta de Extranjeria</option>
@@ -36,7 +36,7 @@
                             <label for="CC" class="col-md-4 col-form-label text-md-end">{{ __('Cédula de ciudadania') }}</label>
                             
                             <div class="col-md-6">    
-                                <input id="doc" type="number" class="form-control @error('') is-invalid @enderror" name="doc" value="{{ old('doc') }}" required autocomplete="doc" autofocus>
+                                <input id="doc" type="number" class="form-control @error('') is-invalid @enderror" name="doc" value="{{$people->doc}}" required autocomplete="doc" autofocus>
                             </div> 
                         </div> 
                         <div class="row mb-3">
@@ -44,7 +44,7 @@
                             
                             <div class="col-md-6"> 
                             <select id="role" class="form-control @error('') is-invalid @enderror" name="role" value="{{ old('role') }}" required autocomplete="role" autofocus>  
-                                <option value="" selected>Seleccione una opción</option>
+                                <option value="{{$people->id_users}}" selected>{{$people->roles->role}}</option>
                                 <option value="1">Administrativos</option>
                                 <option value="2">Profesores de planta</option>
                                 <option value="3">Profesores de catedra</option>
@@ -57,7 +57,7 @@
                             <label class="col-md-4 col-form-label text-md-end"> Tipo de Contrato </label><br>
                             <div class="col-md-6"> 
                             <select id="contract" class="form-control @error('') is-invalid @enderror" name="contract" value="{{ old('contract') }}" required autocomplete="contract" autofocus>
-                              <option value="" selected>Seleccione una opción</option>
+                                <option value="{{$people->id_contracts}}" selected>{{$people->contracts->contract}}</option>
                               <option value="1">Tiempo completo</option>
                               <option value="2">Medio tiempo</option>
                             </select>
@@ -66,13 +66,13 @@
                         <div class="row mb-3">
                             <label for="salary" class="col-md-4 col-form-label text-md-end">{{ __('Salario') }}</label>
                             <div class="col-md-6">
-                            <input id="salary" type="number" class="form-control @error('') is-invalid @enderror" name="salary" value="{{ old('salary') }}" required autocomplete="salary" autofocus>
+                            <input id="salary" type="number" class="form-control @error('') is-invalid @enderror" name="salary" value="{{$people->salary}}" required autocomplete="salary" autofocus>
                             </div>
                         </div>
                         <div class="row mb-3">
                                 <label for="pay_per_hour" class="col-md-4 col-form-label text-md-end">{{ __('Pago por hora') }}</label>
                                 <div class="col-md-6">
-                                <input id="pay_per_hour" type="number" class="form-control @error('') is-invalid @enderror" name="pay_per_hour" value="{{ old('pay_per_hour') }}" required autocomplete="pay_per_hour" autofocus>
+                                <input id="pay_per_hour" type="number" class="form-control @error('') is-invalid @enderror" name="pay_per_hour" value="{{$people->pay_per_hour}}" required autocomplete="pay_per_hour" autofocus>
                                 </div>
                         </div>
                         <div class="col-md-8 offset-md-4">

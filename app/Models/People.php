@@ -10,18 +10,15 @@ class People extends Model
     use HasFactory;
 
     public function contracts(){
-        return $this->hasMany(Contract::class, 'id');
+        return $this->belongsTo(Contract::class, 'id_contracts');
     }
     public function documents(){
-        return $this->hasMany(Document::class, 'id');
+        return $this->belongsTo(document::class, 'id_documents');
     }
     public function payments(){
-        return $this->hasMany(Payment::class, 'id');
-    }
-    public function roles(){
-        return $this->hasMany(Rol::class, 'id');
+        return $this->belongsTo(Payment::class, 'id_payments');
     }
     public function users(){
-        return $this->hasMany(User::class, 'id');
+        return $this->belongsTo(User::class, 'id_users');
     }
 }

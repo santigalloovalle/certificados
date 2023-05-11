@@ -80,6 +80,7 @@ class AdminController extends Controller
     public function edit($id)
     {
         $people = People::find($id);
+        return $people->roles;
         return view('users.admins.edit', compact('people'));
     }
 
