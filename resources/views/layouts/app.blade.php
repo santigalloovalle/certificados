@@ -69,9 +69,15 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    @if(Auth::user()->id_roles =='2')         
+                                    <a class="dropdown-item" href="{{ route('admins.show', Auth::user()->id) }}">
+                                        {{ __('Mi Info') }}
+                                    </a> 
+                                    @else
                                     <a class="dropdown-item" href="{{ route('people.show', Auth::user()->id) }}">
                                         {{ __('Mi Info') }}
-                                    </a>
+                                    </a>       
+                                    @endif
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

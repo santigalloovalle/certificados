@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\People;
+
 class AdminController extends Controller
 {
     /**
@@ -54,7 +56,7 @@ class AdminController extends Controller
 
         $people->save();
 
-        return redirect(route('admins.index'));
+        return redirect(route('users.admins.index'));
     }
 
     /**
@@ -66,8 +68,7 @@ class AdminController extends Controller
     public function show($id)
     {
         $people = People::find($id);
-        
-        return view('admins.show', compact('people'));
+        return view('users.admins.show', compact('people'));
     }
 
     /**
@@ -79,7 +80,7 @@ class AdminController extends Controller
     public function edit($id)
     {
         $people = People::find($id);
-        return view('admins.edit', compact('people'));
+        return view('users.admins.edit', compact('people'));
     }
 
     /**
