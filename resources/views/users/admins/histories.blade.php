@@ -35,21 +35,20 @@
       <table class="table table-primary ">
         <thead>
             <tr>
-              <td scope="col">Certificados Laborales</td>
-              <td cscope="col"></td>
+              <td scope="col">Nombre Completo</td>
+              <td cscope="col">Rol</td>
               <td colspan="2" scope="col">Fecha/Hora</td>
             </tr>
         </thead>
         <tbody>
           @foreach ($users as $user)
-              
-          @endforeach
           <tr>
-            <td scope="col">Nombre Completo {{$user->name}}</td>
-            <td scope="col">Rol{{$users->}}</td>
+            <td scope="col"> {{$user->name}}</td>
+            <td scope="col"> {{$user->roles->role}}</td>
             <td scope="col">Fecha</td>
             <td scope="col">Hora</td>
           </tr>
+          @endforeach
         </tbody>
       </table>
     </div>
