@@ -121,7 +121,8 @@ class AdminController extends Controller
 
     public function histories()
     {
-        return view('users.admins.histories');
+        $users = User::all();
+        return view('users.admins.histories', compact('users'));
     }
 
     public function certificates()
