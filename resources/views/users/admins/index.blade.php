@@ -31,7 +31,7 @@
           </div>
           <div class="col-md-6 col-sm-12">
             <div class="card w-75">
-              <a href="{{asset('./histories')}}">
+              <a href="{{asset('./show_users')}}">
                 <img src="{{asset('img/Usuarios.jpg')}}" class="card-img-top imgAdmin" alt="Usuarios">
               </a>              
               <div class="card-body bg-red">

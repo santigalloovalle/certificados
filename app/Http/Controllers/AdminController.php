@@ -121,9 +121,15 @@ class AdminController extends Controller
         return view('users.admins.histories');
     }
 
-    public function certificado()
+    public function certificates()
     {
-        return view('users.admins.certificado');
+        return view('users.admins.certificates');
+    }
+
+    public function show_users($id)
+    {
+        $people = People::find($id);
+        return view('users.admins.show_users', compact('people'));
     }
     
 }

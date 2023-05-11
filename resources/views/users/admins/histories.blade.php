@@ -41,9 +41,12 @@
             </tr>
         </thead>
         <tbody>
+          @foreach ($users as $user)
+              
+          @endforeach
           <tr>
-            <td scope="col">Nombre Completo</td>
-            <td scope="col">Rol</td>
+            <td scope="col">Nombre Completo {{$user->name}}</td>
+            <td scope="col">Rol{{$users->}}</td>
             <td scope="col">Fecha</td>
             <td scope="col">Hora</td>
           </tr>
