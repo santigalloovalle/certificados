@@ -44,7 +44,7 @@
                             
                             <div class="col-md-6"> 
                             <select id="role" class="form-control @error('') is-invalid @enderror" name="role" value="{{ old('role') }}" required autocomplete="role" autofocus>  
-                                <option value="{{$people->id_users}}" selected>{{$people->roles->role}}</option>
+                                <option value="{{$users->id_users}}" selected>{{$users->roles->role}}</option>
                                 <option value="1">Administrativos</option>
                                 <option value="2">Profesores de planta</option>
                                 <option value="3">Profesores de catedra</option>

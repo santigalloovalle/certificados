@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Models\People;
 
+use App\Models\User;
+
 class AdminController extends Controller
 {
     /**
@@ -80,8 +82,8 @@ class AdminController extends Controller
     public function edit($id)
     {
         $people = People::find($id);
-        return $people->roles;
-        return view('users.admins.edit', compact('people'));
+        $users = User::find($id);
+        return view('users.admins.edit', compact('people','users'));
     }
 
     /**
