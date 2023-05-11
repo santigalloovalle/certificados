@@ -130,10 +130,10 @@ class AdminController extends Controller
         return view('users.admins.certificates');
     }
 
-    public function show_users($id)
+    public function show_users()
     {
-        $people = People::find($id);
-        return view('users.admins.show_users', compact('people'));
+        $users = User::all();
+        return view('users.admins.show_users', compact('users'));
     }
     
 }

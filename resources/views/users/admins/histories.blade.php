@@ -31,8 +31,8 @@
     <button id=""><i class="fa-solid fa-arrow-left"></i></button>
     </section>
     <!--Tabla de historial de los certificados imprimidos o descargados-->
-    <div class="container">
-      <table class="table table-primary ">
+    <div class="container-fluid">
+      <table class="table table-blue text-light ">
         <thead>
             <tr>
               <td scope="col">Nombre Completo</td>
@@ -40,7 +40,7 @@
               <td colspan="2" scope="col">Fecha/Hora</td>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="table-group-divider">
           @foreach ($users as $user)
           <tr>
             <td scope="col"> {{$user->name}}</td>

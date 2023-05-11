@@ -32,22 +32,22 @@
     </section>
     <!--Tabla de historial de los certificados imprimidos o descargados-->
     <div class="container-fluid">
-      <table class="table table-primary ">
+      <table class="table table-blue text-light ">
         <thead>
             <tr>
               <td scope="col">Nombre Completo</td>
               <td scope="col">Correo institucional</td>
-              <td scope="col">Usuario</td>
               <td scope="col">rol</td>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="table-group-divider">
+          @foreach ($users as $user)
           <tr>
-            <td scope="col"></td>
-            <td scope="col"></td>
-            <td scope="col"></td>
-            <td scope="col"></td>
+            <td scope="col"> {{$user->name}}</td>
+            <td scope="col"> {{$user->email}}</td>
+            <td scope="col"> {{$user->roles->role}}</td>
           </tr>
+          @endforeach
         </tbody>
       </table>
     </div>

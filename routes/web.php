@@ -29,8 +29,8 @@ Route::get('/salaries', [App\Http\Controllers\AdminController::class, 'salaries'
 Route::get('/histories', [App\Http\Controllers\AdminController::class, 'histories'])->name('histories');
 Route::get('/certificates', [App\Http\Controllers\AdminController::class, 'certificates'])->name('certificates');
 Route::get('/error', [App\Http\Controllers\HomeController::class, 'error'])->name('error');
-/* Route::get('/show_users', [App\Http\Controllers\AdminController::class, 'show_users'])->name('show_users'); */
+Route::get('/show_users', [App\Http\Controllers\AdminController::class, 'show_users'])->name('show_users');
 
 Route::get('/prueba', function () {
-    return view('users.admins.show_users');
+    return view();
 });
