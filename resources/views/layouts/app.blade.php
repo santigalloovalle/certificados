@@ -93,6 +93,11 @@
                 </div>
             </div>
         </nav>
+        <div class="headerIng mt-3">
+            <div>
+              <img src="./img/LogoUECCB.png" alt="Logo Uniempresarial y logo Cámara de comercio">
+            </div>
+          </div>
 
         <main class="py-4">
             @yield('content')

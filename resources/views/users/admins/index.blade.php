@@ -1,11 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="headerIng">
-    <div>
-      <img src="./img/LogoUECCB.png" alt="Logo Uniempresarial y logo Cámara de comercio">
-    </div>
-  </div>
     <!--encabezado titulo-->
     <section class="sectionTitulo2">
         <div class="col-md-4 col-form-label text-md-end bg-red p-3 w-25 text-light">
@@ -41,7 +36,7 @@
           </div>
           <div class="col-md-6 col-sm-12">
             <div class="card w-75 mt-4">
-              <a href="{{asset('./certificado')}}">
+              <a href="{{asset('./certificates')}}">
                 <img src="{{asset('img/GenerarCerti.jpg')}}" class="card-img-top imgAdmin" alt="Generando certificado">
               </a>
               <div class="card-body bg-red">

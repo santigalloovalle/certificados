@@ -2,11 +2,6 @@
 
 @section('content')
     <body>
-        <div class="headerIng">
-            <div>
-              <img src="/img/LogoUECCB.png" alt="Logo Uniempresarial y logo Cámara de comercio">
-            </div>
-        </div>
         <!--encabezado titulo-->
         <section class="sectionTitulo container-fluid">
             <div class="divTitulo col-md-4 col-form-label text-md-end bg-red p-3 w-50 text-light">
