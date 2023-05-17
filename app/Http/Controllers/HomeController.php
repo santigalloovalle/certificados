@@ -33,23 +33,26 @@ class HomeController extends Controller
 
             case '1':
                 $error = ['name'=>"423",'desc'=>"Locked"];
-                return view('auth.error', compact('error'));
+                $people = DB::table('people')->where('id_users', $people->id)->first();
+                if ($people->doc == '1') {
+                    return view('users.edit', compact('people')); 
+                }
+                else{
+                    if ($people->id_contracts == '1'){
+                        return view('home');
+                    }
+                    /*elseif($people->id_roles == '1'){
+                        return view('auth.error', compact('error'));
+                    }*/
+                    else{
+                        return view('users.index', compact('people'));
+                    }
+    
+                }
                 break;
             
             default:
             $people = DB::table('people')->where('id_users', $people->id)->first();
-            if ($people->doc == '1') {
-                return view('users.edit', compact('people')); 
-            }
-            else{
-                if ($people->id_contracts == '1'){
-                    return view('home');
-                }
-                else{
-                    return view('users.index', compact('people'));
-                }
-
-            }
             break;
         }
     }

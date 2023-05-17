@@ -20,6 +20,7 @@ return new class extends Migration
             $table->foreignId('id_contracts')->constrained('contracts');
             $table->string('salary');
             $table->string('pay_per_hour');
+            $table->foreignId('id_roles')->constrained('roles');
             $table->foreignId('id_users')->constrained('users');
             $table->timestamps();
         });

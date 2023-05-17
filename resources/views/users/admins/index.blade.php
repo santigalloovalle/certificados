@@ -41,7 +41,7 @@
           </div>
           <div class="col-md-6 col-sm-12">
             <div class="card w-75 mt-4">
-              <a href="{{asset('./certificado')}}">
+              <a href="{{asset('./certificates')}}">
                 <img src="{{asset('img/GenerarCerti.jpg')}}" class="card-img-top imgAdmin" alt="Generando certificado">
               </a>
               <div class="card-body bg-red">

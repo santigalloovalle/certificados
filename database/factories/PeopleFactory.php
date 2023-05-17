@@ -24,6 +24,7 @@ class PeopleFactory extends Factory
             'pay_per_hour' => $faker->numberBetween(10000,99999),
             'id_contracts' => $faker->randomElement(Contract::all()->pluck('id')),
             'id_users' => $faker->randomElement(User::all()->pluck('id')),
+            'id_roles' => $faker->randomElement(Role::all()->pluck('id')),
         ];
     }
 }
