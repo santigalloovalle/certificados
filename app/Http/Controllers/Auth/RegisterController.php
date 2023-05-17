@@ -51,7 +51,6 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255',],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -67,20 +66,20 @@ class RegisterController extends Controller
     {
         
         $user = User::create([
-            'name' => $data['name'],
+            'name' => 0,
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'id_roles' => 1
         ]);
 
-        $people = new People();
+        $people = new People();   
         $people->id_documents = 1;
         $people->doc = 1;
-        
         $people->id_contracts =1;   
         $people->salary = 1;
         $people->pay_per_hour = 1;
-        $people->id_users=$user->id;
+        $people->id_roles = $user->id_roles; 
+        $people->id_users = $user->id;
 
         //$work->id_redes = $request->id_redes;
 

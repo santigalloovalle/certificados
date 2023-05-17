@@ -41,9 +41,9 @@ class HomeController extends Controller
                     if ($people->id_contracts == '1'){
                         return view('home');
                     }
-                    /*elseif($people->id_roles == '1'){
+                    elseif($people->id_roles == '1'){
                         return view('auth.error', compact('error'));
-                    }*/
+                    }
                     else{
                         return view('users.index', compact('people'));
                     }

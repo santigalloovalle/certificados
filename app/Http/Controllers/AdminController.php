@@ -70,7 +70,8 @@ class AdminController extends Controller
     public function show($id)
     {
         $people = People::find($id);
-        return view('users.admins.show', compact('people'));
+        $users = User::find($id);
+        return view('users.admins.show', compact('people','users'));
     }
 
     /**

@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Document;
 use App\Models\Contract;
 use App\Models\User;
+use App\Models\Role;
 
 class PeopleFactory extends Factory
 {

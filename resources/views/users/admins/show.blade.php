@@ -9,15 +9,39 @@
         <h1>Tu infomación:</h1>
       </div>
       <div class="card-body">
-        <h2 class="py-2"><b class="pe-5">Nombre:</b> {{$people->name}}</h2>
-        <h3 class="py-2"><b class="pe-5">Correo:</b> {{$people->email}}</h3>
-        <h4 class="py-2"><b class="pe-5">Tipo de Documento:</b> {{$people->type}}</h4>
-        <h4 class="py-2"><b class="pe-5">Documento:</b> {{$people->doc}}</h4>
-        <h4 class="py-2"><b class="pe-5">Tipo de Contrato:</b> {{$people->contract}}</h4>
-        <h4 class="py-2"><b class="pe-5">Rol:</b> {{$people->role}}</h4>
-        <h4 class="py-2"><b class="pe-5">Salario:</b> {{$people->salary}}</h4>
-        <h4 class="py-2"><b class="pe-5">Pago por Hora:</b> {{$people->pay_per_hour}}</h4>
-        <a name="" id="" class="btn btn-primary" href="{{route('admins.edit', $people->id)}}" role="button">Editar</a>
+        <h2 class="py-2"><b class="pe-5">Nombre:</b>
+          @if( $users->name == '0' )
+              {{"Por definir"}}
+          @else
+              {{ $users->name }}
+          @endif
+              </h2>
+            <h3 class="py-2"><b class="pe-5">Correo:</b> {{$users->email}}</h3>
+            <h4 class="py-2"><b class="pe-5">Tipo de Documento:</b> {{$people->documents->type}}</h4>
+            <h4 class="py-2"><b class="pe-5">Documento:</b>       
+          @if( $people->doc == '1' )
+              {{"Por definir"}}
+          @else
+              {{ $users->doc }}
+          @endif</h4>
+            <h4 class="py-2"><b class="pe-5">Tipo de Contrato:</b> {{$people->contracts->contract}}</h4>
+            <h4 class="py-2"><b class="pe-5">Rol:</b> {{$users->roles->role}}</h4>
+            <h4 class="py-2"><b class="pe-5">Salario:</b>       
+          @if( $people->salary == '1' )
+              {{"Por definir"}}
+          @else
+              {{ $people->salary }}
+          @endif</h4>
+            <h4 class="py-2"><b class="pe-5">Pago por Hora:</b>
+          @if( $people->pay_per_hour == '1' )
+              {{"Por definir"}}
+          @else
+              {{ $people->pay_per_hour }}
+          @endif
+        </h4>
+          <h4 name="" id="" class="btn btn-primary" href="{{route('admins.edit', $people->id)}}" role="button">Editar</h4>
+        </div>
+        </div>      
       </div>
     </div>
   </section>

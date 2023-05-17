@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Models\People;
 
+use App\Models\User;
+
 class PeopleController extends Controller
 {
     public function __construct()
@@ -41,11 +43,11 @@ class PeopleController extends Controller
         $people = new People();  
         $people->id_users = $request->name;        
         $people->id_documents = $request->type;
-        $people->doc = $request->doc;
-        $people->id_roles = $request->role; 
         $people->id_contracts = $request->contract;   
         $people->salary = $request->salary;
         $people->pay_per_hour = $request->pay_per_hour;
+        $people->doc = $request->doc;
+        $people->id_roles = $request->role; 
         $people->id_users=$request->id_users;
 
         //$work->id_redes = $request->id_redes;
@@ -61,10 +63,11 @@ class PeopleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(string $id)
+    public function show($id)
     {
         $people = People::find($id);
-        return view('users.show', compact('people'));
+        $users = User::find($id);
+        return view('users.show', compact('people','users'));
     }
 
     /**
@@ -73,7 +76,7 @@ class PeopleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(string $id)
+    public function edit($id)
     {
         $people = People::find($id);
         return view('users.edit', compact('people'));
@@ -86,10 +89,9 @@ class PeopleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,string $id)
+    public function update(Request $request,$id)
     {
         $people = People::find($id);
-        
         $people->doc = $request->doc;
         $people->id_documents = $request->type;
         $people->save();
@@ -103,7 +105,7 @@ class PeopleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
         //
     }
