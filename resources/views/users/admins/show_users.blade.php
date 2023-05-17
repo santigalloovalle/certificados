@@ -3,7 +3,7 @@
 @section('content')
     <!--encabezado titulo -->
     <section class="sectionTitulo">
-        <div class="divTitulo col-md-4 col-form-label text-md-end bg-red p-3 w-50 mt- text-light">
+        <div class="divTitulo col-md-4 col-form-label text-md-end bg-red p-3 w-50 text-light">
           <h3 >
           Usuarios registrados
           </h3>
@@ -12,26 +12,27 @@
   <!--Filtros de búsqueda-->
     <section class="text-center m-5">
       <!--Filtro selección de cargo-->
-    <select id="filtro">
+    <select class="p-2" id="filtro">
         <option selected value="0">Filtros</option>
         <option value="">Docentes cátedra</option>  
         <option value="">Docentes planta</option>       
         <option value="">Talleristas bienestar</option>      
         <option value="">Aprendices</option>      
         <option value="">Retirados</option>      
-     
     </select>
+
       <!--Botón para volver-->
-    <button id=""><i class="fa-solid fa-arrow-left"></i></button>
-    </section>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <a href="{{asset('/admins')}}"><button class="btn btn-outline-danger" id=""><i class="fa-solid fa-arrow-left px-3 justify-content-center"></button></i></button></a>
+      </div>
     <!--Tabla de historial de los certificados imprimidos o descargados-->
-    <div class="container-fluid">
-      <table class="table table-blue text-light ">
+    <div class="container-fluid mt-4">
+      <table class="table table-blue text-light table-bordered ">
         <thead>
             <tr>
               <td scope="col">Nombre Completo</td>
               <td scope="col">Correo institucional</td>
-              <td scope="col">rol</td>
+              <td scope="col">Rol</td>
             </tr>
         </thead>
         <tbody class="table-group-divider">
@@ -45,4 +46,5 @@
         </tbody>
       </table>
     </div>
+    </section>
 @endsection

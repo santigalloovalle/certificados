@@ -12,33 +12,33 @@
         
         <section class="container mt-5 w-50">
             <div class="card">
-                <div class="card-header">
-                    El certificado contendrá su nombre y documento de identidad. En caso de requerir algún dato adicional, seleccione a continuación.
+                <div class="card-header text-center">
+                    <h4> El certificado contendrá su nombre y documento de identidad. En caso de requerir algún dato adicional, seleccione a continuación.</h4>
                 </div>
-
+                <!-- contenido card -->
                 <div class="card-body">
                     <form method="post" action="Docente.php">
 
-                        <div class="row mb-4 mt-3">
+                        <div class="row  mt-2">
 
                             <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="salario">
-                                        <label class="form-check-label ms-3" for="salario">Salario</label>
+                                <input class="form-check-input rounded-pill" type="checkbox" id="salario">
+                                <label class="form-check-label ms-4 fs-4" for="salario">Salario</label>
                             </div>
                         </div>
-                        <div class="row mb-3">
+                        <div class="row mt-2">
                             <div class="form-check">  
-                                <input class="form-check-input" type="checkbox" id="tipoContrato">
-                                <label for="form-check-label ms-5">Tipo de Contrato</label>
+                                <input class="form-check-input rounded-pill" type="checkbox" id="tipoContrato">
+                                <label class="form-check-label ms-4 fs-4" for="contrato">Tipo de Contrato</label>
                             </div>
                         </div>
-                        <div class="row mb-3">
+                        <div class="row mt-2">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="fechaIngreso">
-                                <label for="form-check-label ms-5">Fecha de Ingreso</label>
+                                <input class="form-check-input rounded-pill" type="checkbox" id="fechaIngreso">
+                                <label class="form-check-label ms-4 fs-4" for="Ingreso">Fecha de Ingreso</label>
                             </div>
                         </div>
-                        <div class="row mb-3">
+                        <div class="row mt-2">
                             <div class="col-md-8 offset-md-5">
                                 <button class="btn btn-blue w-25" type="submit" id="btn-abrir-modal">Generar</button>
                                 <!--Confirmación de fecha de documento antes de descargar el certificado por seguridad-->
