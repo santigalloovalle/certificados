@@ -1,12 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    <!--encabezado titulo-->
-    <div class="headerIng">
-        <div>
-          <img src="/img/LogoUECCB.png" alt="Logo Uniempresarial y logo Cámara de comercio">
-        </div>
-    </div>
     <!--encabezado titulo -->
     <section class="sectionTitulo">
         <div class="divTitulo col-md-4 col-form-label text-md-end bg-red p-3 w-50 mt- text-light">

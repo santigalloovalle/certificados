@@ -122,7 +122,10 @@ footer{
 }
 
 .divTitulo{
-  margin-top: 200px;
+  margin-top: 22vh;
+}
+.divTitulo2{
+  margin-top: 15vh;
 }
 .contHome{
   height: 49vh;

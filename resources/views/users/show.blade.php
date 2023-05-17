@@ -1,11 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="headerIng">
-    <div>
-      <img src="/img/LogoUECCB.png" alt="Logo Uniempresarial y logo Cámara de comercio">
-    </div>
-  </div>
 
   <section class="container my-5 w-50">
     <!--Formulario de registro-->

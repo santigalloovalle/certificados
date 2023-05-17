@@ -2,15 +2,9 @@
 
 @section('content')
 <main>
-
-    <div class="headerIng">
-        <div>
-          <img src="/img/LogoUECCB.png" alt="Logo Uniempresarial y logo Cámara de comercio">
-        </div>
-    </div>
     <!--encabezado titulo -->
     <section class="sectionTitulo">
-        <div class="divTitulo col-md-4 col-form-label text-md-end bg-red p-3 w-50 mt- text-light">
+        <div class="divTitulo col-md-4 col-form-label text-md-end bg-red p-3 w-50 mt- text-light align-middle">
           <p class="fs-1" >
           Editar Salario
           </p>
