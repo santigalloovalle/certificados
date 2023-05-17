@@ -11,13 +11,14 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-body">
-                    <form method="POST" action="{{ route('people.store') }}">
+                    <form method="POST" action="{{ route('admins.update', $people->id) }}">
                         <input type="hidden" name="id_users" value="{{Auth::user()->id}}">
                         @csrf
+                        @method('PUT')
                         <div class="row mb-3">
                                 <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Nombre') }}</label>
                                 <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control" name="name" value="@if($users->name == '0'){{"Por definir"}}@else{{$users->name}}@endif" required autocomplete="name" autofocus>
+                                    <input id="name" type="text" class="form-control" name="name" value="@if($users->name == '0'){{""}}@else{{$users->name}}@endif" placeholder="@if($users->name == '0'){{"Por Definir"}}@endif" autocomplete="name" autofocus>
                                     @error('name')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -28,7 +29,7 @@
                         <div class="row mb-3">
                                 <label for="type" class="col-md-4 col-form-label text-md-end">{{ __('Tipo de Documento') }}</label>
                             <div class="col-md-6"> 
-                            <select class="form-control" id="type" type="type" class="form-control @error('type') is-invalid @enderror" name="type" value="{{ old('type') }}" required autocomplete="type" autofocus>  
+                            <select class="form-control" id="type" type="type" class="form-control @error('type') is-invalid @enderror" name="type" value="{{ old('type') }}"  autocomplete="type" autofocus>  
                                 <option value="{{$people->id_documents}}" selected>{{$people->documents->type}}</option>
                                 <option value="1">Tarjeta de Identidad</option>
                                 <option value="2">Cedula de Ciudadania</option>
@@ -48,7 +49,7 @@
                             <label for="role" class="col-md-4 col-form-label text-md-end">{{ __('Rol') }}</label>
                             
                             <div class="col-md-6"> 
-                            <select id="role" class="form-control @error('') is-invalid @enderror" name="role" value="{{ old('role') }}" required autocomplete="role" autofocus>  
+                            <select id="role" class="form-control @error('') is-invalid @enderror" name="role" value="{{ old('role') }}" autocomplete="role" autofocus>  
                                 <option value="{{$users->id_users}}" selected>{{$users->roles->role}}</option>
                                 <option value="1">Administrativos</option>
                                 <option value="2">Profesores de planta</option>

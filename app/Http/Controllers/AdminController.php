@@ -8,6 +8,10 @@ use App\Models\People;
 
 use App\Models\User;
 
+use App\Models\Document;
+
+use App\Models\Contract;
+
 class AdminController extends Controller
 {
     /**
@@ -97,13 +101,26 @@ class AdminController extends Controller
     public function update(Request $request, $id)
     {
         $people = People::find($id);
-        
+        $users = User::find($id);
+        $doc = Document::find($id);
+        $con = Contract::find($id);
+        $users->name = $request->name;        
+        $doc->type = $request->type;
         $people->doc = $request->doc;
-        $people->id_documents = $request->type;
+        $people->id_roles = $request->role; 
+        $con->id_contracts = $request->contract;   
+        $people->salary = $request->salary;
+        $people->pay_per_hour = $request->pay_per_hour;
+        $people->id_users=$request->id_users;
         $people->save();
+        $doc->save();
+        $con->save();
+        $users->save();
 
-        return redirect(route('home'));
+
+        return redirect(route('admins.show', $id));
     }
+
 
     /**
      * Remove the specified resource from storage.

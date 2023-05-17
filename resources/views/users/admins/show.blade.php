@@ -19,21 +19,21 @@
             <h3 class="py-2"><b class="pe-5">Correo:</b> {{$users->email}}</h3>
             <h4 class="py-2"><b class="pe-5">Tipo de Documento:</b> {{$people->documents->type}}</h4>
             <h4 class="py-2"><b class="pe-5">Documento:</b>       
-          @if( $people->doc == '1' )
+          @if( $people->doc === '1' )
               {{"Por definir"}}
           @else
-              {{ $users->doc }}
+              {{ $people->doc }}
           @endif</h4>
             <h4 class="py-2"><b class="pe-5">Tipo de Contrato:</b> {{$people->contracts->contract}}</h4>
             <h4 class="py-2"><b class="pe-5">Rol:</b> {{$users->roles->role}}</h4>
             <h4 class="py-2"><b class="pe-5">Salario:</b>       
-          @if( $people->salary == '1' )
+          @if( $people->salary === '1' )
               {{"Por definir"}}
           @else
               {{ $people->salary }}
           @endif</h4>
             <h4 class="py-2"><b class="pe-5">Pago por Hora:</b>
-          @if( $people->pay_per_hour == '1' )
+          @if( $people->pay_per_hour === '1' )
               {{"Por definir"}}
           @else
               {{ $people->pay_per_hour }}
