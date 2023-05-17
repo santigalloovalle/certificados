@@ -4,7 +4,7 @@
 
 <section class="registro"></section>
     <br><br>
-    <div class=" col-form-label text-md-center text-blue ">
+    <div class=" col-form-label text-center text-blue ">
     <h1>Regístrate</h1>
     <!--Formulario de registro-->
     </div>
