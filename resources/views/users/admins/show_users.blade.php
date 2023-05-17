@@ -4,9 +4,9 @@
     <!--encabezado titulo -->
     <section class="sectionTitulo">
         <div class="divTitulo col-md-4 col-form-label text-md-end bg-red p-3 w-50 text-light">
-          <h3 >
+          <h2 >
           Usuarios registrados
-          </h3>
+          </h2>
         </div>
       </section>
   <!--Filtros de búsqueda-->

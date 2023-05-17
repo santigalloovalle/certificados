@@ -22,7 +22,7 @@
                         <div class="row  mt-2">
 
                             <div class="form-check">
-                                <input class="form-check-input rounded-pill" type="checkbox" id="salario">
+                                <input class="form-check-input rounded-5" type="checkbox" id="salario">
                                 <label class="form-check-label ms-4 fs-4" for="salario">Salario</label>
                             </div>
                         </div>
