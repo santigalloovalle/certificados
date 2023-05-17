@@ -3,12 +3,14 @@
 @section('content')
     <!--encabezado titulo-->
     <section class="sectionTitulo2">
-        <div class="col-md-4 col-form-label text-md-end bg-red p-3 w-25 text-light">
+      <div class="divTitulo2">
+        <div class="col-md-4 col-form-label text-md-end bg-red p-4 w-25 text-light">
           <h2>Bienvenido al </h2>
         </div>
-        <div class="col-md-4 col-form-label text-md-end bg-blue p-3 m-3 w-50 text-light">
+        <div class="col-md-4 col-form-label text-md-end bg-blue p-4 m-3 w-50 text-light">
           <h2>Perfil administrador</h2>
         </div>
+      </div>
       </section>
         <!--Menú perfil administrador-->
         <!--Botón menú-->
