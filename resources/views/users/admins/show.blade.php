@@ -39,7 +39,7 @@
               {{ $people->pay_per_hour }}
           @endif
         </h4>
-          <h4 name="" id="" class="btn btn-primary" href="{{route('admins.edit', $people->id)}}" role="button">Editar</h4>
+          <a name="" id="" class="btn btn-primary" href="{{route('admins.edit', $people->id)}}" role="button">Editar</a>
         </div>
         </div>      
       </div>
