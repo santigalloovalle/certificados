@@ -20,11 +20,11 @@
                             
                             <div class="col-md-6"> 
                             <select class="form-control" id="type" placeholder="Ingrese Tipo de Documento" name="type" value="{{$people->id_documents}}">  
-                                <option value="" selected>Seleccione una opción</option>
-                                <option value="2">Tarjeta de Identidad</option>
-                                <option value="3">Cedula de Ciudadania</option>
-                                <option value="4">Tarjeta de Extranjeria</option>
-                                <option value="5">Cedula de Extranjeria</option>
+                                @foreach ($documents as $document)
+                                <option value="{{$document->id}}">
+                                  {{$document->type}}
+                                </option>
+                                @endforeach
                              </select>
                             </div>
                         </div>

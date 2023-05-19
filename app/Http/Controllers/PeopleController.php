@@ -8,6 +8,8 @@ use App\Models\People;
 
 use App\Models\User;
 
+use App\Models\Document;
+
 class PeopleController extends Controller
 {
     public function __construct()
@@ -43,18 +45,18 @@ class PeopleController extends Controller
         $people = new People();  
         $people->id_users = $request->name;        
         $people->id_documents = $request->type;
+        $people->doc = $request->doc;
+        $people->id_roles = $request->role; 
         $people->id_contracts = $request->contract;   
         $people->salary = $request->salary;
         $people->pay_per_hour = $request->pay_per_hour;
-        $people->doc = $request->doc;
-        $people->id_roles = $request->role; 
         $people->id_users=$request->id_users;
 
         //$work->id_redes = $request->id_redes;
 
         $people->save();
 
-        return redirect(route('users.index'));
+        return redirect(route('users.admins.index'));
     }
 
     /**
@@ -79,7 +81,9 @@ class PeopleController extends Controller
     public function edit($id)
     {
         $people = People::find($id);
-        return view('users.edit', compact('people'));
+        $users = User::find($id);
+        $documents = Document::all();
+        return view('users.admins.edit', compact('people','users','documents'));
     }
 
     /**
@@ -92,11 +96,19 @@ class PeopleController extends Controller
     public function update(Request $request,$id)
     {
         $people = People::find($id);
-        $people->doc = $request->doc;
+        $users = User::find($id);
+        $users->name = $request->name;        
         $people->id_documents = $request->type;
+        $people->doc = $request->doc; 
+        $people->id_contracts = $request->contract;   
+        $people->salary = $request->salary;
+        $people->pay_per_hour = $request->pay_per_hour;
+        $users->id_roles = $request->role;
+        $people->id_users = $request->id_users;
         $people->save();
+        $users->save();
 
-        return redirect(route('home'));
+        return redirect(route('admins.show_users', $id));
     }
 
     /**

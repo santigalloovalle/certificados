@@ -9,6 +9,10 @@
         <h1>Tu infomación:</h1>
       </div>
       <div class="card-body">
+              <!--Botón para volver-->
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <a href="{{asset('/admins')}}"><button class="btn btn-outline-danger" id=""><i class="fa-solid fa-arrow-left px-3 justify-content-center"></button></i></button></a>
+      </div>
         <h2 class="py-2"><b class="pe-5">Nombre:</b>
           @if( $users->name == '0' )
               {{"Por definir"}}

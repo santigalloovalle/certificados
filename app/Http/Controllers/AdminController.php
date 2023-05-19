@@ -8,6 +8,8 @@ use App\Models\People;
 
 use App\Models\User;
 
+use App\Models\Role;
+
 use App\Models\Document;
 
 use App\Models\Contract;
@@ -88,7 +90,11 @@ class AdminController extends Controller
     {
         $people = People::find($id);
         $users = User::find($id);
-        return view('users.admins.edit', compact('people','users'));
+        $roles = Role::all();
+        $contracts = Contract::all();
+        $documents = Document::all();
+        return view('users.admins.edit', compact('people','users','roles'
+        ,'documents','contracts'));
     }
 
     /**
@@ -102,21 +108,16 @@ class AdminController extends Controller
     {
         $people = People::find($id);
         $users = User::find($id);
-        $doc = Document::find($id);
-        $con = Contract::find($id);
         $users->name = $request->name;        
-        $doc->type = $request->type;
-        $people->doc = $request->doc;
-        $people->id_roles = $request->role; 
-        $con->id_contracts = $request->contract;   
+        $people->id_documents = $request->type;
+        $people->doc = $request->doc; 
+        $people->id_contracts = $request->contract;   
         $people->salary = $request->salary;
         $people->pay_per_hour = $request->pay_per_hour;
+        $users->id_roles = $request->role;
         $people->id_users=$request->id_users;
         $people->save();
-        $doc->save();
-        $con->save();
         $users->save();
-
 
         return redirect(route('admins.show', $id));
     }
@@ -132,15 +133,17 @@ class AdminController extends Controller
     {
         //
     }
-    public function salaries()
+    public function salaries(Request $request, $id)
     {
-        return view('users.admins.salaries');
+    
     }
 
     public function histories()
     {
         $users = User::all();
-        return view('users.admins.histories', compact('users'));
+        $roles = Role::all();
+        return view('users.admins.histories', compact('users','roles'));
+
     }
 
     public function certificates()
@@ -151,7 +154,9 @@ class AdminController extends Controller
     public function show_users()
     {
         $users = User::all();
-        return view('users.admins.show_users', compact('users'));
+        $roles = Role::all();
+        return view('users.admins.show_users', compact('users','roles'));
+
     }
     
 }

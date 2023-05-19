@@ -14,16 +14,15 @@
     <section class="text-center m-5">
       <!--Filtro selección de cargo-->
     <select class="p-2" id="filtro">
-        <option selected value="0">Filtros</option>
-        <option value="">Docentes cátedra</option>  
-        <option value="">Docentes planta</option>       
-        <option value="">Talleristas bienestar</option>      
-        <option value="">Aprendices</option>      
-        <option value="">Retirados</option>      
+      @foreach ($roles as $role)
+      <option value="{{$role->id}}">
+        {{$role->role}}
+      </option>
+      @endforeach        
     </select>
         <!--Se renderiza el rol seleccionado-->
           <h3 class="d-flex justify-content-center font-weight-bold fs-1">Rol Seleccionado:</h3>
-          <p id="rolSalario" class="d-flex justify-content-center fs-2">Ninguno</p>
+          <p id="rolSalario" class="d-flex justify-content-center fs-2" value="">{{"$role->role"}}</p>
           <!--Formulario de esditar salario-->
           <div class="container">
             <div class="row justify-content-center">
@@ -34,9 +33,9 @@
                         <div class="row mb-3">
                           <label for="" class="col-md-4 col-form-label text-md-start">{{ __('Nuevo salario') }}</label>
                           <div class="col-md-6">    
-                              <input id="#" type="number" class="form-control required autocomplete=" autofocus>
-                          </div> 
-                        </div> 
+                          <input id="salary" type="number" class="form-control @error('') is-invalid @enderror" name="salary" value="{{$people->salary}}" required autocomplete="salary" autofocus>
+                          </div>
+                      </div>
 
                         <div class="row mb-5">
                         <label for="#" class="col-md-4 col-form-label text-md-start">{{ __('Este cambio se verá reflejado a partir de:') }}</label>

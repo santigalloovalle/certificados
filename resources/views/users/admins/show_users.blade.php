@@ -13,12 +13,11 @@
     <section class="text-center m-5">
       <!--Filtro selección de cargo-->
     <select class="p-2" id="filtro">
-        <option selected value="0">Filtros</option>
-        <option value="">Docentes cátedra</option>  
-        <option value="">Docentes planta</option>       
-        <option value="">Talleristas bienestar</option>      
-        <option value="">Aprendices</option>      
-        <option value="">Retirados</option>      
+      @foreach ($roles as $role)
+      <option value="{{$role->id}}">
+        {{$role->role}}
+      </option>
+      @endforeach       
     </select>
 
       <!--Botón para volver-->

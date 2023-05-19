@@ -29,17 +29,18 @@
                         <div class="row mb-3">
                                 <label for="type" class="col-md-4 col-form-label text-md-end">{{ __('Tipo de Documento') }}</label>
                             <div class="col-md-6"> 
-                            <select class="form-control" id="type" type="type" class="form-control @error('type') is-invalid @enderror" name="type" value="{{ old('type') }}"  autocomplete="type" autofocus>  
+                            <select class="form-control" id="type" type="type" class="form-control @error('type') is-invalid @enderror" name="type" value="{{$people->documents->type}}"  autocomplete="type" autofocus>  
                                 <option value="{{$people->id_documents}}" selected>{{$people->documents->type}}</option>
-                                <option value="1">Tarjeta de Identidad</option>
-                                <option value="2">Cedula de Ciudadania</option>
-                                <option value="3">Tarjeta de Extranjeria</option>
-                                <option value="4">Cedula de Extranjeria</option>
+                                @foreach ($documents as $document)
+                                <option value="{{$document->id}}">
+                                  {{$document->type}}
+                                </option>
+                                @endforeach
                              </select>
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="CC" class="col-md-4 col-form-label text-md-end">{{ __('Cédula de ciudadania') }}</label>
+                            <label for="CC" class="col-md-4 col-form-label text-md-end">{{ __('Documento') }}</label>
                             
                             <div class="col-md-6">    
                                 <input id="doc" type="number" class="form-control @error('') is-invalid @enderror" name="doc" value="{{$people->doc}}" required autocomplete="doc" autofocus>
@@ -49,23 +50,26 @@
                             <label for="role" class="col-md-4 col-form-label text-md-end">{{ __('Rol') }}</label>
                             
                             <div class="col-md-6"> 
-                            <select id="role" class="form-control @error('') is-invalid @enderror" name="role" value="{{ old('role') }}" autocomplete="role" autofocus>  
-                                <option value="{{$users->id_users}}" selected>{{$users->roles->role}}</option>
-                                <option value="1">Administrativos</option>
-                                <option value="2">Profesores de planta</option>
-                                <option value="3">Profesores de catedra</option>
-                                <option value="4">Aprendices</option>
-                                <option value="5">Talleristas bienestar</option>
+                            <select id="role" class="form-control @error('') is-invalid @enderror" name="role" value="{{$users->roles->role}}" autocomplete="role" autofocus>  
+                                <option value="{{$users->id_roles}}" selected>{{$users->roles->role}}</option>
+                                @foreach ($roles as $role)
+                                <option value="{{$role->id}}">
+                                  {{$role->role}}
+                                </option>
+                                @endforeach
                              </select>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label class="col-md-4 col-form-label text-md-end"> Tipo de Contrato </label><br>
                             <div class="col-md-6"> 
-                            <select id="contract" class="form-control @error('') is-invalid @enderror" name="contract" value="{{ old('contract') }}" required autocomplete="contract" autofocus>
+                            <select id="contract" class="form-control @error('') is-invalid @enderror" name="contract" value="{{$people->contracts->contract}}" required autocomplete="contract" autofocus>
                                 <option value="{{$people->id_contracts}}" selected>{{$people->contracts->contract}}</option>
-                              <option value="1">Tiempo completo</option>
-                              <option value="2">Medio tiempo</option>
+                                @foreach ($contracts as $contract)
+                                <option value="{{$contract->id}}">
+                                  {{$contract->contract}}
+                                </option>
+                                @endforeach
                             </select>
                           </div>
                         </div>
