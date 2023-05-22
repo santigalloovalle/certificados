@@ -17,7 +17,7 @@
         <div class="container mt-5">  
         <div class="row">
           <div class="col-md-6 col-sm-12">
-            <div class="card w-75">
+            <div class="card w-75 ms-5">
               <a href="{{asset('./histories')}}">
                 <img src="{{asset('img/Certificado.jpg')}}" class="card-img-top imgAdmin" alt="Certificado">
               </a>
@@ -37,7 +37,7 @@
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
-            <div class="card w-75 mt-4">
+            <div class="card w-75 mt-5 ms-5">
               <a href="{{asset('./certificates')}}">
                 <img src="{{asset('img/GenerarCerti.jpg')}}" class="card-img-top imgAdmin" alt="Generando certificado">
               </a>
@@ -47,7 +47,7 @@
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
-            <div class="card w-75 mt-4">
+            <div class="card w-75 mt-5">
               <a href="{{asset('./salaries')}}">
                 <img src="{{asset('img/Salario.jpg')}}"   class="card-img-top imgAdmin" alt="Salarios">
               </a>
