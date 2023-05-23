@@ -99,7 +99,7 @@
         </nav>
         <div class="headerIng mt-3">
             <div>
-              <img src="./img/LogoUECCB.png" alt="Logo Uniempresarial y logo Cámara de comercio">
+              <img src="{{asset('./img/LogoUECCB.png')}}" alt="Logo Uniempresarial y logo Cámara de comercio">
             </div>
           </div>
 

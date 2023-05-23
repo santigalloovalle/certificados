@@ -43,9 +43,7 @@
           @endif
         </h4>
         <div class="col-md-8 offset-md-2">
-          <button type="submit" class="btn btn-blue">
-              {{ __('Editar') }}
-          </button>
+          <a name="" id="" href="{{route('admins.edit', $people->id)}}" role="button"><button type="submit" class="btn btn-blue">Editar</button></a>
         </div>
       </div>
     </div>      
