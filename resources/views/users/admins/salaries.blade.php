@@ -21,8 +21,8 @@
       @endforeach        
     </select>
         <!--Se renderiza el rol seleccionado-->
-          <h3 class="d-flex justify-content-center font-weight-bold fs-1">Rol Seleccionado:</h3>
-          <p id="rolSalario" class="d-flex justify-content-center fs-2" value="">{{"$role->role"}}</p>
+          <h3 class="d-flex justify-content-center font-weight-bold fs-2 mt-3">Rol Seleccionado:</h3>
+          <p id="rolSalario" class="d-flex justify-content-center fs-3" value="">{{"$role->role"}}</p>
           <!--Formulario de esditar salario-->
           <div class="container">
             <div class="row justify-content-center">
@@ -33,7 +33,7 @@
                         <div class="row mb-3">
                           <label for="" class="col-md-4 col-form-label text-md-start">{{ __('Nuevo salario') }}</label>
                           <div class="col-md-6">    
-                          <input id="salary" type="number" class="form-control @error('') is-invalid @enderror" name="salary" value="{{$people->salary}}" required autocomplete="salary" autofocus>
+                          <input id="salary" type="number" class="form-control @error('') is-invalid @enderror" name="salary" value="{{-- {{$people->salary}} --}}" required autocomplete="salary" autofocus>
                           </div>
                       </div>
 
@@ -44,10 +44,9 @@
                             <input id="#" type="date" class="form-control required autocomplete=" autofocus>
                         </div> 
                       </div>
-                    </section>
                     <!--Botones para guardar o cancelar los cambios a los usuarios -->
                     <div class="row mb-3">
-                      <div class="col-md-3 offset-md-3">
+                      <div class="col-md-2 offset-md-3">
                           <button type="submit" class="btn btn-blue btn-lg">
                               {{ __('Registrar') }}
                           </button>
@@ -56,6 +55,7 @@
                         <button type="submit" class="btn btn-danger btn-lg">
                             {{ __('Cancelar') }}
                         </button>
+                      </section>
                     </div>
                   </div>
                 </div>
