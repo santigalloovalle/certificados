@@ -21,6 +21,7 @@ class PeopleFactory extends Factory
         return [
             'id_documents' => $faker->randomElement(Document::all()->pluck('id')),
             'doc' => $faker->numberBetween(10000,99999),
+            'date' => $faker->numberBetween(10000,99999),
             'salary' => $faker->numberBetween(10000,99999),
             'pay_per_hour' => $faker->numberBetween(10000,99999),
             'id_contracts' => $faker->randomElement(Contract::all()->pluck('id')),

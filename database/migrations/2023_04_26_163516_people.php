@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('id_documents')->constrained('documents');
             $table->string('doc');
+            $table->string('date');
             $table->foreignId('id_contracts')->constrained('contracts');
             $table->string('salary');
             $table->string('pay_per_hour');

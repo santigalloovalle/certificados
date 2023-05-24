@@ -33,7 +33,7 @@
                         <div class="row mb-3">
                           <label for="" class="col-md-4 col-form-label text-md-start">{{ __('Nuevo salario') }}</label>
                           <div class="col-md-6">    
-                          <input id="salary" type="number" class="form-control @error('') is-invalid @enderror" name="salary" value="{{-- {{$people->salary}} --}}" required autocomplete="salary" autofocus>
+                          <input id="salary" type="number" class="form-control @error('') is-invalid @enderror" name="salary" value="{{$people->salary}}" required autocomplete="salary" autofocus>
                           </div>
                       </div>
 
