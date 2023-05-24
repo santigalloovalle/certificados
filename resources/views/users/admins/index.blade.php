@@ -26,8 +26,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-sm-12">
-            <div class="card w-75">
+          <div class="col-md-6 col-sm-12 ">
+            <div class="card w-75 mx-auto">
               <a href="{{asset('./show_users')}}">
                 <img src="{{asset('img/Usuarios.jpg')}}" class="card-img-top imgAdmin" alt="Usuarios">
               </a>              
@@ -47,7 +47,7 @@
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
-            <div class="card w-75 mt-5">
+            <div class="card w-75 mt-5 mx-auto">
               <a href="{{asset('./salaries')}}">
                 <img src="{{asset('img/Salario.jpg')}}"   class="card-img-top imgAdmin" alt="Salarios">
               </a>
