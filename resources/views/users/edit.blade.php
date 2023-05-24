@@ -17,17 +17,16 @@
                         @csrf
                         <div class="row mb-3">
                             <label for="type" class="col-md-4 col-form-label text-md-end">{{ __('Tipo de Documento') }}</label>
-                            
-                            <div class="col-md-6"> 
-                            <select class="form-control" id="type" placeholder="Ingrese Tipo de Documento" name="type" value="{{$people->id_documents}}">  
-                                @foreach ($documents as $document)
-                                <option value="{{$document->id}}">
-                                  {{$document->type}}
-                                </option>
-                                @endforeach
-                             </select>
-                            </div>
+                        <div class="col-md-6"> 
+                        <select class="form-control" id="type" type="type" class="form-control @error('type') is-invalid @enderror" name="type" value=""  autocomplete="type" autofocus>  
+                            @foreach ($documents as $document)
+                            <option value="{{$document->id}}">
+                              {{$document->type}}
+                            </option>
+                            @endforeach
+                         </select>
                         </div>
+                    </div>
                         <div class="row mb-3">
                             <label for="CC" class="col-md-4 col-form-label text-md-end">{{ __('Documento') }}</label>
                             

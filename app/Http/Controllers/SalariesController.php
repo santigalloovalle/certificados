@@ -19,7 +19,7 @@ class SalariesController extends Controller
     {
         $roles = Role::all();
         $people = People::all();
-        return view('users.admins.salaries', compact('roles','people'));
+        return view('users.admins.salaries');
     }
 
     /**

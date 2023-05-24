@@ -56,7 +56,7 @@ class PeopleController extends Controller
 
         $people->save();
 
-        return redirect(route('users.admins.index'));
+        return redirect(route('users.index'));
     }
 
     /**
@@ -83,7 +83,7 @@ class PeopleController extends Controller
         $people = People::find($id);
         $users = User::find($id);
         $documents = Document::all();
-        return view('users.admins.edit', compact('people','users','documents'));
+        return view('users.edit', compact('people','users','documents'));
     }
 
     /**
@@ -108,7 +108,7 @@ class PeopleController extends Controller
         $people->save();
         $users->save();
 
-        return redirect(route('admins.show_users', $id));
+        return redirect(route('users.index'));
     }
 
     /**
