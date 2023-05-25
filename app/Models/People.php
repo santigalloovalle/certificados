@@ -13,7 +13,7 @@ class People extends Model
         return $this->belongsTo(Contract::class, 'id_contracts');
     }
     public function documents(){
-        return $this->belongsTo(document::class, 'id_documents');
+        return $this->belongsTo(Document::class, 'id_documents');
     }
     public function payments(){
         return $this->belongsTo(Payment::class, 'id_payments');

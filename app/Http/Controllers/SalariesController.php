@@ -17,6 +17,8 @@ class SalariesController extends Controller
      */
     public function index()
     {
+        $people = People::all();
+        $roles = Role::all();
         return view('users.admins.salaries');
     }
 
