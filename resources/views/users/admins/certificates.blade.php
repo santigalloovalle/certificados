@@ -10,7 +10,7 @@
             </div>
         </section> 
         <!--Boton regresar-->
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end m-5">
+        <div class="d-grid gap-2 d-md-flex justify-content-end m-5">
             <a href="{{asset('/admins')}}"><button class="btn btn-outline-danger" id=""><i class="fa-solid fa-arrow-left px-3 justify-content-center"></button></i></button></a>
         </div>
 
@@ -26,19 +26,19 @@
 
                             <div class="row mt-2">
                                 <div class="form-check">
-                                    <input class="form-check-input rounded-pill" type="checkbox" id="salario">
+                                    <input class="form-check-input rounded py-2" type="checkbox" id="salario">
                                     <label class="form-check-label ms-4 fs-4" for="salario">Salario</label>
                                  </div>
                             </div>
                             <div class="row mt-2">
                                 <div class="form-check">  
-                                <input class="form-check-input rounded-pill" type="checkbox" id="tipoContrato">
+                                <input class="form-check-input rounded py-2" type="checkbox" id="tipoContrato">
                                 <label class="form-check-label ms-4 fs-4" for="form-check-label">Tipo de Contrato</label>
                                 </div> 
 
                                 <div class="row mt-2">
                                     <div class="form-check">
-                                    <input class="form-check-input rounded-pill" type="checkbox" id="fechaIngreso">
+                                    <input class="form-check-input rounded py-2" type="checkbox" id="fechaIngreso">
                                     <label class="form-check-label ms-4 fs-4" for="form-check-label">Fecha de Ingreso</label>
                                     </div>
                                 </div>
