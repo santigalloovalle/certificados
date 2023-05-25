@@ -7,7 +7,7 @@
     <div class="card">
             <!--Botón para volver-->
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-              <a href="{{asset('/home')}}"><button class="btn btn-outline-danger" id=""><i class="fa-solid fa-arrow-left px-3 justify-content-center"></button></i></button></a>
+              <a href="{{asset('/users.index')}}"><button class="btn btn-outline-danger" id=""><i class="fa-solid fa-arrow-left px-3 justify-content-center"></button></i></button></a>
             </div>
       <div class="card-header text-md-center text-blue ">
         <h1>Tu infomación:</h1>

@@ -14,6 +14,8 @@ use App\Models\Document;
 
 use App\Models\Contract;
 
+use Illuminate\Support\Facades\Auth;
+
 class AdminController extends Controller
 {
     /**
@@ -29,6 +31,10 @@ class AdminController extends Controller
      
     public function index()
     {
+        $people = Auth::user();
+        if ($people->id_roles != 2) {
+            return redirect(route('users.index'));
+        }
         return view('users.admins.index');
     }
 
@@ -77,6 +83,10 @@ class AdminController extends Controller
     {
         $people = People::find($id);
         $users = User::find($id);
+        $people2 = Auth::user();
+        if ($people2->id_roles != 2) {
+            return redirect(route('users.index'));
+        }
         return view('users.admins.show', compact('people','users'));
     }
 
@@ -93,6 +103,10 @@ class AdminController extends Controller
         $roles = Role::all();
         $contracts = Contract::all();
         $documents = Document::all();
+        $people = Auth::user();
+        if ($people->id_roles != 2) {
+            return redirect(route('users.index'));
+        }
         return view('users.admins.edit', compact('people','users','roles'
         ,'documents','contracts'));
     }
@@ -142,12 +156,20 @@ class AdminController extends Controller
     {
         $users = User::all();
         $roles = Role::all();
+        $people = Auth::user();
+        if ($people->id_roles != 2) {
+            return redirect(route('users.index'));
+        }
         return view('users.admins.histories', compact('users','roles'));
 
     }
 
     public function certificates()
     {
+        $people = Auth::user();
+        if ($people->id_roles != 2) {
+            return redirect(route('users.index'));
+        }
         return view('users.admins.certificates');
     }
 
@@ -155,6 +177,10 @@ class AdminController extends Controller
     {
         $users = User::all();
         $roles = Role::all();
+                $people = Auth::user();
+        if ($people->id_roles != 2) {
+            return redirect(route('users.index'));
+        }
         return view('users.admins.show_users', compact('users','roles'));
 
     }
