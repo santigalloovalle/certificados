@@ -28,29 +28,26 @@ class HomeController extends Controller
         $people = Auth::user();
         switch ($people->id_roles) {
             case '2':
-                return view('users.admins.index');
+                return view(route('users.admins.index'));
                 break;
-
             case '1':
                 $error = ['name'=>"423",'desc'=>"Locked"];
                 $people = DB::table('people')->where('id_users', $people->id)->first();
                 if ($people->doc == '1') {
-                    return view('users.edit', compact('people')); 
+                    return redirect(route('users.edit',$people->id));
                 }
                 else{
                     if ($people->id_contracts == '1'){
-                        return view('home');
+                        return redirect(route('home'));
                     }
                     elseif($people->id_roles == '1'){
-                        return view('auth.error', compact('error'));
+                        return redirect(route('auth.error', compact('error')));
                     }
                     else{
-                        return view('users.index', compact('people'));
+                        return redirect(route('users.index', compact('people')));
                     }
-    
                 }
                 break;
-            
             default:
             $people = DB::table('people')->where('id_users', $people->id)->first();
             break;

@@ -42,12 +42,8 @@
                             <a onclick="redirigir03()"><i class="text-light fa-brands fa-facebook-f m-1"></i></a>
                             <a onclick="redirigir04()"><i class="text-light fa-brands fa-twitter m-1"></i></a>
                         </div>
-   
-
                     </ul>
-
                     <a class="text-light mail" onclick="redirigir05()"><i class="text-light fa-solid fa-envelope"></i> Mail corporativo</a>
-
                     <ul class="navbar-nav ms-auto">
                         <!-- Right Side Of Navbar -->
                         @if(Auth::user()->id_roles =='2')
