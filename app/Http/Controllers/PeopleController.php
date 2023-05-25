@@ -83,6 +83,7 @@ class PeopleController extends Controller
         $people = People::find($id);
         $users = User::find($id);
         $documents = Document::all();
+        return $documents;
         return view('users.edit', compact('people','users','documents'));
     }
 

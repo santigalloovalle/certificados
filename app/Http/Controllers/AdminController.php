@@ -103,8 +103,8 @@ class AdminController extends Controller
         $roles = Role::all();
         $contracts = Contract::all();
         $documents = Document::all();
-        $people = Auth::user();
-        if ($people->id_roles != 2) {
+        $people2 = Auth::user();
+        if ($people2->id_roles != 2) {
             return redirect(route('users.index'));
         }
         return view('users.admins.edit', compact('people','users','roles'
@@ -147,10 +147,6 @@ class AdminController extends Controller
     {
         //
     }
-    public function salaries(Request $request, $id)
-    {
-    
-    }
 
     public function histories()
     {
@@ -177,7 +173,7 @@ class AdminController extends Controller
     {
         $users = User::all();
         $roles = Role::all();
-                $people = Auth::user();
+        $people = Auth::user();
         if ($people->id_roles != 2) {
             return redirect(route('users.index'));
         }

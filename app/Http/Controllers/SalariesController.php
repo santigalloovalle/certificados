@@ -17,8 +17,8 @@ class SalariesController extends Controller
      */
     public function index()
     {
-        $roles = Role::all();
         $people = People::all();
+        $roles = Role::all();
         return view('users.admins.salaries');
     }
 
@@ -64,7 +64,6 @@ class SalariesController extends Controller
     {
         $people = People::all();
         $roles = Role::all();
-
         return view('users.admins.salaries', compact('people','roles'));
     }
 
@@ -83,7 +82,7 @@ class SalariesController extends Controller
         $people->id_users = $request->id_users;
         $people->save();
 
-        return redirect(route('admins.salaries'));
+        return redirect(route('users.admins.salaries'));
     }
 
     /**

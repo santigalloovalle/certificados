@@ -1,17 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-
+            <!--Botón para volver-->
   <div class="d-grid gap-2 d-md-flex justify-content-end m-5">
     <a href="{{asset('/home')}}"><button class="btn btn-outline-danger" id=""><i class="fa-solid fa-arrow-left px-3 justify-content-center"></button></i></button></a>
   </div>
   <section class="container my-5 w-50">
     <!--Formulario de registro-->
     <div class="card text-md-center">
-            <!--Botón para volver-->
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-              <a href="{{asset('/home')}}"><button class="btn btn-outline-danger" id=""><i class="fa-solid fa-arrow-left px-3 justify-content-center"></button></i></button></a>
-            </div>
         <div class="card-header  text-blue ">
         <h1>Tu infomación:</h1>
       </div>

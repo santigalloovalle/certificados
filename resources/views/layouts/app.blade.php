@@ -20,7 +20,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/Redirigir.js') }}"></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 </head>
@@ -37,17 +36,13 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <div class="">
-                            <a onclick="redirigir01()"><i class="text-light fa-brands fa-whatsapp m-1"></i></a>
-                            <a onclick="redirigir02()"><i class="text-light fa-brands fa-instagram m-1"></i></a>
-                            <a onclick="redirigir03()"><i class="text-light fa-brands fa-facebook-f m-1"></i></a>
-                            <a onclick="redirigir04()"><i class="text-light fa-brands fa-twitter m-1"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=573107836734&text=Hola!%20Quiero%20informaci%C3%B3n%20de%20la%20universidad."><i class="text-light fa-brands fa-whatsapp m-1"></i></a>
+                            <a href="https://www.instagram.com/uniempresarial/"><i class="text-light fa-brands fa-instagram m-1"></i></a>
+                            <a href="https://www.facebook.com/uniempresarial"><i class="text-light fa-brands fa-facebook-f m-1"></i></a>
+                            <a href="https://twitter.com/uempresarial"><i class="text-light fa-brands fa-twitter m-1"></i></a>
                         </div>
-   
-
                     </ul>
-
-                    <a class="text-light mail" onclick="redirigir05()"><i class="text-light fa-solid fa-envelope"></i> Mail corporativo</a>
-
+                    <a class="text-light mail" href="https://login.microsoftonline.com/login.srf"><i class="text-light fa-solid fa-envelope"></i> Mail corporativo</a>
                     <ul class="navbar-nav ms-auto">
                         <!-- Right Side Of Navbar -->               
                         <!-- Authentication Links -->
