@@ -46,9 +46,25 @@
 
                     </ul>
 
-                    <!-- Right Side Of Navbar -->
                     <a class="text-light mail" onclick="redirigir05()"><i class="text-light fa-solid fa-envelope"></i> Mail corporativo</a>
+
                     <ul class="navbar-nav ms-auto">
+                        <!-- Right Side Of Navbar -->
+                        @if(Auth::user()->id_roles =='2')
+                            <li class="nav-item">
+                                <a class="nav-link active text-light rounded" aria-current="page" href="/admins">Historial Certificados</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active text-light rounded" aria-current="page" href="/admins">Control usuarios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active text-light rounded" aria-current="page" href="/admins">Crear certificado</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active text-light rounded" aria-current="page" href="/admins">Inicio</a>
+                            </li>
+                        @endif
+                                          
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))

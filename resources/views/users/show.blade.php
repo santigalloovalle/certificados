@@ -2,7 +2,7 @@
 
 @section('content')
 
-  <div class="d-grid gap-2 d-md-flex justify-content-md-end  m-5">
+  <div class="d-grid gap-2 d-md-flex justify-content-end m-5">
     <a href="{{asset('/home')}}"><button class="btn btn-outline-danger" id=""><i class="fa-solid fa-arrow-left px-3 justify-content-center"></button></i></button></a>
   </div>
   <section class="container my-5 w-50">
