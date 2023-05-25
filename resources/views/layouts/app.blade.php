@@ -45,38 +45,39 @@
                     </ul>
                     <a class="text-light mail" onclick="redirigir05()"><i class="text-light fa-solid fa-envelope"></i> Mail corporativo</a>
                     <ul class="navbar-nav ms-auto">
-                        <!-- Right Side Of Navbar -->
-                        @if(Auth::user()->id_roles =='2')
-                            <li class="nav-item">
-                                <a class="nav-link active text-light rounded" aria-current="page" href="/admins">Historial Certificados</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active text-light rounded" aria-current="page" href="/admins">Control usuarios</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active text-light rounded" aria-current="page" href="/admins">Crear certificado</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active text-light rounded" aria-current="page" href="/admins">Inicio</a>
-                            </li>
-                        @endif
-                                          
+                        <!-- Right Side Of Navbar -->               
                         <!-- Authentication Links -->
+                        @auth
+                        @if(Auth::user()->id_roles =='2')
+                                <li class="nav-item">
+                                    <a class="nav-link active text-light rounded" aria-current="page" href="/histories">Historial Certificados</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active text-light rounded" aria-current="page" href="/show_users">Control usuarios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active text-light rounded" aria-current="page" href="/certificates">Crear certificado</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active text-light rounded" aria-current="page" href="/admins">Inicio</a>
+                                </li>
+                            @endif
+                        @endauth
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" href="{{ route('login') }}">{{ __('Iniciar sesión') }}</a>
+                                    <a class="nav-link text-light rounded" href="{{ route('login') }}">{{ __('Iniciar sesión') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
+                                    <a class="nav-link text-light rounded" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
                                 </li>
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-light rounded" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     @if( Auth::user()->name == '0' )
                                         {{ Auth::user()->email }}
                                     @else
@@ -86,15 +87,15 @@
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     @if(Auth::user()->id_roles =='2')         
-                                    <a class="dropdown-item" href="{{ route('admins.show', Auth::user()->id) }}">
+                                    <a class="dropdown-item rounded" href="{{ route('admins.show', Auth::user()->id) }}">
                                         {{ __('Mi Info') }}
                                     </a> 
                                     @else
-                                    <a class="dropdown-item" href="{{ route('people.show', Auth::user()->id) }}">
+                                    <a class="dropdown-item rounded" href="{{ route('people.show', Auth::user()->id) }}">
                                         {{ __('Mi Info') }}
                                     </a>       
                                     @endif
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    <a class="dropdown-item rounded" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Cerrar Sesión') }}
@@ -109,21 +110,21 @@
                 </div>
             </div>
         </nav>
-        <div class="headerIng mt-3">
+        <div class="headerIng my-2">
             <div>
               <img src="{{asset('./img/LogoUECCB.png')}}" alt="Logo Uniempresarial y logo Cámara de comercio">
             </div>
           </div>
 
-        <main class="py-4">
+        <main class="mt-2">
             @yield('content')
         </main>
     </div>
       <!--footer-->
   <footer>
-    <div class="footer1 bg-blue text-center">
+    <div class="footer1 bg-blue text-center mt-3 text-light">
       <img src="{{asset('img/LogoFooter.png')}}" alt="Logo uniempresarial y cámara de comercio">
-      <p>Institución de educación superior sujeta a la inspección y vigilancia del Ministerio de Educación / SNIES 2738
+      <p class="mt-4">Institución de educación superior sujeta a la inspección y vigilancia del Ministerio de Educación / SNIES 2738
       </p>
     </div>
     <div class="footer2 ">
