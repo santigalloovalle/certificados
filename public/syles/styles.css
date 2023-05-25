@@ -1,10 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 .headerIng{
     width: 100%;
     height: 15vh;
@@ -21,25 +14,15 @@
 }
 
 footer{
-    bottom: 0;
-    width: 100%;
+    bottom: 0;  
 }
 
 .footer1{
     height: 28vh;
-    padding: 0px 125px;
-    background-color: #0e2b49;
-    color: white;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    word-spacing: 5px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .footer1 p{
-    width: 50vw;
-    color: white;
+
     text-decoration: none;
 }
 
@@ -132,6 +115,10 @@ footer{
 .cardAdmin{
   width: 33vw;
   
+}
+
+.nav-link:hover{
+  background-color: #1b2481;
 }
 
 
