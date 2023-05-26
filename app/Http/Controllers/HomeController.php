@@ -28,7 +28,7 @@ class HomeController extends Controller
         $people = Auth::user();
         switch ($people->id_roles) {
             case '2':
-                return view(route('users.admins.index'));
+                return view('users.admins.index');
                 break;
             case '1':
                 $error = ['name'=>"423",'desc'=>"Locked"];
