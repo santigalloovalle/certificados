@@ -2,13 +2,14 @@
 <html>
 <head>
     <title>Certificado Laboral</title>
+    <link href="\xampp\htdocs\certificados\public\css/pdf.css" rel="stylesheet">
 </head>
 <body>
     <!--"Header"-->
-    <p class="text-center"><b class="fs-2"> LA FUNDACIÓN UNIVERSITARIA EMPRESARIAL DE LA CÁMARA DE COMERCIO DE BOGOTÁ
+    <p class="title"> <b> LA FUNDACIÓN UNIVERSITARIA EMPRESARIAL DE LA CÁMARA DE COMERCIO DE BOGOTÁ
     -UNIEMPRESARIAL-</b><br>
     Personería Jurídica, Resolución 598 del 2 de abril de 2001 del Ministerio de Educación Nacional - Registro ICFES 2738</p>
-    <h1 class="text-center">{{ $title }}</h1>
+    <h1 class="title">{{ $title }}</h1>
 
     @switch($id_roles)
     @case('2')

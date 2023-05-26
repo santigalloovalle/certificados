@@ -13,7 +13,6 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ asset('/syles/styles.css') }}">
     <link rel="icon" href="{{ asset('/img/logoicono.png') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -121,13 +120,13 @@
     </div>
       <!--footer-->
   <footer>
-    <div class="bg-blue text-center  text-light">
+    <div class="bg-blue text-center  text-light mt-3 p-4">
             <img src="{{asset('img/LogoFooter.png')}}" alt="Logo uniempresarial y cámara de comercio" class="container">
             <p class="mb-0">Institución de educación superior sujeta a la inspección y vigilancia del Ministerio de Educación / SNIES 2738</p>
         </div>
       
     </div>
-    <div class="footer2 text-center p-1">
+    <div class="text-center p-2 bg-secondary text-light">
       <p>Todos los derechos reservados © 2020 -2022 Fundación Universitaria de la Cámara de Comercio de Bogotá
         Uniempresarial | Términos, politicas y Condiciones de Servicio Resolución 598 del Ministerio de Educación.
         Registro Icfes 2738.

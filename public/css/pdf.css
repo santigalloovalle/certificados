@@ -1,0 +1,10 @@
+body{
+    background-image: src"/img/fondoPDF";
+}
+.nameUni{
+    justify-content: center;
+}
+
+p{
+    text-align: justify;
+}
