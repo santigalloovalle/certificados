@@ -78,6 +78,10 @@ class RegisterController extends Controller
         $people->date = 1;
         $people->id_contracts =1;   
         $people->salary = 1;
+        $people->date_i = 1;
+        $people->date_f = 1;
+        $people->onus = 1;
+        $people->area = 1;
         $people->pay_per_hour = 1;
         $people->id_roles = $user->id_roles; 
         $people->id_users = $user->id;

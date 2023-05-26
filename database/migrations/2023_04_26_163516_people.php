@@ -20,6 +20,10 @@ return new class extends Migration
             $table->string('date');
             $table->foreignId('id_contracts')->constrained('contracts');
             $table->string('salary');
+            $table->string('date_i');
+            $table->string('date_f');
+            $table->string('onus');
+            $table->string('area');
             $table->string('pay_per_hour');
             $table->foreignId('id_roles')->constrained('roles');
             $table->foreignId('id_users')->constrained('users');

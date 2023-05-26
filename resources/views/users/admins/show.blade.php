@@ -42,6 +42,11 @@
               {{ $people->pay_per_hour }}
           @endif
         </h4>
+        <h4 class="py-2"><b class="pe-3">Fecha Inicio:</b> {{$people->date_i}}</h4>
+        <h4 class="py-2"><b class="pe-3">Fecha Fin:</b> {{$people->date_f}}</h4>
+        <h4 class="py-2"><b class="pe-3">Cargo:</b> {{$people->onus}}</h4>
+        <h4 class="py-2"><b class="pe-3">Area:</b> {{$people->area}}</h4>
+      </div>
         <div class="col-md-8 offset-md-2">
           <a name="" id="" href="{{route('admins.edit', $people->id)}}" role="button"><button type="submit" class="btn btn-blue">Editar</button></a>
         </div>
