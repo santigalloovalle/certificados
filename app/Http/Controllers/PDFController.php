@@ -23,6 +23,7 @@ class PDFController extends Controller
             'title' => 'CERTIFICA',
             'name' => $user->name,
             't_doc' => $people->documents->type,
+            'contract' => $people->contracts->contract,
             'doc' => $people->doc,
             'id_roles' => $user->id_roles,
             'date_i' => $people->date_i,

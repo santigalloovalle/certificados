@@ -18,10 +18,13 @@ class DatabaseSeeder extends Seeder
             'contract' => 'Por definir', 
         ]);
         \App\Models\Contract::factory()->create([
-            'contract' => 'Tiempo Completo', 
+            'contract' => 'Termino Fijo', 
         ]);
         \App\Models\Contract::factory()->create([
-            'contract' => 'Medio Tiempo', 
+            'contract' => 'Termino Indefinido', 
+        ]);
+        \App\Models\Contract::factory()->create([
+            'contract' => 'Obra o labor', 
         ]);
         \App\Models\Role::factory()->create([
             'role' => 'Por definir', 
