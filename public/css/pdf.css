@@ -1,10 +1,41 @@
 body{
-    background-image: src"/img/fondoPDF";
-}
-.nameUni{
-    justify-content: center;
+    padding: 0;
+    margin: 0;
 }
 
-p{
+.titleDoc{
+    text-align: center;
+}
+.nameUni{
+    margin-bottom: 5%;
+}
+
+.textContent{
     text-align: justify;
+}
+.bodyText{
+   margin-top: 10%; 
+}
+.foot{
+    margin: 0;
+}
+.foot1{
+    font-size: 12px;
+}
+.margen{
+    margin-top: 10%; 
+}
+.foooter{
+    background: url(../);
+    width: 100%;
+}
+img{
+    margin-left: -10%;
+    width: 120%;
+}
+.img1{
+    margin-top: -8%;
+}
+.img2{
+    margin-top: 22%;
 }
