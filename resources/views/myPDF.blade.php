@@ -17,7 +17,7 @@
         @break
 
     @case('3')
-    <p class="bodyText"> Que el señor(a) <b>{{ $name }}</b> identificado(a) con <b> {{ $t_doc }} </b> No.<b>{{ $doc }}</b>, está vinculado(a) con la Fundación Universitaria Empresarial de la Cámara de Comercio de Bogotá Uniempresarial con NIT 830.084.876-6, desde el {{ $date_i }}. Actualmente desempeña el cargo de DOCENTE con dedicación mediante un contrato a término {{ $contract }}, devengando un salario de (letras y números) <b>___________</b>.</p>
+    <p class="bodyText"> Que el señor(a) <b>{{ $name }}</b> identificado(a) con <b> {{ $t_doc }} </b> No.<b>{{ $doc }}</b>, está vinculado(a) con la Fundación Universitaria Empresarial de la Cámara de Comercio de Bogotá Uniempresarial con NIT 830.084.876-6, desde el {{ $date_i }}. Actualmente desempeña el cargo de DOCENTE con dedicación mediante un contrato de {{ $contract }}, devengando un salario de (letras y números) <b>___________</b>.</p>
         @break
 
     @case('4')
