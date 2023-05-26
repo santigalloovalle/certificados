@@ -24,10 +24,10 @@ class AdminController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     /* public function __construct()
+     public function __construct()
      {
          $this->middleware('auth');
-     } */
+     }
      
     public function index()
     {
@@ -83,10 +83,10 @@ class AdminController extends Controller
     {
         $people = People::find($id);
         $users = User::find($id);
-        $people2 = Auth::user();
-        if ($people2->id_roles != 2) {
+        if ($users->id_roles != 2) {
             return redirect(route('users.index'));
         }
+        return $id;
         return view('users.admins.show', compact('people','users'));
     }
 

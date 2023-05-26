@@ -21,7 +21,7 @@ class PDFController extends Controller
         $people = People::find($user->id);
         $data = [
             'title' => 'CERTIFICA',
-            'name' => $people->name,
+            'name' => $user->name,
             't_doc' => $people->documents->type,
             'doc' => $people->doc,
             'id_roles' => $user->id_roles,

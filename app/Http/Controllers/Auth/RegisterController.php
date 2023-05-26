@@ -75,6 +75,7 @@ class RegisterController extends Controller
         $people = new People();   
         $people->id_documents = 1;
         $people->doc = 1;
+        $people->date = 1;
         $people->id_contracts =1;   
         $people->salary = 1;
         $people->pay_per_hour = 1;

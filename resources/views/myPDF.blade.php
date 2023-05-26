@@ -13,7 +13,7 @@
     @switch($id_roles)
     @case('2')
     <p>Que el señor(a) {{ $name }} identificada con {{ $t_doc }} No. {{ $doc }}, está vinculada con la Fundación Universitaria Empresarial de la Cámara de Comercio de Bogotá Uniempresarial con NIT 
-        830.084.876-6, desempeñando el cargo de ___________________, mediante un contrato a término indefinido desde el ________________. Actualmente devenga un salario de (letras y números) ____________).</p>
+        830.084.876-6, desempeñando el cargo de ___________________, mediante un contrato a término ----------------------- desde el ________________. Actualmente devenga un salario de (letras y números) ____________).</p>
         @break
 
     @case('3')
@@ -21,13 +21,13 @@
         @break
 
     @case('4')
-    <p>Que el señor(a) {{ $name }}, identificado con {{ $t_doc }} No. {{ $doc }}, está vinculado con la Fundación Universitaria Empresarial de la Cámara de Comercio de Bogotá Uniempresarial con NIT 830.084.876-6, desempeñando el cargo de DOCENTE HORA CATEDRA mediante contratos por obra o labor en los siguientes periodos:</p>
+    <p>Que el señor(a) {{ $name }}, identificado con {{ $t_doc }} No. {{ $doc }}, está vinculado con la Fundación Universitaria Empresarial de la Cámara de Comercio de Bogotá Uniempresarial con NIT 830.084.876-6, desempeñando el cargo de DOCENTE HORA CATEDRA mediante contratos ------------ en los siguientes periodos:</p>
     <table>
     </table>    
         @break
 
     @case('5')
-    <p>Que el señor(a) {{ $name }}, identificado con {{ $t_doc }} No. {{ $doc }}, esta vinculado con la Fundación Universitaria Empresarial de la Cámara de Comercio de Bogotá Uniempresarial con NIT 830.084.876-6, mediante un contrato de aprendizaje desde el _____________ hasta el ___________________ en el área de _______________.</p>
+    <p>Que el señor(a) {{ $name }}, identificado con {{ $t_doc }} No. {{ $doc }}, esta vinculado con la Fundación Universitaria Empresarial de la Cámara de Comercio de Bogotá Uniempresarial con NIT 830.084.876-6, mediante un contrato de------------ desde el _____________ hasta el ___________________ en el área de _______________.</p>
     @break
 
     @default
