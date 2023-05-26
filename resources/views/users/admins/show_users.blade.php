@@ -10,7 +10,7 @@
         </div>
       </section>
   <!--Filtros de búsqueda-->
-    <section class="text-center m-5">
+    <section class="text-center m-5" id="rol">
       <!--Filtro selección de cargo-->
     <select class="p-2" id="filtro">
       @foreach ($roles as $role)
@@ -26,13 +26,13 @@
       </div>
     <!--Tabla de historial de los certificados imprimidos o descargados-->
     <div class="container-fluid mt-4">
-      <table class="table table-blue text-light table-bordered ">
+      <table class="table table-blue text-light table-bordered " id="tabla">
         <thead>
             <tr>
-              <td scope="col">Nombre Completo</td>
-              <td scope="col">Correo institucional</td>
-              <td scope="col">Rol</td>
-              <td colspan="2" scope="col">Acciones</td>
+              <th scope="col">Nombre Completo</th>
+              <th scope="col">Correo institucional</th>
+              <th scope="col">Rol</th>
+              <th colspan="2" scope="col">Acciones</th>
             </tr>
         </thead>
         <tbody class="table-group-divider">

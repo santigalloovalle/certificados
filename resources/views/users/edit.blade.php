@@ -13,8 +13,8 @@
                 <div class="card-body">
                     <form action="{{route('people.update',$people->id)}}" method="POST">
                         <input type="hidden" name="id_users" value="{{Auth::user()->id}}">
-                        @method('PUT')
                         @csrf
+                        @method('PUT')
                         <div class="row mb-3">
                             <label for="type" class="col-md-4 col-form-label text-md-end">{{ __('Tipo de Documento') }}</label>
                         <div class="col-md-6"> 
@@ -32,6 +32,13 @@
                             
                             <div class="col-md-6">    
                                 <input id="doc" type="number" class="form-control @error('') is-invalid @enderror" name="doc" value="{{ old('doc') }}" required autocomplete="doc" autofocus>
+                            </div> 
+                        </div> 
+                        <div class="row mb-3">
+                            <label for="date" class="col-md-4 col-form-label text-md-end">{{ __('Fecha de Expedición') }}</label>
+                            
+                            <div class="col-md-6">    
+                                <input id="date" type="date" class="form-control @error('') is-invalid @enderror" name="date" value="{{ old('date') }}" required autocomplete="date" autofocus>
                             </div> 
                         </div> 
                         <div class="col-md-8 offset-md-4">

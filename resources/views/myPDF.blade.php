@@ -13,11 +13,11 @@
 
     @switch($id_roles)
     @case('2')
-    <p class="bodyText">Que el señor(a) <b>{{ $name }}</b> identificado(a) con <b> {{ $t_doc }} </b> No. <b>{{ $doc }}</b>, está vinculado(a) con la Fundación Universitaria Empresarial de la Cámara de Comercio de Bogotá Uniempresarial con NIT 830.084.876-6, desempeñando el cargo de <b>{{ $onus }}</b>, mediante un contrato a {{ $contract }} desde el {{ $date_i }}. Actualmente devenga un salario de (letras y números) <b>____________</b>.</p>
+    <p class="bodyText">Que el señor(a) <b>{{ $name }}</b> identificado(a) con <b> {{ $t_doc }} </b> No. <b>{{ $doc }}</b>, está vinculado(a) con la Fundación Universitaria Empresarial de la Cámara de Comercio de Bogotá Uniempresarial con NIT 830.084.876-6, desempeñando el cargo de <b>{{ $onus }}</b>, mediante un contrato a {{ $contract }} desde el {{ $date_i }}. Actualmente devenga un salario de (letras y números) <b>{{ $salary }}</b>.</p>
         @break
 
     @case('3')
-    <p class="bodyText"> Que el señor(a) <b>{{ $name }}</b> identificado(a) con <b> {{ $t_doc }} </b> No.<b>{{ $doc }}</b>, está vinculado(a) con la Fundación Universitaria Empresarial de la Cámara de Comercio de Bogotá Uniempresarial con NIT 830.084.876-6, desde el {{ $date_i }}. Actualmente desempeña el cargo de DOCENTE con dedicación mediante un contrato de {{ $contract }}, devengando un salario de (letras y números) <b>___________</b>.</p>
+    <p class="bodyText"> Que el señor(a) <b>{{ $name }}</b> identificado(a) con <b> {{ $t_doc }} </b> No.<b>{{ $doc }}</b>, está vinculado(a) con la Fundación Universitaria Empresarial de la Cámara de Comercio de Bogotá Uniempresarial con NIT 830.084.876-6, desde el {{ $date_i }}. Actualmente desempeña el cargo de DOCENTE con dedicación mediante un contrato de {{ $contract }}, devengando un salario de (letras y números) <b>{{ $salary }}</b>.</p>
         @break
 
     @case('4')
@@ -33,7 +33,7 @@
     @default
 @endswitch
     <!--"Footer"-->
-    <p class="bodyText">El presente certificado se expide a solicitud del interesado a los treinta y uno ({{ $day }}) días del mes de octubre de {{ $year }}.</p><br>
+    <p class="bodyText">El presente certificado se expide a solicitud del interesado a los treinta y uno ({{ $day }}) días del mes de {{ $month }} de {{ $year }}.</p><br>
 
     <p class="mt-5">Atentamente</p><br>
 

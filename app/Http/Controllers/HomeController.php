@@ -34,7 +34,7 @@ class HomeController extends Controller
                 $error = ['name'=>"423",'desc'=>"Locked"];
                 $people = DB::table('people')->where('id_users', $people->id)->first();
                 if ($people->doc == '1') {
-                    return redirect(route('users.edit',$people->id));
+                    return redirect(route('people.edit',$people->id));
                 }
                 else{
                     if ($people->id_contracts == '1'){
