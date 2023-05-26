@@ -32,7 +32,7 @@
               <td scope="col">Nombre Completo</td>
               <td scope="col">Correo institucional</td>
               <td scope="col">Rol</td>
-              <td scope="col">Acciones</td>
+              <td colspan="2" scope="col">Acciones</td>
             </tr>
         </thead>
         <tbody class="table-group-divider">
@@ -42,6 +42,7 @@
             <td scope="col"> {{$user->email}}</td>
             <td scope="col"> {{$user->roles->role}}</td>
             <td><div class="btn-group " role="group" aria-label="Button group name"><a href="{{route('admins.edit', $user->id)}}"> <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-pen"></i></button></a></td>
+            <td><div class="btn-group " role="group" aria-label="Button group name"><a href="{{route('generatePDF', $user->id)}}"> <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-file-pdf"></i></button></a></td>
           </tr>
           @endforeach
         </tbody>

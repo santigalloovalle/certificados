@@ -18,7 +18,7 @@
                         <div class="row mb-3">
                                 <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Nombre') }}</label>
                                 <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control" name="name" value="@if($users->name == '0'){{""}}@else{{$users->name}}@endif" placeholder="@if($users->name == '0'){{"Por Definir"}}@endif" autocomplete="name" autofocus>
+                                    <input id="name" type="text" class="form-control" name="name" value="@if($users->name == '0'){{""}}@else{{$users->name}}@endif" placeholder="@if($users->name == '0'){{"Por Definir"}}@endif" required autocomplete="name" autofocus>
                                     @error('name')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -76,25 +76,25 @@
                         <div class="row mb-3">
                             <label for="date_i" class="col-md-4 col-form-label text-md-end">{{ __('Fecha Inicio') }}</label>
                             <div class="col-md-6">
-                            <input id="date_i" type="number" class="form-control @error('') is-invalid @enderror" name="date_i" value="{{$people->date_i}}" autocomplete="date_i" autofocus>
+                            <input id="date_i" type="date" class="form-control @error('') is-invalid @enderror" name="date_i" value="{{$people->date_i}}" required autocomplete="date_i" autofocus>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="date_f" class="col-md-4 col-form-label text-md-end">{{ __('Fecha fin') }}</label>
                             <div class="col-md-6">
-                            <input id="date_f" type="number" class="form-control @error('') is-invalid @enderror" name="salary" value="{{$people->date_f}}" autocomplete="date_f" autofocus>
+                            <input id="date_f" type="date" class="form-control @error('') is-invalid @enderror" name="date_f" value="{{$people->date_f}}" required autocomplete="date_f" autofocus>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="onus" class="col-md-4 col-form-label text-md-end">{{ __('Cargo') }}</label>
                             <div class="col-md-6">
-                            <input id="onus" type="number" class="form-control @error('') is-invalid @enderror" name="onus" value="{{$people->onus}}" autocomplete="onus" autofocus>
+                            <input id="onus" type="text" class="form-control @error('') is-invalid @enderror" name="onus" value="{{$people->onus}}" autocomplete="onus" autofocus>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="area" class="col-md-4 col-form-label text-md-end">{{ __('Area') }}</label>
                             <div class="col-md-6">
-                            <input id="area" type="number" class="form-control @error('') is-invalid @enderror" name="area" value="{{$people->area}}" autocomplete="area" autofocus>
+                            <input id="area" type="text" class="form-control @error('') is-invalid @enderror" name="area" value="{{$people->area}}" autocomplete="area" autofocus>
                             </div>
                         </div>
                         <div class="row mb-3">

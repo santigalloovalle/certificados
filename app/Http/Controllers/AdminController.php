@@ -90,7 +90,6 @@ class AdminController extends Controller
         if ($users->id_roles != 2) {
             return redirect(route('users.index'));
         }
-        return $id;
         return view('users.admins.show', compact('people','users'));
     }
 
@@ -130,11 +129,11 @@ class AdminController extends Controller
         $people->id_documents = $request->type;
         $people->doc = $request->doc; 
         $people->id_contracts = $request->contract;   
-        $people->salary = $request->salary;
         $people->date_i = $request->date_i;
         $people->date_f = $request->date_f;
         $people->onus = $request->onus;
         $people->area = $request->area;
+        $people->salary = $request->salary;
         $people->pay_per_hour = $request->pay_per_hour;
         $users->id_roles = $request->role;
         $people->id_users=$request->id_users;

@@ -25,6 +25,10 @@ class PDFController extends Controller
             't_doc' => $people->documents->type,
             'doc' => $people->doc,
             'id_roles' => $user->id_roles,
+            'date_i' => $people->date_i,
+            'date_f' => $people->date_f,
+            'onus' => $people->onus,
+            'area' => $people->area,
             'day' => date('d'),
             'month' => date('m'),
             'year' => date('Y')
