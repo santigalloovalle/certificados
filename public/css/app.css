@@ -10896,3 +10896,16 @@ textarea.form-control-lg {
 .nav-link:hover{
   background-color: #1b2481;
 }
+#myModal{
+  background: #FFFFFF20;
+}
+.modal-header{
+  background: #06357a;
+  color: white;
+}
+.modal-header button{
+  color: red;
+  opacity: 100%;
+  text-shadow: none;
+  margin-left: 9vw;
+}
