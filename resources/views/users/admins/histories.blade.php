@@ -42,6 +42,7 @@
             <td scope="col"> {{$certificate->roles->role}}</td> 
             <td scope="col">{{$certificate->fecha_descarga}}</td>
             <td scope="col">{{$certificate->hora_descarga}}</td>
+            
           </tr>
           @endforeach
         </tbody>
