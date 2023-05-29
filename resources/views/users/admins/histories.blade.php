@@ -36,12 +36,12 @@
             </tr>
         </thead>
         <tbody class="table-group-divider">
-          @foreach ($users as $user)
+          @foreach ($certificate as $certificate)
           <tr>
-            <td scope="col"> {{$user->name}}</td>
-            <td scope="col"> {{$user->roles->role}}</td>
-            <td scope="col">Fecha</td>
-            <td scope="col">Hora</td>
+            <td scope="col"> {{$certificate->users->name}}</td>
+            <td scope="col"> {{$certificate->roles->role}}</td> 
+            <td scope="col">{{$certificate->fecha_descarga}}</td>
+            <td scope="col">{{$certificate->hora_descarga}}</td>
           </tr>
           @endforeach
         </tbody>

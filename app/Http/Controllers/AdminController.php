@@ -14,6 +14,9 @@ use App\Models\Document;
 
 use App\Models\Contract;
 
+use App\Models\Certificates;
+
+
 use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
@@ -161,10 +164,11 @@ class AdminController extends Controller
         $users = User::all();
         $roles = Role::all();
         $people = Auth::user();
+        $certificate = Certificates::all();
         if ($people->id_roles != 2) {
             return redirect(route('users.index'));
         }
-        return view('users.admins.histories', compact('users','roles'));
+        return view('users.admins.histories', compact('users','roles','certificate')); 
 
     }
 
