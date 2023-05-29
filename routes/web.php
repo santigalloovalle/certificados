@@ -33,4 +33,5 @@ Route::get('/users', [App\Http\Controllers\AdminController::class, 'show_users']
 Route::get('/CertificadoLaboral', [App\Http\Controllers\PDFController::class, 'generatePDF'])->name('generatePDF');
 
 Route::get('/prueba', function () {
+    return view();
 });
