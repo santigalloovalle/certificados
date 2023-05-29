@@ -18,7 +18,7 @@
         <div class="row">
           <div class="col-md-6 col-sm-12">
             <div class="card w-75 ms-5">
-              <a href="{{asset('./histories')}}">
+              <a href="{{route('histories')}}">
                 <img src="{{asset('img/Certificado.jpg')}}" class="card-img-top imgAdmin" alt="Certificado">
               </a>
               <div class="card-body bg-red">
@@ -28,7 +28,7 @@
           </div>
           <div class="col-md-6 col-sm-12 ">
             <div class="card w-75 mx-auto">
-              <a href="{{asset('./show_users')}}">
+              <a href="{{route('users.index')}}">
                 <img src="{{asset('img/Usuarios.jpg')}}" class="card-img-top imgAdmin" alt="Usuarios">
               </a>              
               <div class="card-body bg-red">
@@ -38,7 +38,7 @@
           </div>
           <div class="col-md-6 col-sm-12">
             <div class="card w-75 mt-5 ms-5">
-              <a href="{{asset('./certificates')}}">
+              <a href="{{route('certificates')}}">
                 <img src="{{asset('img/GenerarCerti.jpg')}}" class="card-img-top imgAdmin" alt="Generando certificado">
               </a>
               <div class="card-body bg-red">
@@ -48,7 +48,7 @@
           </div>
           <div class="col-md-6 col-sm-12">
             <div class="card w-75 mt-5 mx-auto">
-              <a href="{{asset('./salaries')}}">
+              <a href="#">
                 <img src="{{asset('img/Salario.jpg')}}"   class="card-img-top imgAdmin" alt="Salarios">
               </a>
               <div class="card-body bg-red">

@@ -29,7 +29,7 @@ Route::resource('/salaries', App\Http\Controllers\SalariesController::class)->na
 Route::get('/histories', [App\Http\Controllers\AdminController::class, 'histories'])->name('histories');
 Route::get('/certificates', [App\Http\Controllers\AdminController::class, 'certificates'])->name('certificates');
 Route::get('/error', [App\Http\Controllers\HomeController::class, 'error'])->name('error');
-Route::get('/show_users', [App\Http\Controllers\AdminController::class, 'show_users'])->name('show_users');
+Route::get('/users', [App\Http\Controllers\AdminController::class, 'show_users'])->name('users.index');
 Route::get('/CertificadoLaboral', [App\Http\Controllers\PDFController::class, 'generatePDF'])->name('generatePDF');
 
 Route::get('/prueba', function () {
