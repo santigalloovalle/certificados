@@ -87,7 +87,8 @@ class AdminController extends Controller
     {
         $people = People::find($id);
         $users = User::find($id);
-        if ($users->id_roles != 2) {
+        $people2 = Auth::user();
+        if ($people2->id_roles != 2) {
             return redirect(route('users.index'));
         }
         return view('users.admins.show', compact('people','users'));

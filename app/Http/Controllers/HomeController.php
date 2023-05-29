@@ -38,7 +38,7 @@ class HomeController extends Controller
                 }
                 else{
                     if ($people->id_contracts == '1'){
-                        return redirect(route('home'));
+                        return view('home');
                     }
                     elseif($people->id_roles == '1'){
                         return redirect(route('auth.error', compact('error')));
@@ -49,7 +49,7 @@ class HomeController extends Controller
                 }
                 break;
             default:
-            $people = DB::table('people')->where('id_users', $people->id)->first();
+            return redirect(route('users.index'));
             break;
         }
     }

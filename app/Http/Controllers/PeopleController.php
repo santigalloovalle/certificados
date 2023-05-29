@@ -109,7 +109,7 @@ class PeopleController extends Controller
         $people->save();
         $users->save();
 
-        return redirect(route('users.index'));
+        return redirect(route('home'));
     }
 
     /**

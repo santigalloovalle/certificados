@@ -50,7 +50,7 @@
       <div class="col-md-8 offset-md-4">
         <div class="col-md-8 offset-md-2">
             <a href="{{route('admins.edit', $people->id)}}"><button type="submit" class="btn btn-blue">
-                {{ __('Enviar') }}
+                {{ __('Editar') }}
             </button></a>
         </div>
     </div>
