@@ -12,41 +12,84 @@
   <!--Filtros de búsqueda-->
     <section class="text-center m-5" id="rol">
       <!--Filtro selección de cargo-->
-    <select class="p-2" id="filtro">
-      @foreach ($roles as $role)
-      <option value="{{$role->id}}">
-        {{$role->role}}
-      </option>
-      @endforeach       
-    </select>
-
-      <!--Botón para volver-->
-      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <a href="{{asset('/admins')}}"><button class="btn btn-outline-danger" id=""><i class="fa-solid fa-arrow-left px-3 justify-content-center"></button></i></a>
-      </div>
-    <!--Tabla de historial de los certificados imprimidos o descargados-->
-    <div class="container-fluid mt-4">
-      <table class="table table-blue text-light table-bordered " id="tabla">
-        <thead>
-            <tr>
-              <th scope="col">Nombre Completo</th>
-              <th scope="col">Correo institucional</th>
-              <th scope="col">Rol</th>
-              <th colspan="2" scope="col">Acciones</th>
-            </tr>
-        </thead>
-        <tbody class="table-group-divider">
-          @foreach ($users as $user)
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+  <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+  
+  
+  <div class="select">
+      <select id="age">
+          <option value="">- Select -</option>
+          <option value="Tokyo">Tokyo</option>
+          <option value="Edinburgh">Edinburgh</option>
+      </select>
+  </div>
+  
+  <div class="select">
+      <select id="position">
+          <option value="">- Select -</option>
+          <option value="accountant">Accountant</option>
+          <option value="system architect">System Architect</option>
+      </select>
+  </div>
+  
+  
+  <table id="example" class="display" style="width:100%">
+      <thead>
           <tr>
-            <td scope="col"> {{$user->name}}</td>
-            <td scope="col"> {{$user->email}}</td>
-            <td scope="col"> {{$user->roles->role}}</td>
-            <td><div class="btn-group " role="group" aria-label="Button group name"><a href="{{route('admins.edit', $user->id)}}"> <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-pen"></i></button></a></td>
-            <td><div class="btn-group " role="group" aria-label="Button group name"><a href="{{route('generatePDF', $user->id)}}"> <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-file-pdf"></i></button></a></td>
+              <th>Name</th>
+              <th>Position</th>
+              <th>Office</th>
+              <th>Age</th>
+              <th>Start date</th>
+              <th>Salary</th>
           </tr>
-          @endforeach
-        </tbody>
-      </table>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Tiger Nixon</td>
+              <td>System Architect</td>
+              <td>Edinburgh</td>
+              <td>61</td>
+              <td>2011-04-25</td>
+              <td>$320,800</td>
+          </tr>
+          <tr>
+              <td>Garrett Winters</td>
+              <td>System Architect</td>
+              <td>Tokyo</td>
+              <td>63</td>
+              <td>2011-07-25</td>
+              <td>$162,700</td>
+          </tr>
+          <tr>
+              <td>Ashton Cox</td>
+              <td>System Architect</td>
+              <td>Accountant Land</td>
+              <td>66</td>
+              <td>2009-01-12</td>
+              <td>$162,700</td>
+          </tr>
+          <tr>
+              <td>Cedric Kelly</td>
+              <td>Accountant</td>
+              <td>Edinburgh</td>
+              <td>22</td>
+              <td>2012-03-29</td>
+              <td>$433,060</td>
+          </tr>
+          <tr>
+              <td>Airi Satou</td>
+              <td>Accountant</td>
+              <td>Tokyo</td>
+              <td>33</td>
+              <td>2008-11-28</td>
+              <td>$162,700</td>
+          </tr>
+      </tbody>
+  </table>
     </div>
     </section>
 @endsection
