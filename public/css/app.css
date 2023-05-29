@@ -10899,13 +10899,28 @@ textarea.form-control-lg {
 #myModal{
   background: #FFFFFF20;
 }
-.modal-header{
-  background: #06357a;
-  color: white;
+.modal-body{
+  border: 25px solid #06357a;
+  border-radius: 5px;
+  text-align: center;
 }
-.modal-header button{
-  color: red;
+.modal-body h2{
+  font-size: 24px;
+  width: 90%;
+  margin: 0vh 0 0 1vw;
+}
+.close-modal{
   opacity: 100%;
-  text-shadow: none;
-  margin-left: 9vw;
+  background: none;
+  border: none;
+  font-size: 25px;
+  margin-left: 20.5vw;
+  margin-top: -2.5vh;
+}
+.close-modal i{
+  color: red;
+  font-size: 28px;
+}
+.w-modal{
+  width: 65%;
 }

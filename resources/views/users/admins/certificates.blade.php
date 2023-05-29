@@ -20,7 +20,7 @@
                     
                 <!-- contenido card -->
                 <div class=" card-body">
-                       <form method="post" action="Docente.php">
+                       <form method="post" action="">
                 <div class="card-body">
                        <form method="post" >
 
@@ -42,35 +42,30 @@
 
                         <div class="row mt-2"> 
                             <div class="col-12 offset-lg-5 offset-4">
-                                <button class="btn btn-blue w-25" type="submit" data-toggle="modal" data-target="#modal">Generar</button>
-                                <!--Confirmación de fecha de documento antes de descargar el certificado por seguridad-->
                                 <div id="modal" class="descargar modal fade" role="dialog">
-                                    <h2>Para continuar, valida la fecha de expedición de tu documento.</h2>
                                     <form>
-                                        <input type="date" class="date">
                                         <button class="continue1" type="submit" value="Generate PDF">Continuar</button>    
                                     </form>
                                         <button id="btn-cerrar-modal" class="mt-5"><a href="">Cerrar</a></button>
                                 </div>
-                            </div>
-                            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+                                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
                                 <!-- Modal -->
                                 <div class="modal fade" id="myModal" role="dialog">
                                     <div class="modal-dialog">
                                     <!-- Modal content-->
                                         <div class="modal-content">
-                                            <div class="modal-header ps-5">
-                                                <button type="button" class="close ms-5 text-danger" data-dismiss="modal">&times;</button>
-                                            </div>
                                             <div class="modal-body">
-                                                <p>Some text in the modal.</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                <button class="close-modal" data-dismiss="modal"><i class="fa-solid fa-circle-xmark"></i></button>
+                                                <h2>Para continuar, valida la fecha de expedición de tu documento.</h2>
+                                                <form class="mt-5 d-grid m-auto w-modal">
+                                                    <input type="date" class="mb-4 text-center h-100">
+                                                    <a class="text-white" href="CertificadoLaboral"><button class=" mt-4  m-auto w-50 h-70 bg-blue" type="submit" value="Generate PDF">Generar</button></a>   
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
-                                </div>    
+                                </div>
+                            </div>    
                     </form>
                 </div>
             </div>
