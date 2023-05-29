@@ -14,13 +14,12 @@
             <a href="{{asset('/admins')}}"><button class="btn btn-outline-danger" id=""><i class="fa-solid fa-arrow-left px-3"></button></i></button></a>
         </div>
 
-        <section class="container mt-5 w-50">
+        <section class="formsCards container mt-5 w-50">
+            <h3> El certificado contendrá su nombre y documento de identidad. En caso de requerir algún dato adicional, seleccione a continuación.</h3>
             <div class="card">
-                <div class="card-header text-center">
-                    <h4> El certificado contendrá su nombre y documento de identidad. En caso de requerir algún dato adicional, seleccione a continuación.</h4>
-                </div>
+                    
                 <!-- contenido card -->
-                <div class="card-body">
+                <div class=" card-body">
                        <form method="post" action="Docente.php">
 
                         <div class="row">

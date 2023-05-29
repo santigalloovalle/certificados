@@ -53,16 +53,19 @@
                         @auth
                         @if(Auth::user()->id_roles =='2')
                                 <li class="nav-item">
-                                    <a class="nav-link active text-light rounded" aria-current="page" href="/histories">Historial Certificados</a>
+                                    <a class="nav-link active text-light rounded {{request()->routeIs('customers.index') ? 'active' : ''}}" aria-current="page" href="/histories">Historial Certificados</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active text-light rounded" aria-current="page" href="/show_users">Control usuarios</a>
+                                    <a class="nav-link active text-light rounded {{request()->routeIs('customers.index') ? 'active' : ''}}" aria-current="page" href="/salaries">Editar salario</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active text-light rounded" aria-current="page" href="/certificates">Crear certificado</a>
+                                    <a class="nav-link active text-light rounded {{request()->routeIs('customers.index') ? 'active' : ''}}" aria-current="page" href="/show_users">Control usuarios</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active text-light rounded" aria-current="page" href="/admins">Inicio</a>
+                                    <a class="nav-link active text-light rounded {{request()->routeIs('customers.index') ? 'active' : ''}}" aria-current="page" href="/certificates">Crear certificado</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active text-light rounded {{request()->routeIs('customers.index') ? 'active' : ''}}" aria-current="page" href="/admins">Inicio</a>
                                 </li>
                             @endif
                         @endauth
@@ -125,7 +128,7 @@
     </div>
       <!--footer-->
   <footer>
-    <div class="bg-blue text-center  text-light mt-3 p-4">
+    <div class="bg-blue text-center  text-light mt-5 p-4">
             <img src="{{asset('img/LogoFooter.png')}}" alt="Logo uniempresarial y cámara de comercio" class="container">
             <p class="mb-0">Institución de educación superior sujeta a la inspección y vigilancia del Ministerio de Educación / SNIES 2738</p>
         </div>

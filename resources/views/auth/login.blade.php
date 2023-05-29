@@ -14,7 +14,7 @@
     </section>
       
       <!--formulario inicio sesión-->
-      <section class="inicioSesion container mt-5">
+      <section class="formsCards container mt-5 ">
         <h3 class="d-flex justify-content-center">Iniciar sesión</h3>
             <div class="col-md-12">
                 <div class="card">
