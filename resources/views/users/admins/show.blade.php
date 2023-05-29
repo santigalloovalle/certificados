@@ -47,9 +47,13 @@
         <h4 class="py-2"><b class="pe-3">Cargo:</b> {{$people->onus}}</h4>
         <h4 class="py-2"><b class="pe-3">Area:</b> {{$people->area}}</h4>
       </div>
+      <div class="col-md-8 offset-md-4 mb-5">
         <div class="col-md-8 offset-md-2">
-          <a name="" id="" href="{{route('admins.edit', $people->id)}}" role="button"><button type="submit" class="btn btn-blue">Editar</button></a>
+            <button type="submit" class="btn btn-blue">
+                {{ __('Enviar') }}
+            </button>
         </div>
+    </div>
       </div>
     </div>      
   </div>
