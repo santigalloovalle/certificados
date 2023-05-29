@@ -102,17 +102,9 @@ class PeopleController extends Controller
     {
         $people = People::find($id);
         $users = User::find($id);
-        $users->name = $request->name;        
         $people->id_documents = $request->type;
         $people->doc = $request->doc; 
-        $people->id_contracts = $request->contract;   
-        $people->salary = $request->salary;
-        $people->date_i = $request->date_i;
-        $people->date_f = $request->date_f;
-        $people->onus = $request->onus;
-        $people->area = $request->area;
-        $people->pay_per_hour = $request->pay_per_hour;
-        $users->id_roles = $request->role;
+        $people->date = $request->date;
         $people->id_users = $request->id_users;
         $people->save();
         $users->save();

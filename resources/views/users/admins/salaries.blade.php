@@ -29,21 +29,12 @@
                 <div class="col-md-6">
                     <div class="card">
                         <div class="card-body">
-                        
                         <div class="row mb-3">
                           <label for="" class="col-md-4 col-form-label text-md-start">{{ __('Nuevo salario') }}</label>
                           <div class="col-md-6">    
                           <input id="salary" type="number" class="form-control @error('') is-invalid @enderror" name="salary" value="{{$people->salary}}" required autocomplete="salary" autofocus>
                           </div>
-                      </div>
-
-                        <div class="row mb-5">
-                        <label for="#" class="col-md-4 col-form-label text-md-start">{{ __('Este cambio se verá reflejado a partir de:') }}</label>
-                        
-                        <div class="col-md-6">    
-                            <input id="#" type="date" class="form-control required autocomplete=" autofocus>
-                        </div> 
-                      </div>
+                        </div>
                     <!--Botones para guardar o cancelar los cambios a los usuarios -->
                     <div class="row mb-3">
                       <div class="col-md-2 offset-md-3">

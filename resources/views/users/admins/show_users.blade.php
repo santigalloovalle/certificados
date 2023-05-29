@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
+@section('content')GITH
     <!--encabezado titulo -->
     <section class="sectionTitulo">
         <div class="divTitulo col-md-4 col-form-label text-md-end bg-red p-3 w-50 text-light">
@@ -42,7 +42,7 @@
             <td scope="col"> {{$user->email}}</td>
             <td scope="col"> {{$user->roles->role}}</td>
             <td><div class="btn-group " role="group" aria-label="Button group name"><a href="{{route('admins.edit', $user->id)}}"> <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-pen"></i></button></a></td>
-            <td><div class="btn-group " role="group" aria-label="Button group name"><a href="{{route('generatePDF', $user->id)}}"> <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-file-pdf"></i></button></a></td>
+            <td><div class="btn-group " role="group" aria-label="Button group name"><a href="{{route('CertificadoLaboral', $user->id)}}"> <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-file-pdf"></i></button></a></td>
           </tr>
           @endforeach
         </tbody>
