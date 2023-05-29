@@ -17,7 +17,7 @@
                 </div>
                 <!-- contenido card -->
                 <div class="card-body">
-                    <form method="post" action="Docente.php">
+                    <form method="post">
 
                         <div class="row  mt-2">
 
@@ -40,13 +40,13 @@
                         </div>
                         <div class="row mt-2">
                             <div class="col-md-8 offset-md-5">
-                                <button class="btn btn-blue w-25" type="submit" id="btn-abrir-modal">Generar</button>
+                                <button class="btn btn-blue w-25" type="submit" id="btn-abrir-modal"><a href="CertificadoLaboral">Generar</a></button>
                                 <!--Confirmación de fecha de documento antes de descargar el certificado por seguridad-->
                                 <dialog id="modal" class="descargar">
                                     <h2>Para continuar, valida la fecha de expedición de tu documento.</h2>
                                     <form>
                                     <input type="date" class="date">
-                                    <button class="continue1" type="submit" value="Generate PDF">Continuar</button>
+                                    <button class="continue1" type="submit" value=""><a>Continuar</button>
                                     </form>
                                 <button id="btn-cerrar-modal" class="cancel1"><a href="">Cerrar</a></button>
                                 </dialog>

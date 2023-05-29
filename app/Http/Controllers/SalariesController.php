@@ -82,7 +82,7 @@ class SalariesController extends Controller
         $people->id_users = $request->id_users;
         $people->save();
 
-        return redirect(route('users.admins.salaries'));
+        return redirect(route('salaries.edit',$people));
     }
 
     /**
