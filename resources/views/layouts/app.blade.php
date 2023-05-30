@@ -25,8 +25,8 @@
     <!-- CSS -->
     <link href="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.css" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+ 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
@@ -48,9 +48,10 @@
                             <a href="https://www.instagram.com/uniempresarial/"><i class="text-light fa-brands fa-instagram m-1"></i></a>
                             <a href="https://www.facebook.com/uniempresarial"><i class="text-light fa-brands fa-facebook-f m-1"></i></a>
                             <a href="https://twitter.com/uempresarial"><i class="text-light fa-brands fa-twitter m-1"></i></a>
+                            <a class="text-light" href="https://login.microsoftonline.com/login.srf"><i class="text-light fa-solid fa-envelope"></i> Mail corporativo</a>
                         </div>
                     </ul>
-                    <a class="text-light mail" href="https://login.microsoftonline.com/login.srf"><i class="text-light fa-solid fa-envelope"></i> Mail corporativo</a>
+                    
                     <ul class="navbar-nav ms-auto">
                         <!-- Right Side Of Navbar -->               
                         <!-- Authentication Links -->

@@ -48,24 +48,23 @@
                                     </form>
                                         <button id="btn-cerrar-modal" class="mt-5"><a href="">Cerrar</a></button>
                                 </div>
-                                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-                                <!-- Modal -->
-                                <div class="modal fade" id="myModal" role="dialog">
-                                    <div class="modal-dialog">
-                                    <!-- Modal content-->
-                                        <div class="modal-content">
-                                            <div class="modal-body">
-                                                <button class="close-modal" data-dismiss="modal"><i class="fa-solid fa-circle-xmark"></i></button>
-                                                <h2>Para continuar, valida la fecha de expedición de tu documento.</h2>
-                                                <form class="mt-5 d-grid m-auto w-modal">
-                                                    <input type="date" class="mb-4 text-center h-100">
-                                                    <a class="text-white" href="CertificadoLaboral"><button class=" mt-4  m-auto w-50 h-70 bg-blue" type="submit" value="Generate PDF">Generar</button></a>   
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>    
+                            <a href="#modal1" class="text-white bg-blue text-white border-none mt-4 w-100 ">
+                            <button type="button" class="btn btn-info btn-lg text-white bg-blue text-white border-none mt-4 w-25 m-auto" data-toggle="modal" data-target="#myModal">
+                                <a href="#modal1" class="text-white bg-blue text-white border-none"> Descargar </a><i class="fa-solid fa-download text-white"></i>
+                            </button>
+                        </a>
+                            <div id="modal1" class="modalmask p-5">
+                                <div class="modalbox movedown">
+                                    <a href="#close" title="Close" class="close bg-white border-none"><i class="fa-solid fa-circle-xmark text-danger bg-white"></i></a>
+                                    <h2><strong>Importante</strong></h2>
+                                    <form action="" class="mt-4 d-grid m-auto">
+                                        <h5> Valida la fecha de expedición de tu documento para continuar.</h5>
+                                        <input name="confirmdate" type="date" class=" my-2 h-70 py-1 text-center">
+                                        <button class="mt-2 botonmodal w-50 h-70 bg-blue" type="submit" value="Generate PDF"><a class="text-white" href="CertificadoLaboral">Generar</a></button>   
+                                    </form>
+                                </div>
+                            </div>
                     </form>
                 </div>
             </div>
