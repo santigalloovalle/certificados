@@ -1,9 +1,11 @@
 <?php
   
 namespace App\Http\Controllers;
-  
+
+use App\Models\Certificates;
 use Illuminate\Http\Request;
 use App\Models\People;
+use App\Models\User;
 use App\Models\Document;
 use Barryvdh\DomPDF\PDF as DomPDFPDF;
 use Illuminate\Support\Facades\Auth;
@@ -31,7 +33,7 @@ class PDFController extends Controller
         }
     }
 
-    public function generatePDF()
+    public function generatePDF(Request $request)
     {
         $meses_en = array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
         $meses_es = array('enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre');
@@ -117,6 +119,22 @@ class PDFController extends Controller
           
         $pdf = PDF::loadView('myPDF', $data);
     
+
+        $certificate = new Certificates();
+        date_default_timezone_set("America/Bogota");
+        $certificate->fecha_descarga = date("y.m.d"); 
+        $certificate->hora_descarga = date("H:i:s"); 
+        $certificate->id_roles = $user->id_roles;
+        $certificate->id_users = $user->id;
+        $certificate->save();
+
         return $pdf->download('CertificadoLaboral.pdf');
     }
+    public function store(Request $request, $id)
+    {
+        
+    }
+
+
+    
 }

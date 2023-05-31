@@ -61,7 +61,7 @@
                                     <form action="" class="mt-4 d-grid m-auto">
                                         <h5> Valida la fecha de expedición de tu documento para continuar.</h5>
                                         <input name="confirmdate" type="date" class=" my-2 h-70 py-1 text-center">
-                                        <button class="mt-2 botonmodal w-50 h-70 bg-blue" type="submit" value="Generate PDF"><a class="text-white" href="CertificadoLaboral">Generar</a></button>   
+                                        <button class="mt-2 botonmodal w-50 h-70 bg-blue" type="submit" value="Generate PDF" name="confirmdate"><a class="text-white" href="CertificadoLaboral">Generar</a></button>   
                                     </form>
                                 </div>
                             </div>
