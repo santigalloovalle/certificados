@@ -21,10 +21,10 @@
 
     @switch($id_roles)
     @case('2')
-    < class="textContent">Que el señor(a) <b>{{ $name }}</b> identificado(a) con <b> {{ $t_doc }} </b> No. <b>{{ $doc }}</b>, está vinculado(a) con la Fundación Universitaria Empresarial de la Cámara de Comercio de Bogotá Uniempresarial con NIT 830.084.876-6, desempeñando el cargo de <b>{{ $onus }}</b>, 
+    <p class="textContent"> Que el señor/a <b>{{ $name }}</b> identificado/a con <b> {{ $t_doc }} </b> No. <b>{{ $doc }}</b>, está vinculado/a con la Fundación Universitaria Empresarial de la Cámara de Comercio de Bogotá Uniempresarial con NIT 830.084.876-6, desempeñando el cargo de <b>{{ $onus }}</b>, 
 
-    @if (){
-        mediante un contrato a {{ $contract }}
+     @if (){
+        mediante un contrato a {{ $contract }}.
     }
     @if (){
         desde el {{ $date_i }} hasta el {{$date_f}}. 
