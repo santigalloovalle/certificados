@@ -49,7 +49,7 @@ class HomeController extends Controller
                 }
                 break;
             default:
-            return redirect(route('users.index'));
+            return view('users.index');
             break;
         }
     }

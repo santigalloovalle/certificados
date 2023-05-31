@@ -189,6 +189,7 @@ class AdminController extends Controller
         if ($people->id_roles != 2) {
             return redirect(route('users.index'));
         }
+        
         return view('users.admins.show_users', compact('users','roles'));
 
     }
