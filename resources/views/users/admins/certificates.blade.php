@@ -27,17 +27,21 @@
                         <div class="row">
                             <div class="form-check">
                                 <input class="form-check-input col-2 rounded " type="checkbox" id="salario">
-                                <label class="form-check-label col-4 ms-4 fs-5" for="salario">Salario</label>
+                                <label class="form-check-label col-4 ms-4 fs-5" name="salario" for="salario">Salario</label>
                             </div>
-
                             <div class="form-check">  
                                 <input class="form-check-input col-2 rounded " type="checkbox" id="tipoContrato">
-                                <label class="form-check-label col-4 ms-4 fs-5" for="form-check-label">Tipo de Contrato</label>
+                                <label class="form-check-label col-4 ms-4 fs-5" for="tipoContrato">Tipo de Contrato</label>
                             </div> 
                             <div class="form-check">
-                                <input class="form-check-input col-2 rounded " type="checkbox" id="fechaIngreso">
-                                <label class="form-check-label col-4 ms-4 fs-5" for="form-check-label">Fecha de Ingreso</label>
+                                <input class="form-check-input col-2 rounded " type="checkbox" id="fecha">
+                                <label class="form-check-label col-4 ms-4 fs-5" for="form-check-label">Fecha de Ingreso y Salida</label>
                             </div>
+                            <div class="form-check">
+                                <input class="form-check-input col-2 rounded" type="checkbox" id="pay_per_hour">
+                                <label class="form-check-label col-4 ms-4 fs-5" for="Pago">Pago por hora</label>
+                            </div>
+                        </div>
                         </div>
 
                         <div class="row mt-2"> 

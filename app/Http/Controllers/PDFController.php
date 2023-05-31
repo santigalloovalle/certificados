@@ -94,12 +94,18 @@ class PDFController extends Controller
             return trim($words);
         }
 
+        $contract_check = isset($salario) && $salario;
+        $tipoContratoCheckbox = isset($tipoContrato) && $tipoContrato;
+        $fechaCheckbox = isset($fecha) && $fecha;
+        $payPerHourCheckbox = isset($pay_per_hour) && $pay_per_hour;
 
         $user = Auth::user();
         $people = People::find($user->id);
 
         $salary = $people->salary;
         $salary = convertNumberToWords($salary);
+        $pay_per_hour = $people->pay_per_hour;
+        $pay_per_hour = convertNumberToWords($pay_per_hour);
         $data = [
             'title' => 'CERTIFICA',
             'name' => $user->name,
@@ -109,6 +115,7 @@ class PDFController extends Controller
             'id_roles' => $user->id_roles,
             'date_i' => $people->date_i,
             'salary' => $salary,
+            'pay_per_hour' => $pay_per_hour,
             'date_f' => $people->date_f,
             'onus' => $people->onus,
             'area' => $people->area,
@@ -126,6 +133,7 @@ class PDFController extends Controller
         $certificate->hora_descarga = date("H:i:s"); 
         $certificate->id_roles = $user->id_roles;
         $certificate->id_users = $user->id;
+        $id;
         $certificate->save();
 
         return $pdf->download('CertificadoLaboral.pdf');

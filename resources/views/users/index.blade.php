@@ -22,20 +22,20 @@
                         <div class="row  mt-2">
 
                             <div class="form-check">
-                                <input class="form-check-input rounded-5" type="checkbox" id="salario">
-                                <label class="form-check-label ms-4 fs-4" for="salario">Salario</label>
+                                <input class="form-check-input col-2 rounded " type="checkbox" id="salario">
+                                <label class="form-check-label col-4 ms-4 fs-5" for="salario">Salario</label>
                             </div>
-                        </div>
-                        <div class="row mt-2">
                             <div class="form-check">  
-                                <input class="form-check-input rounded-pill" type="checkbox" id="tipoContrato">
-                                <label class="form-check-label ms-4 fs-4" for="contrato">Tipo de Contrato</label>
-                            </div>
-                        </div>
-                        <div class="row mt-2">
+                                <input class="form-check-input col-2 rounded " type="checkbox" id="tipoContrato">
+                                <label class="form-check-label col-4 ms-4 fs-5" for="tipoContrato">Tipo de Contrato</label>
+                            </div> 
                             <div class="form-check">
-                                <input class="form-check-input rounded-pill" type="checkbox" id="fechaIngreso">
-                                <label class="form-check-label ms-4 fs-4" for="Ingreso">Fecha de Ingreso</label>
+                                <input class="form-check-input col-2 rounded " type="checkbox" id="fechaIngreso">
+                                <label class="form-check-label col-4 ms-4 fs-5" for="form-check-label">Fecha de Ingreso y Salida</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input col-2 rounded" type="checkbox" id="pay_per_hour">
+                                <label class="form-check-label col-4 ms-4 fs-5" for="Pago">Pago por hora</label>
                             </div>
                         </div>
                         <div class="row mt-2">
