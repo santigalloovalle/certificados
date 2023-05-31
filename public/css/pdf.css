@@ -20,7 +20,7 @@ body{
 }
 .foot{
     margin: 0;
-}
+}   
 .foot1{
     font-size: 12px;
 }
@@ -29,17 +29,18 @@ body{
 }
 .foooter{
     background: url(../);
-    width: 100%;
+    width: 100vw;
 }
 img{
-    margin-left: -10%;
+    margin-left: -15%;
     width: 120%;
 }
 .img1{
     margin-top: -8%;
 }
 .img2{
-    margin-top: 22%;
+    margin-top: 30%;
+    width: 100vw;
 }
 .titleCertificado{
     margin-top: 20%;

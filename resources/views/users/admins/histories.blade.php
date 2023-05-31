@@ -3,6 +3,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
 
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+    
+@endsection
 @section('content')
     <!--encabezado titulo -->
     <section class="sectionTitulo">
@@ -15,14 +18,6 @@
   <!--Filtros de búsqueda-->
     <section class="text-center m-5">
       <!--Filtro selección de cargo-->
-    <select class="p-2" id="filtro">
-        <option selected value="0">Filtros</option>
-        @foreach ($roles as $role)
-        <option value="{{$role->id}}">
-          {{$role->role}}
-        </option>
-        @endforeach     
-    </select>
     
       <!--Botón para volver-->
       <div class="d-grid gap-2 d-md-flex justify-content-end">
@@ -30,12 +25,13 @@
       </div>
     <!--Tabla de historial de los certificados imprimidos o descargados-->
     <div class="container-fluid mt-4">
-      <table class="table table-blue text-light table-bordered ">
+      <table class="table table-blue text-light table-bordered " id="myTable">
         <thead>
             <tr>
               <td scope="col">Nombre Completo</td>
               <td cscope="col">Rol</td>
-              <td colspan="2" scope="col">Fecha/Hora</td>
+              <td scope="col">Fecha</td>
+              <td scope="col">Hora</td>
             </tr>
         </thead>
         <tbody class="table-group-divider">
@@ -52,10 +48,10 @@
       </table>
     </div>
   </section>
-    <script>
-      $(document).ready( function () {
-    $('filtro').DataTable();
+  <script>
+    $(document).ready( function () {
+  $('#myTable').DataTable();
 } );
-    </script>  
+  </script>
 @endsection
 

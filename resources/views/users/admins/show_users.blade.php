@@ -17,13 +17,6 @@
   <!--Filtros de búsqueda-->
     <section class="text-center m-5" id="rol">
       <!--Filtro selección de cargo-->
-    <select class="p-2" id="filtro">
-      @foreach ($roles as $role)
-      <option value="{{$role->id}}">
-        {{$role->role}}
-      </option>
-      @endforeach       
-    </select>
 
       <!--Botón para volver-->
       <div class="d-grid gap-2 d-md-flex justify-content-md-end">

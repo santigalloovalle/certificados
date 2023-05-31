@@ -7,7 +7,7 @@
     <link href="\xampp\htdocs\certificados\public\css/pdf.css" rel="stylesheet">
 </head>
 <body>
-    <!--<img src="img/header.png" alt="" class="img1">-->
+    <img src="img/header.png" alt="" class="img1">
     <!--"Header"-->
     <div class="container">
     <p class="title"> <b> LA FUNDACIÓN UNIVERSITARIA EMPRESARIAL DE LA CÁMARA DE COMERCIO DE BOGOTÁ
@@ -50,6 +50,6 @@
 <p class="foot1"><b>Proyectó:</b> Nicol Valencia – Profesional de Nómina y Contratación<br>
 <b>202211031-348</b></p>
 </section class="margen">
-<!--    <img src="img/footerpdf.png" alt="" class="img2 fixed-bottom">-->
+<img src="img/footerpdf.png" alt="" class="img2 fixed-bottom">
 </body>
 </html>
