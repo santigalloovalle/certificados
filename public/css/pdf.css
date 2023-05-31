@@ -11,7 +11,8 @@ body{
 }
 
 .textContent{
-    text-align: justify;
+    margin-top: 30%;
+    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
 .bodyText{
@@ -41,5 +42,6 @@ img{
     margin-top: 22%;
 }
 .titleCertificado{
+    margin-top: 20%;
     text-align: center;
 }

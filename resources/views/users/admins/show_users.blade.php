@@ -1,5 +1,10 @@
 @extends('layouts.app')
+@section('head')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
 
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+@endsection
 @section('content')
     <!--encabezado titulo -->
     <section class="sectionTitulo">
@@ -26,13 +31,14 @@
       </div>
     <!--Tabla de historial de los certificados imprimidos o descargados-->
     <div class="container-fluid mt-4">
-      <table class="table table-blue text-light table-bordered " id="tabla">
+      <table class="table table-blue text-light table-bordered " id="myTable">
         <thead>
             <tr>
               <th scope="col">Nombre Completo</th>
               <th scope="col">Correo institucional</th>
               <th scope="col">Rol</th>
-              <th colspan="2" scope="col">Acciones</th>
+              <th scope="col">Editar</th>
+              <th scope="col">Acciones</th>
             </tr>
         </thead>
         <tbody class="table-group-divider">
@@ -48,5 +54,10 @@
         </tbody>
       </table>
     </div>
-    </section>
+  </section>
+    <script>
+      $(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+    </script>
 @endsection
