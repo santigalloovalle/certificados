@@ -23,16 +23,6 @@ class PDFController extends Controller
         $this->middleware('auth');
     }
 
-    public function confirmDate()
-    {
-        $user = Auth::user();
-        $people = People::find($user->id);
-
-        if($date==confirmdate){
-            return $pdf->download('CertificadoLaboral.pdf');
-        }
-    }
-
     public function generatePDF(Request $request)
     {
         $meses_en = array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
@@ -94,10 +84,6 @@ class PDFController extends Controller
             return trim($words);
         }
 
-        $contract_check = isset($salario) && $salario;
-        $tipoContratoCheckbox = isset($tipoContrato) && $tipoContrato;
-        $fechaCheckbox = isset($fecha) && $fecha;
-        $payPerHourCheckbox = isset($pay_per_hour) && $pay_per_hour;
 
         $user = Auth::user();
         $people = People::find($user->id);
@@ -133,15 +119,11 @@ class PDFController extends Controller
         $certificate->hora_descarga = date("H:i:s"); 
         $certificate->id_roles = $user->id_roles;
         $certificate->id_users = $user->id;
-        $id;
         $certificate->save();
 
+
+
         return $pdf->download('CertificadoLaboral.pdf');
-    }
-    public function store(Request $request, $id)
-    {
-        
-    }
 
 
     

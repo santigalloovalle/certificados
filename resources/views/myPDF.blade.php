@@ -23,7 +23,7 @@
     @case('2')
     <p class="textContent"> Que el señor/a <b>{{ $name }}</b> identificado/a con <b> {{ $t_doc }} </b> No. <b>{{ $doc }}</b>, está vinculado/a con la Fundación Universitaria Empresarial de la Cámara de Comercio de Bogotá Uniempresarial con NIT 830.084.876-6, desempeñando el cargo de <b>{{ $onus }}</b>, 
 
-     @if (){
+     {{-- @if (){
         mediante un contrato a {{ $contract }}.
     }
     @if (){
@@ -35,28 +35,13 @@
 
     @if (){
        .Actualmente devenga un salario de (letras y números) <b>{{ $salary }}</b>.
-    }
+    } --}}
     </p>   
     
     @break
 
     @case('3')
     <p class="textContent"> Que el señor(a) <b>{{ $name }}</b> identificado(a) con <b> {{ $t_doc }} </b> No.<b>{{ $doc }}</b>, está vinculado(a) con la Fundación Universitaria Empresarial de la Cámara de Comercio de Bogotá Uniempresarial con NIT 830.084.876-6. Actualmente desempeña el cargo de DOCENTE con dedicación , 
-
-    
-    @if (){
-        mediante un contrato de {{ $contract }}
-    }
-    @if (){
-        desde el {{ $date_i }} hasta el {{$date_f}}. 
-    }
-    @if (){
-        con un pago por hora de (letras y números) <b>{{ $pay_per_hour }}</b>. 
-    }
-
-    @if (){
-        devengando un salario de (letras y números) <b>{{ $salary }}</b>.
-    }
 
 </p>
         @break
@@ -72,19 +57,6 @@
 
 devengando un salario de (letras y números) <b>{{ $salary }}</b>.
 
-    @if (){
-        mediante un contrato de {{ $contract }}
-    }
-    @if (){
-        desde el {{ $date_i }} hasta el {{$date_f}}. 
-    }
-    @if (){
-        con un pago por hora de (letras y números) <b>{{ $pay_per_hour }}</b>. 
-    }
-
-    @if (){
-        devengando un salario de (letras y números) <b>{{ $salary }}</b>.
-    }
 
 </p>
     @break

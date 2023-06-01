@@ -38,20 +38,31 @@
                                 <label class="form-check-label col-4 ms-4 fs-5" for="Pago">Pago por hora</label>
                             </div>
                         </div>
-                        <div class="row mt-2">
-                            <div class="col-md-8 offset-md-5">
-                                <button class="btn btn-blue w-25" type="submit" id="btn-abrir-modal"><a href="CertificadoLaboral">Generar</a></button>
-                                <!--Confirmación de fecha de documento antes de descargar el certificado por seguridad-->
-                                <dialog id="modal" class="descargar">
-                                    <h2>Para continuar, valida la fecha de expedición de tu documento.</h2>
+                        <div class="row mt-2"> 
+                            <div class="col-12 offset-lg-5 offset-4">
+                                <div id="modal" class="descargar modal fade" role="dialog">
                                     <form>
-                                    <input type="date" class="date">
-                                    <button class="continue1" type="submit" value=""><a>Continuar</button>
+                                        <button class="continue1" type="submit" value="Generate PDF">Continuar</button>    
                                     </form>
-                                <button id="btn-cerrar-modal" class="cancel1"><a href="">Cerrar</a></button>
-                                </dialog>
+                                        <button id="btn-cerrar-modal" class="mt-5"><a href="">Cerrar</a></button>
+                                </div>
+                            </div>    
+                            <a href="#modal1" class="text-white bg-blue text-white border-none mt-4 w-100 ">
+                            <button type="button" class="btn btn-info btn-lg text-white bg-blue text-white border-none mt-4 w-25 m-auto" data-toggle="modal" data-target="#myModal">
+                                <a href="#modal1" class="text-white bg-blue text-white border-none"> Descargar </a><i class="fa-solid fa-download text-white"></i>
+                            </button>
+                        </a>
+                            <div id="modal1" class="modalmask p-5">
+                                <div class="modalbox movedown">
+                                    <a href="#close" title="Close" class="close bg-white border-none"><i class="fa-solid fa-circle-xmark text-danger bg-white"></i></a>
+                                    <h2><strong>Importante</strong></h2>
+                                    <form action="" class="mt-4 d-grid m-auto">
+                                        <h5> Valida la fecha de expedición de tu documento para continuar.</h5>
+                                        <input name="confirmdate" type="date" class=" my-2 h-70 py-1 text-center">
+                                        <button class="mt-2 botonmodal w-50 h-70 bg-blue" type="submit" value="Generate PDF" name="confirmdate"><a class="text-white" href="CertificadoLaboral">Generar</a></button>   
+                                    </form>
+                                </div>
                             </div>
-                        </div>
                     </form>
                 </div>
             </div>
