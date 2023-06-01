@@ -18,9 +18,6 @@ class People extends Model
     public function payments(){
         return $this->belongsTo(Payment::class, 'id_payments');
     }
-    public function users(){
-        return $this->belongsTo(User::class, 'id_users');
-    }
     public function roles(){
         return $this->belongsTo(Role::class, 'id_roles');
     }

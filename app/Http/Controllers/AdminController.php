@@ -60,7 +60,8 @@ class AdminController extends Controller
     public function store(Request $request)
     {
         $people = new People();  
-        $people->id_users = $request->name;        
+        $users = new User();
+        $users->id = $request->name;        
         $people->id_documents = $request->type;
         $people->doc = $request->doc;
         $people->id_roles = $request->role; 
@@ -71,7 +72,7 @@ class AdminController extends Controller
         $people->area = $request->area;
         $people->salary = $request->salary;
         $people->pay_per_hour = $request->pay_per_hour;
-        $people->id_users=$request->id_users;
+        $users->id=$request->id_users;
 
         //$work->id_redes = $request->id_redes;
 
@@ -140,7 +141,6 @@ class AdminController extends Controller
         $people->salary = $request->salary;
         $people->pay_per_hour = $request->pay_per_hour;
         $users->id_roles = $request->role;
-        $people->id_users=$request->id_users;
         $people->save();
         $users->save();
         

@@ -63,7 +63,7 @@ devengando un salario de (letras y números) <b>{{ $salary }}</b>.
     @default
 @endswitch
 <!--"Footer"-->
-<p class="bodyText">El presente certificado se expide a solicitud del interesado a los treinta y uno ({{ $day }}) días del mes de octubre de {{ $year }}.</p><br>
+<p class="bodyText">El presente certificado se expide a solicitud del interesado a los treinta y uno ({{ $day }}) días del mes de ({{ $month }}) de {{ $year }}.</p><br>
         
 <p class="bodyText">Atentamente</p><br>
 <div class="info">

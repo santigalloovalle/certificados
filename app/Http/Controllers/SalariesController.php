@@ -8,6 +8,8 @@ use App\Models\People;
 
 use App\Models\Role;
 
+use App\Models\Role;
+
 class SalariesController extends Controller
 {
     /**
@@ -77,9 +79,10 @@ class SalariesController extends Controller
     public function update(Request $request, $id)
     {
         $people = People::all();
+        $users = User::all();
         $roles = Role::all();
         $people->salary = $request->salary;
-        $people->id_users = $request->id_users;
+        $users->id = $request->id_users;
         $people->save();
 
         return redirect(route('salaries.edit', $people , $roles));

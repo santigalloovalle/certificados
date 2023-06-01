@@ -48,16 +48,6 @@
                                 </div>
                             </div>
                         <div class="row mb-3 ">
-                            <div class="col-md-6 col-form-label ">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="checkbox" id="flexSwitchCheckDefault" {{ old('remember') ? 'checked' : '' }}>
- 
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        {{ __('Recuerdame') }}
-                                    </label>
-                                    
-                                </div>
-                            </div>
                             <div class="col-md-8 offset-md-4">
                                 <div class="col-md-8 offset-md-2">
                                     <button type="submit" class="btn btn-blue">

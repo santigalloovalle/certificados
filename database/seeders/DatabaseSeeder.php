@@ -61,7 +61,7 @@ class DatabaseSeeder extends Seeder
             'type' => 'Cedula de Extranjeria', 
         ]);
         \App\Models\User::factory()->create([
-            "name"=>"admin",
+            "name"=>"Administrador",
             "email"=>"admin@gmail.com",
             "password"=>Hash::make("admin123"),
             "id_roles"=>2
@@ -83,8 +83,7 @@ class DatabaseSeeder extends Seeder
             "onus"=>"asd",
             "area"=>"admin",
             "pay_per_hour"=>123,
-            "id_roles"=>2,
-            "id_users"=>1
+            "id_users"=>1,
         ]);
         \App\Models\People::factory()->create([
             "id_documents"=>3,
@@ -97,8 +96,7 @@ class DatabaseSeeder extends Seeder
             "onus"=>"asd",
             "area"=>"admin",
             "pay_per_hour"=>123,
-            "id_roles"=>3,
-            "id_users"=>2
+            "id_users"=>2,
         ]);
         \App\Models\User::factory(10)->create();
         \App\Models\People::factory(10)->create();

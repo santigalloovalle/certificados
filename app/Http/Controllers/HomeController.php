@@ -33,6 +33,7 @@ class HomeController extends Controller
             case '1':
                 $error = ['name'=>"423",'desc'=>"Locked"];
                 $people = DB::table('people')->where('id_users', $people->id)->first();
+                $users = Auth::user();
                 if ($people->doc == '1') {
                     return redirect(route('people.edit',$people->id));
                 }
@@ -40,7 +41,7 @@ class HomeController extends Controller
                     if ($people->id_contracts == '1'){
                         return view('home');
                     }
-                    elseif($people->id_roles == '1'){
+                    elseif($users->id_roles == '1'){
                         return redirect(route('auth.error', compact('error')));
                     }
                     else{
