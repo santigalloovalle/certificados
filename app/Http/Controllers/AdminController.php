@@ -143,8 +143,15 @@ class AdminController extends Controller
         $people->id_users=$request->id_users;
         $people->save();
         $users->save();
-
-        return redirect(route('admins.show', $id));
+        
+        $users = User::all();
+        $roles = Role::all();
+        $people = Auth::user();
+        if ($people->id_roles != 2) {
+            return redirect(route('users.index'));
+        }
+        
+        return view('users.admins.show_users', compact('users','roles'));
     }
 
 

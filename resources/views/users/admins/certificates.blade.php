@@ -20,8 +20,8 @@
                     
                 <!-- contenido card -->
                 <div class=" card-body">
-                    <form action="" method="POST">
-
+                    <form action="{{route('generatePDF')}}" class="mt-4 d-grid m-auto" method="POST">
+                        @csrf
                         <div class="row">
                             <div class="form-check">
                                 <input class="form-check-input col-2 rounded " type="checkbox" id="salario">
@@ -44,7 +44,7 @@
 
                         <div class="row mt-2"> 
                             <button type="submit" class="btn btn-info btn-lg text-white bg-blue text-white border-none mt-4 w-25 m-auto">
-                                <a href="CertificadoLaboral" class="text-white bg-blue text-white border-none"> Descargar </a><i class="fa-solid fa-download text-white"></i>
+                                <a class="text-white bg-blue text-white border-none"> Descargar </a><i class="fa-solid fa-download text-white"></i>
                             </button>
                             </div>
                     </form>

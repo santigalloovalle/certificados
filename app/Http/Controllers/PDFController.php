@@ -132,7 +132,7 @@ class PDFController extends Controller
                 return $pdf->download('CertificadoLaboral.pdf');
 
             }else{
-                return '<script language="javascript">alert("Error de autentificacion");window.location.href="home"</script>';
+                return '<script language="javascript">alert("Fecha de expedición errónea");window.location.href="home"</script>';
             }
             
         }
