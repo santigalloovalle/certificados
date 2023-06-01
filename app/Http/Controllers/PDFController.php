@@ -81,7 +81,6 @@ class PDFController extends Controller
                 $words .= $units[$number] . ' ';
             }
         
-            return trim($words);
         }
 
 
@@ -119,12 +118,25 @@ class PDFController extends Controller
         $certificate->hora_descarga = date("H:i:s"); 
         $certificate->id_roles = $user->id_roles;
         $certificate->id_users = $user->id;
-        $certificate->save();
+        $confirmdate = $request->confirmdate;
 
+        if($user->id_roles == '2'){
 
+            $certificate->save();
+            return $pdf->download('CertificadoLaboral.pdf');
+        }else{
 
-        return $pdf->download('CertificadoLaboral.pdf');
+            if($confirmdate == $people->date){
+                
+                $certificate->save();
+                return $pdf->download('CertificadoLaboral.pdf');
 
+            }else{
+                return '<script language="javascript">alert("Error de autentificacion");window.location.href="home"</script>';
+            }
+            
+        }
 
-    
-}}
+    }
+
+}
