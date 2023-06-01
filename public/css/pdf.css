@@ -9,14 +9,19 @@ body{
 .nameUni{
     margin-bottom: 5%;
 }
-
-.textContent{
-    margin-top: 30%;
+.title{
+    margin-top: 2%;
     text-align: center;
+}
+.textContent{
+    margin-top: 10%;
     font-family: Arial, Helvetica, sans-serif;
+    line-height: 2em;
 }
 .bodyText{
-   margin-top: 10%; 
+   margin-top: 5%; 
+   font-family: Arial, Helvetica, sans-serif;
+
 }
 .foot{
     margin: 0;
@@ -43,6 +48,10 @@ img{
     width: 100vw;
 }
 .titleCertificado{
-    margin-top: 20%;
+    margin-top: 10%;
     text-align: center;
+}
+.info{
+    margin-top: 12%;
+
 }

@@ -14,10 +14,9 @@
     -UNIEMPRESARIAL-</b>
     </div>
     <br>
-    Personería Jurídica, Resolución 598 del 2 de abril de 2001 del Ministerio de Educación Nacional - Registro ICFES 2738</p>
-    <h3 class="titleCertificado
-    
-    ">{{ $title }}</h3>
+    <p class="title">  Personería Jurídica, Resolución 598 del 2 de abril de 2001 del Ministerio de Educación Nacional - Registro ICFES 2738</p>
+  </p>
+    <h3 class="titleCertificado">{{ $title }}</h3>
 
     @switch($id_roles)
     @case('2')
@@ -67,11 +66,13 @@ devengando un salario de (letras y números) <b>{{ $salary }}</b>.
 <p class="bodyText">El presente certificado se expide a solicitud del interesado a los treinta y uno ({{ $day }}) días del mes de octubre de {{ $year }}.</p><br>
         
 <p class="bodyText">Atentamente</p><br>
-
-<p class="foot">LUZ YAZMÍN LIZARAZO JIMÉNEZ</strong></p>
+<div class="info">
+    <p class="foot">LUZ YAZMÍN LIZARAZO JIMÉNEZ</strong></p>
 <p class="foot">Directora de Talento Humano</p>
 <p class="foot1"><b>Proyectó:</b> Nicol Valencia – Profesional de Nómina y Contratación<br>
 <b>202211031-348</b></p>
+</div>
+
 </section class="margen">
 <img src="img/footerpdf.png" alt="" class="img2 fixed-bottom">
 </body>
