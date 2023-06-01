@@ -1,5 +1,12 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PDFController;
+use App\Http\Controllers\PeopleController;
+use App\Http\Controllers\SalariesController;
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,18 +26,18 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::resource('/users', App\Http\Controllers\UserController::class)->names('users');
-Route::resource('/people', App\Http\Controllers\PeopleController::class)->names('people');
-Route::resource('/admins', App\Http\Controllers\AdminController::class)->names('admins');
-Route::resource('/salaries', App\Http\Controllers\SalariesController::class)->names('salaries');
+Route::resource('/users', UserController::class)->names('users');
+Route::resource('/people', PeopleController::class)->names('people');
+Route::resource('/admins', AdminController::class)->names('admins');
+Route::resource('/salaries', SalariesController::class)->names('salaries');
 
-Route::get('/histories', [App\Http\Controllers\AdminController::class, 'histories'])->name('histories');
-Route::get('/certificates', [App\Http\Controllers\AdminController::class, 'certificates'])->name('certificates');
-Route::get('/error', [App\Http\Controllers\HomeController::class, 'error'])->name('error');
-Route::get('/users', [App\Http\Controllers\AdminController::class, 'show_users'])->name('users.index');
-Route::get('/CertificadoLaboral', [App\Http\Controllers\PDFController::class, 'generatePDF'])->name('generatePDF');
+Route::get('/histories', [AdminController::class, 'histories'])->name('histories');
+Route::get('/certificates', [AdminController::class, 'certificates'])->name('certificates');
+Route::get('/error', [HomeController::class, 'error'])->name('error');
+Route::get('/users', [AdminController::class, 'show_users'])->name('users.index');
+Route::post('/generatePDF', [PDFController::class, 'generatePDF'])->name('generatePDF');
 
 Route::get('/prueba', function () {
     return view();

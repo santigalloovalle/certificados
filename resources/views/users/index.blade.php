@@ -17,8 +17,10 @@
                 </div>
                 <!-- contenido card -->
                 <div class="card-body">
-                    <form method="post">
-
+                    <form action="" class="mt-4 d-grid m-auto" method="POST">
+                        <input type="hidden" name="id_users" value="{{Auth::user()->id}}">
+                        @csrf
+                        @method('PUT')
                         <div class="row  mt-2">
 
                             <div class="form-check">
@@ -52,18 +54,20 @@
                                 <a href="#modal1" class="text-white bg-blue text-white border-none"> Descargar </a><i class="fa-solid fa-download text-white"></i>
                             </button>
                         </a>
-                            <div id="modal1" class="modalmask p-5">
-                                <div class="modalbox movedown">
-                                    <a href="#close" title="Close" class="close bg-white border-none"><i class="fa-solid fa-circle-xmark text-danger bg-white"></i></a>
-                                    <h2><strong>Importante</strong></h2>
-                                    <form action="" class="mt-4 d-grid m-auto">
-                                        <h5> Valida la fecha de expedición de tu documento para continuar.</h5>
-                                        <input name="confirmdate" type="date" class=" my-2 h-70 py-1 text-center">
-                                        <button class="mt-2 botonmodal w-50 h-70 bg-blue" type="submit" value="Generate PDF" name="confirmdate"><a class="text-white" href="CertificadoLaboral">Generar</a></button>   
-                                    </form>
-                                </div>
-                            </div>
+                            
                     </form>
+                    <div id="modal1" class="modalmask p-5">
+                        <div class="modalbox movedown">
+                            <a href="#close" title="Close" class="close bg-white border-none"><i class="fa-solid fa-circle-xmark text-danger bg-white"></i></a>
+                            <h2><strong>Importante</strong></h2>
+                            <form action="{{route('generatePDF')}}" class="mt-4 d-grid m-auto" method="POST">
+                                @csrf
+                                <h5> Valida la fecha de expedición de tu documento para continuar.</h5>
+                                <input name="confirmdate" type="date" class=" my-2 h-70 py-1 text-center">
+                                <button class="mt-2 botonmodal w-50 h-70 bg-blue" type="submit" value="Generate PDF"><a class="text-white">Generar</a></button>   
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
