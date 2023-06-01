@@ -21,7 +21,7 @@
               </h2>
             <h3 class="py-2"><b class="pe-3">Correo:</b> {{$users->email}}</h3>
             <h4 class="py-2"><b class="pe-3">Tipo de Documento:</b> {{$people->documents->type}}</h4>
-            <h4 class="py-2"><b class="pe-3">Documento:</b>       
+            <h4 class="py-2"><b class="pe-3">Documento:</b>
           @if( $people->doc === '1' )
               {{"Por definir"}}
           @else

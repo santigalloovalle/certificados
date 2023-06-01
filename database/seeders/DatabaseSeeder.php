@@ -72,6 +72,34 @@ class DatabaseSeeder extends Seeder
             "password"=>Hash::make("user123"),
             "id_roles"=>1
         ]);
+        \App\Models\People::factory()->create([
+            "id_documents"=>3,
+            "doc"=>1234567890,
+            "date"=>"1981-04-23",
+            "id_contracts"=>2,
+            "salary"=>123,
+            "date_i"=>"1981-04-23",
+            "date_f"=>"1981-04-23",
+            "onus"=>"asd",
+            "area"=>"admin",
+            "pay_per_hour"=>123,
+            "id_roles"=>2,
+            "id_users"=>1
+        ]);
+        \App\Models\People::factory()->create([
+            "id_documents"=>3,
+            "doc"=>1234567890,
+            "date"=>"1981-04-23",
+            "id_contracts"=>1,
+            "salary"=>123,
+            "date_i"=>"1981-04-23",
+            "date_f"=>"1981-04-23",
+            "onus"=>"asd",
+            "area"=>"admin",
+            "pay_per_hour"=>123,
+            "id_roles"=>3,
+            "id_users"=>2
+        ]);
         \App\Models\User::factory(10)->create();
         \App\Models\People::factory(10)->create();
         \App\Models\Certificates::factory(5)->create();
