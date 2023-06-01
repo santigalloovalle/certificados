@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -58,6 +59,18 @@ class DatabaseSeeder extends Seeder
         ]);
         \App\Models\Document::factory()->create([
             'type' => 'Cedula de Extranjeria', 
+        ]);
+        \App\Models\User::factory()->create([
+            "name"=>"admin",
+            "email"=>"admin@gmail.com",
+            "password"=>Hash::make("admin123"),
+            "id_roles"=>2
+        ]);
+        \App\Models\User::factory()->create([
+            "name"=>"user",
+            "email"=>"user@gmail.com",
+            "password"=>Hash::make("user123"),
+            "id_roles"=>1
         ]);
         \App\Models\User::factory(10)->create();
         \App\Models\People::factory(10)->create();
