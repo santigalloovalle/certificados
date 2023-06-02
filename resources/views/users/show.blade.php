@@ -36,7 +36,7 @@
               {{ $people->salary }}
           @endif</h4>
             <h4 class="py-2"><b class="pe-3">Pago por Hora:</b>
-          @if( $people->pay_per_hour === '1' )
+          @if( $people->pay_per_hour == '1' )
               {{"Por definir"}}
           @else
               {{ $people->pay_per_hour }}

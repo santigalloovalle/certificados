@@ -80,6 +80,8 @@ class PDFController extends Controller
             if ($number > 0) {
                 $words .= $units[$number] . ' ';
             }
+            
+            return trim($words);
         
         }
 
@@ -87,20 +89,41 @@ class PDFController extends Controller
         $user = Auth::user();
         $people = People::find($user->id);
 
-        $salary = $people->salary;
-        $salary = convertNumberToWords($salary);
-        $pay_per_hour = $people->pay_per_hour;
-        $pay_per_hour = convertNumberToWords($pay_per_hour);
+        // $rcontract = $request->contract;
+        
+        // if($rcontract ){
+        //     $contract = $people->contracts->contract;
+        // }else{
+        //     $contract = 0;
+        // }
+        // if(){
+        //     $date_i = $people->date_i;
+        // }else{
+        //     $date_i = 0;
+        // }
+        // if(){
+        //     $pay_per_hour = $people->pay_per_hour;
+        //     $pay_per_hour = convertNumberToWords($pay_per_hour);
+        // }else{
+        //     $pay_per_hour = 0;
+        // }
+        // if(){
+        //     $salary = $people->salary;
+        //     $salary = convertNumberToWords($salary);
+        // }else{
+        //     $salary = 0;
+        // }
+
         $data = [
             'title' => 'CERTIFICA',
             'name' => $user->name,
             't_doc' => $people->documents->type,
-            'contract' => $people->contracts->contract,
+            // 'contract' => $contract,
             'doc' => $people->doc,
             'id_roles' => $user->id_roles,
-            'date_i' => $people->date_i,
-            'salary' => $salary,
-            'pay_per_hour' => $pay_per_hour,
+            // 'date_i' => $date_i,
+            // 'salary' => $salary,
+            // 'pay_per_hour' => $pay_per_hour,
             'date_f' => $people->date_f,
             'onus' => $people->onus,
             'area' => $people->area,
@@ -122,6 +145,7 @@ class PDFController extends Controller
 
         if($user->id_roles == '2'){
 
+            return $request->contract;
             $certificate->save();
             return $pdf->download('CertificadoLaboral.pdf');
         }else{

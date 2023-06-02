@@ -17,11 +17,11 @@ return new class extends Migration
             $table->id();
             $table->foreignId('id_documents')->constrained('documents');
             $table->string('doc');
-            $table->string('date');
+            $table->date('date');
             $table->foreignId('id_contracts')->constrained('contracts');
             $table->string('salary');
-            $table->string('date_i');
-            $table->string('date_f');
+            $table->date('date_i');
+            $table->date('date_f');
             $table->string('onus');
             $table->string('area');
             $table->string('pay_per_hour');

@@ -75,11 +75,11 @@ class RegisterController extends Controller
         $people = new People();   
         $people->id_documents = 1;
         $people->doc = 1;
-        $people->date = 1;
+        $people->date = date("Y-m-d");
         $people->id_contracts =1;   
         $people->salary = 1;
-        $people->date_i = 1;
-        $people->date_f = 1;
+        $people->date_i = date("Y-m-d");
+        $people->date_f = date("Y-m-d");
         $people->onus = 1;
         $people->area = 1;
         $people->pay_per_hour = 1;
