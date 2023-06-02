@@ -3,7 +3,7 @@
 @section('content')
 
     <div class=" col-form-label text-md-center text-blue ">
-    <h1>A continuación, llena la siguiente información:</h1>
+    <h1>A continuación, complete la siguiente información:</h1>
     <!--Formulario de registro-->
     </div>
 <div class="container">

@@ -12,7 +12,7 @@
                         </div>
                     @endif
 
-                    {{ __('Tu solicitud ha sido tomada en cuenta') }}
+                    {{ __('Solicitud Procesada') }}
                     <p class="fs-5 mt-3">Podrás descargar tu certificado proximamente </p>
                 </div>
             </div>
