@@ -87,7 +87,7 @@ class PDFController extends Controller
         }
 
 
-        $user = User::find($id);
+        $user = DB::table('users')->where('id', $id)->first();
         $people = People::find($user->id);
         
         if($request->contract == "on" ){

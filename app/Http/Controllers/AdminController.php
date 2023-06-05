@@ -18,6 +18,7 @@ use App\Models\Certificates;
 
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -179,13 +180,14 @@ class AdminController extends Controller
 
     }
 
-    public function certificates()
+    public function certificates($id)
     {
+        $users = DB::table('users')->where('id', $id)->first();
         $people = Auth::user();
         if ($people->id_roles != 2) {
             return redirect(route('users.index'));
         }
-        return view('users.admins.certificates');
+        return view('users.admins.certificates', compact('users'));
     }
 
     public function show_users()

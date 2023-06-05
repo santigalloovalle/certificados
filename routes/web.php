@@ -34,10 +34,10 @@ Route::resource('/admins', AdminController::class)->names('admins');
 Route::resource('/salaries', SalariesController::class)->names('salaries');
 
 Route::get('/histories', [AdminController::class, 'histories'])->name('histories');
-Route::get('/certificates', [AdminController::class, 'certificates'])->name('certificates');
+Route::get('/certificates/{id}', [AdminController::class, 'certificates'])->name('certificates');
 Route::get('/error', [HomeController::class, 'error'])->name('error');
 Route::get('/users', [AdminController::class, 'show_users'])->name('users.index');
-Route::post('/generatePDF', [PDFController::class, 'generatePDF'])->name('generatePDF');
+Route::post('/generatePDF/{id}', [PDFController::class, 'generatePDF'])->name('generatePDF');
 
 Route::get('/prueba', function () {
     return view();

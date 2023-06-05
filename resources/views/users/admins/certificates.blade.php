@@ -20,7 +20,7 @@
                     
                 <!-- contenido card -->
                 <div class=" card-body">
-                    <form action="{{route('generatePDF')}}" class="mt-4 d-grid m-auto" method="POST">
+                    <form action="{{route('generatePDF', $users->id)}}" class="mt-4 d-grid m-auto" method="POST">
                         @csrf
                         <div class="row">
                             <div class="form-check">
