@@ -20,6 +20,7 @@ class CertificatesFactory extends Factory
             'hora_descarga' => $faker->time($format = 'H:i:s', $max = 'now'),
             'id_roles' => $this->faker->randomElement(DB::table('roles')->pluck('id')),
             'id_users' => $this->faker->randomElement(DB::table('users')->pluck('id')),
+            'des_por'=> $faker->name(),
         ];
     }
 }

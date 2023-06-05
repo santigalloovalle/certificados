@@ -19,6 +19,7 @@ class CreateCertificatesTable extends Migration
             $table->char('hora_descarga')->nullable();
             $table->foreignId('id_roles')->constrained('roles');
             $table->foreignId('id_users')->constrained('users');
+            $table->string('des_por');
            
 
             $table->timestamps();

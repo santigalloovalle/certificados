@@ -39,7 +39,7 @@
           @foreach ($certificate as $certificate)
           <tr>
             <td scope="col"> {{$certificate->users->name}}</td>
-            <td scope="col"> </td>
+            <td scope="col"> {{$certificate->des_por}}</td>
             <td scope="col"> {{$certificate->roles->role}}</td> 
             <td scope="col">{{$certificate->fecha_descarga}}</td>
             <td scope="col">{{$certificate->hora_descarga}}</td>

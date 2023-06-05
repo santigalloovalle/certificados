@@ -137,7 +137,7 @@ class PDFController extends Controller
         date_default_timezone_set("America/Bogota");
         $certificate->fecha_descarga = date("y.m.d"); 
         $certificate->hora_descarga = date("H:i:s"); 
-        // $certificate->id_roles = $user->id_roles;
+        $certificate->des_por = $user->name;
         $certificate->id_roles = $user->id_roles;
         $certificate->id_users = $user->id;
         $confirmdate = $request->confirmdate;
