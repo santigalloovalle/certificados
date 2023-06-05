@@ -99,7 +99,7 @@ class PeopleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,$id)
+    public function update(Request $request, $id)
     {
         $people = People::find($id);
         $users = User::find($id);

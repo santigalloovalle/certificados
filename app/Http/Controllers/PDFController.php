@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Models\Document;
 use Barryvdh\DomPDF\PDF as DomPDFPDF;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use PDF;
   
 class PDFController extends Controller
@@ -23,7 +24,7 @@ class PDFController extends Controller
         $this->middleware('auth');
     }
 
-    public function generatePDF(Request $request)
+    public function generatePDF(Request $request, $id)
     {
         $meses_en = array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
         $meses_es = array('enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre');
@@ -86,7 +87,7 @@ class PDFController extends Controller
         }
 
 
-        $user = Auth::user();
+        $user = User::find($id);
         $people = People::find($user->id);
         
         if($request->contract == "on" ){
