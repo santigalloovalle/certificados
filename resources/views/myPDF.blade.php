@@ -19,30 +19,39 @@
     <h3 class="titleCertificado">{{ $title }}</h3>
 
     @switch($id_roles)
-    @case('2')
-    <p class="textContent"> Que el señor/a <b>{{ $name }}</b> identificado/a con <b> {{ $t_doc }} </b> No. <b>{{ $doc }}</b>, está vinculado/a con la Fundación Universitaria Empresarial de la Cámara de Comercio de Bogotá Uniempresarial con NIT 830.084.876-6, desempeñando el cargo de <b>{{ $onus }}</b>, 
+        @case('2')
+            <p class="textContent"> Que el señor/a <b>{{ $name }}</b> identificado/a con <b> {{ $t_doc }} </b> No. <b>{{ $doc }}</b>, está vinculado/a con la Fundación Universitaria Empresarial de la Cámara de Comercio de Bogotá Uniempresarial con NIT 830.084.876-6, desempeñando el cargo de <b>{{ $onus }}</b>, 
 
-     {{-- @if ({{$contract != 0}}){
-        mediante un contrato a {{ $contract }}.
-    }
-    @if ($date_i != 0){
-        desde el {{ $date_i }} hasta el {{$date_f}}. 
-    }
-    @if ($pay_per_hour !=0){
-        con un pago por hora de (letras y números) <b>{{ $pay_per_hour }}</b>. 
-    }
-
-    @if ($salary !=0 ){
-       .Actualmente devenga un salario de (letras y números) <b>{{ $salary }}</b>
-    } --}}
-    </p>   
+            @if ($contract != '0')
+                mediante un contrato a <b>{{ $contract }}</b>.
+            @endif
+            @if ($date_i != '0')
+            desde el <b>{{ $date_i }}</b> hasta el <b>{{$date_f}}</b>. 
+            @endif
+            @if ($pay_per_hour != '0')
+                con un pago por hora de (letras y números) <b>{{ $pay_per_hour }}</b>. 
+            @endif
+            @if ($salary != '0')
+                .Actualmente devenga un salario de (letras y números) <b>{{ $salary }}</b>
+            @endif
+            </p>   
     
     @break
-
     @case('3')
     <p class="textContent"> Que el señor(a) <b>{{ $name }}</b> identificado(a) con <b> {{ $t_doc }} </b> No.<b>{{ $doc }}</b>, está vinculado(a) con la Fundación Universitaria Empresarial de la Cámara de Comercio de Bogotá Uniempresarial con NIT 830.084.876-6. Actualmente desempeña el cargo de DOCENTE con dedicación , 
-
-</p>
+    @if ($contract != '0')
+                mediante un contrato a <b>{{ $contract }}</b>.
+            @endif
+            @if ($date_i != '0')
+                desde el <b>{{ $date_i }}</b> hasta el <b>{{$date_f}}</b>. 
+            @endif
+            @if ($pay_per_hour != '0')
+                con un pago por hora de (letras y números) <b>{{ $pay_per_hour }}</b>. 
+            @endif
+            @if ($salary != '0')
+                .Actualmente devenga un salario de (letras y números) <b>{{ $salary }}</b>
+            @endif
+    </p>
         @break
 
     @case('4')
@@ -54,16 +63,25 @@
     @case('5')
     <p class="textContent">Que el señor(a) <b>{{ $name }}</b>, identificado(a) con <b> {{ $t_doc }}</b> No. <b>{{ $doc }}</b>, esta vinculado(a) con la Fundación Universitaria Empresarial de la Cámara de Comercio de Bogotá Uniempresarial con NIT 830.084.876-6,  hasta el {{ $date_f }} en el área de {{ $area }}.
 
-devengando un salario de (letras y números) <b>{{ $salary }}</b>.
-
-
-</p>
+    @if ($contract != '0')
+                mediante un contrato a <b>{{ $contract }}</b>.
+            @endif
+            @if ($date_i != '0')
+            desde el <b>{{ $date_i }}</b> hasta el <b>{{$date_f}}</b>. 
+            @endif
+            @if ($pay_per_hour != '0')
+                con un pago por hora de (letras y números) <b>{{ $pay_per_hour }}</b>. 
+            @endif
+            @if ($salary != '0')
+                .Actualmente devenga un salario de (letras y números) <b>{{ $salary }}</b>
+            @endif
+    </p>
     @break
 
     @default
 @endswitch
 <!--"Footer"-->
-<p class="bodyText">El presente certificado se expide a solicitud del interesado a los treinta y uno ({{ $day }}) días del mes de ({{ $month }}) de {{ $year }}.</p><br>
+<p class="bodyText">El presente certificado se expide a solicitud del interesado a los ({{ $day }}) días del mes de ({{ $month }}) de {{ $year }}.</p><br>
         
 <p class="bodyText">Atentamente</p><br>
 <div class="info">

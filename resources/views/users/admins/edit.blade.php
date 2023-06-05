@@ -53,9 +53,12 @@
                             <select id="role" class="form-control @error('') is-invalid @enderror" name="role" value="{{$users->roles->role}}" autocomplete="role" autofocus>  
                                 <option value="{{$users->id_roles}}" selected>{{$users->roles->role}}</option>
                                 @foreach ($roles as $role)
+                                @if($users->id_roles == $role->id)
+                                @else
                                 <option value="{{$role->id}}">
                                   {{$role->role}}
                                 </option>
+                                @endif
                                 @endforeach
                              </select>
                             </div>

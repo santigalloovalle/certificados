@@ -22,22 +22,21 @@
                         @csrf
                         @method('PUT')
                         <div class="row  mt-2">
-
-                            <div class="form-check">
-                                <input class="form-check-input col-2 rounded " type="checkbox" id="salario">
-                                <label class="form-check-label col-4 ms-4 fs-5" for="salario">Salario</label>
+                        <div class="form-check">
+                                <input class="form-check-input col-2 rounded " name="salary" type="checkbox" id="salario">
+                                <label class="form-check-label col-4 ms-4 fs-5"  for="salario">Salario</label>
                             </div>
                             <div class="form-check">  
-                                <input class="form-check-input col-2 rounded " type="checkbox" id="tipoContrato">
-                                <label class="form-check-label col-4 ms-4 fs-5" for="tipoContrato">Tipo de Contrato</label>
+                                <input class="form-check-input col-2 rounded " name="contract" type="checkbox" id="tipoContrato">
+                                <label class="form-check-label col-4 ms-4 fs-5"  for="tipoContrato">Tipo de Contrato</label>
                             </div> 
                             <div class="form-check">
-                                <input class="form-check-input col-2 rounded " type="checkbox" id="fechaIngreso">
-                                <label class="form-check-label col-4 ms-4 fs-5" for="form-check-label">Fecha de Ingreso y Salida</label>
+                                <input class="form-check-input col-2 rounded " name="date_i" type="checkbox" id="fecha">
+                                <label class="form-check-label col-4 ms-4 fs-5"  for="form-check-label">Fecha de Ingreso y Salida</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input col-2 rounded" type="checkbox" id="pay_per_hour">
-                                <label class="form-check-label col-4 ms-4 fs-5" for="Pago">Pago por hora</label>
+                                <input class="form-check-input col-2 rounded" name="pay_per_hour" type="checkbox" id="pay_per_hour">
+                                <label class="form-check-label col-4 ms-4 fs-5"  for="Pago">Pago por hora</label>
                             </div>
                         </div>
                         <div class="row mt-2"> 

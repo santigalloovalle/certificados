@@ -88,42 +88,40 @@ class PDFController extends Controller
 
         $user = Auth::user();
         $people = People::find($user->id);
-
-        // $rcontract = $request->contract;
         
-        // if($rcontract ){
-        //     $contract = $people->contracts->contract;
-        // }else{
-        //     $contract = 0;
-        // }
-        // if(){
-        //     $date_i = $people->date_i;
-        // }else{
-        //     $date_i = 0;
-        // }
-        // if(){
-        //     $pay_per_hour = $people->pay_per_hour;
-        //     $pay_per_hour = convertNumberToWords($pay_per_hour);
-        // }else{
-        //     $pay_per_hour = 0;
-        // }
-        // if(){
-        //     $salary = $people->salary;
-        //     $salary = convertNumberToWords($salary);
-        // }else{
-        //     $salary = 0;
-        // }
+        if($request->contract == "on" ){
+            $contract = $people->contracts->contract;
+        }else{
+            $contract = 0;
+        }
+        if($request->date_i == "on"){
+            $date_i = $people->date_i;
+        }else{
+            $date_i = 0;
+        }
+        if($request->pay_per_hour == "on"){
+            $pay_per_hour = $people->pay_per_hour;
+            $pay_per_hour = convertNumberToWords($pay_per_hour);
+        }else{
+            $pay_per_hour = 0;
+        }
+        if($request->salary == "on"){
+            $salary = $people->salary;
+            $salary = convertNumberToWords($salary);
+        }else{
+            $salary = 0;
+        }
 
         $data = [
             'title' => 'CERTIFICA',
             'name' => $user->name,
             't_doc' => $people->documents->type,
-            // 'contract' => $contract,
+            'contract' => $contract,
             'doc' => $people->doc,
             'id_roles' => $user->id_roles,
-            // 'date_i' => $date_i,
-            // 'salary' => $salary,
-            // 'pay_per_hour' => $pay_per_hour,
+            'date_i' => $date_i,
+            'salary' => $salary,
+            'pay_per_hour' => $pay_per_hour,
             'date_f' => $people->date_f,
             'onus' => $people->onus,
             'area' => $people->area,
@@ -139,13 +137,12 @@ class PDFController extends Controller
         date_default_timezone_set("America/Bogota");
         $certificate->fecha_descarga = date("y.m.d"); 
         $certificate->hora_descarga = date("H:i:s"); 
+        // $certificate->id_roles = $user->id_roles;
         $certificate->id_roles = $user->id_roles;
         $certificate->id_users = $user->id;
         $confirmdate = $request->confirmdate;
 
         if($user->id_roles == '2'){
-
-            return $request->contract;
             $certificate->save();
             return $pdf->download('CertificadoLaboral.pdf');
         }else{

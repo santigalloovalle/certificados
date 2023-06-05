@@ -28,7 +28,8 @@
       <table class="table table-blue text-light table-bordered " id="myTable">
         <thead>
             <tr>
-              <td scope="col">Nombre Completo</td>
+              <td scope="col">Generado por:</td>
+              <td scope="col">Generado para:</td>
               <td cscope="col">Rol</td>
               <td scope="col">Fecha</td>
               <td scope="col">Hora</td>
@@ -38,6 +39,7 @@
           @foreach ($certificate as $certificate)
           <tr>
             <td scope="col"> {{$certificate->users->name}}</td>
+            <td scope="col"> </td>
             <td scope="col"> {{$certificate->roles->role}}</td> 
             <td scope="col">{{$certificate->fecha_descarga}}</td>
             <td scope="col">{{$certificate->hora_descarga}}</td>
