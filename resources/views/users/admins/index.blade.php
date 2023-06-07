@@ -38,7 +38,7 @@
           </div>
           <div class="col-md-6 col-sm-12">
             <div class="card w-75 mt-5 ms-5">
-              <a href="{{route('certificates')}}">
+              <a href="{{route('certificates', Auth::user()->id)}}">
                 <img src="{{asset('img/GenerarCerti.jpg')}}" class="card-img-top imgAdmin" alt="Generando certificado">
               </a>
               <div class="card-body bg-red">
