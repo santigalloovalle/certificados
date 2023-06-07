@@ -171,12 +171,13 @@ class AdminController extends Controller
     {
         $users = User::all();
         $roles = Role::all();
-        $people = Auth::user();
         $certificate = Certificates::all();
-        if ($people->id_roles != 2) {
+        $people = People::all();        
+        $people2 = Auth::user();
+        if ($people2->id_roles != 2) {
             return redirect(route('users.index'));
         }
-        return view('users.admins.histories', compact('users','roles','certificate')); 
+        return view('users.admins.histories', compact('users','roles','certificate','people')); 
 
     }
 
