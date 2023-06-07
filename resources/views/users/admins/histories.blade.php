@@ -38,7 +38,7 @@
         <tbody class="table-group-divider">
           @foreach ($certificate as $certificate)
           <tr>
-            <td scope="col"> {{$people->name}}</td>
+            <td scope="col">{{$certificate->users->name}} </td>
             <td scope="col"> {{$certificate->des_por}}</td>
             <td scope="col"> {{$certificate->roles->role}}</td> 
             <td scope="col">{{$certificate->fecha_descarga}}</td>

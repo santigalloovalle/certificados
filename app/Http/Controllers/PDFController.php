@@ -140,7 +140,7 @@ class PDFController extends Controller
         $certificate->hora_descarga = date("H:i:s"); 
         $certificate->des_por = $user->name;
         $certificate->id_roles = $user->id_roles;
-        $certificate->id_users = $user->id;
+        $certificate->id_users = Auth::user()->id;
         $confirmdate = $request->confirmdate;
 
         if(Auth::user()->id_roles == '2'){

@@ -91,25 +91,25 @@
                         <div class="row mb-3">
                             <label for="onus" class="col-md-4 col-form-label text-md-end">{{ __('Cargo') }}</label>
                             <div class="col-md-6">
-                            <input id="onus" type="text" class="form-control @error('') is-invalid @enderror" name="onus" value="{{$people->onus}}" autocomplete="onus" autofocus>
+                            <input id="onus" type="text" class="form-control @error('') is-invalid @enderror" name="onus" value="@if($people->onus == '0'){{""}}@else{{$people->onus}}@endif" autocomplete="onus" autofocus placeholder="@if($people->onus == '0'){{"Por Definir"}}@endif">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="area" class="col-md-4 col-form-label text-md-end">{{ __('Area') }}</label>
                             <div class="col-md-6">
-                            <input id="area" type="text" class="form-control @error('') is-invalid @enderror" name="area" value="{{$people->area}}" autocomplete="area" autofocus>
+                            <input id="area" type="text" class="form-control @error('') is-invalid @enderror" name="area" value="@if($people->area == '0'){{""}}@else{{$people->area}}@endif" autocomplete="area" autofocus placeholder="@if($people->area == '0'){{"Por Definir"}}@endif">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="salary" class="col-md-4 col-form-label text-md-end">{{ __('Salario') }}</label>
                             <div class="col-md-6">
-                            <input id="salary" type="number" class="form-control @error('') is-invalid @enderror" name="salary" value="{{$people->salary}}" required autocomplete="salary" autofocus>
+                            <input id="salary" type="number" class="form-control @error('') is-invalid @enderror" name="salary" value="@if($people->salary == '0'){{""}}@else{{$people->salary}}@endif" required autocomplete="salary" autofocus placeholder="@if($people->salary == '0'){{"Por Definir"}}@endif">
                             </div>
                         </div>
                         <div class="row mb-3">
                                 <label for="pay_per_hour" class="col-md-4 col-form-label text-md-end">{{ __('Pago por hora') }}</label>
                                 <div class="col-md-6">
-                                <input id="pay_per_hour" type="number" class="form-control @error('') is-invalid @enderror" name="pay_per_hour" value="{{$people->pay_per_hour}}" required autocomplete="pay_per_hour" autofocus>
+                                <input id="pay_per_hour" type="number" class="form-control @error('') is-invalid @enderror" name="pay_per_hour" value="@if($people->pay_per_hour == '0'){{""}}@else{{$people->pay_per_hour}}@endif" required autocomplete="pay_per_hour" autofocus placeholder="@if($people->pay_per_hour == '0'){{"Por Definir"}}@endif">
                                 </div>
                         </div>
                         <div class="col-md-8 offset-md-4">
