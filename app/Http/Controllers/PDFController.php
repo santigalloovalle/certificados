@@ -143,7 +143,7 @@ class PDFController extends Controller
         $certificate->id_users = $user->id;
         $confirmdate = $request->confirmdate;
 
-        if($user->id_roles == '2'){
+        if(Auth::user()->id_roles == '2'){
             $certificate->save();
             return $pdf->download('CertificadoLaboral.pdf');
         }else{
