@@ -40,7 +40,7 @@
             <td scope="col"> {{$user->name}}</td>
             <td scope="col"> {{$user->email}}</td>
             <td scope="col"> {{$user->roles->role}}</td>
-            <td><div class="btn-group " role="group" aria-label="Button group name"><a href="{{route('admins.edit', $user->id)}}"> <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-pen"></i></button></a></td>
+            <td><div hclass="btn-group " role="group" aria-label="Button group name"><a href="{{route('admins.edit', $user->id)}}"> <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-pen"></i></button></a></td>
             <td><div class="btn-group " role="group" aria-label="Button group name"><a href="{{route('certificates', $user->id)}}"> <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-file-pdf"></i></button></a></td>
           </tr>
           @endforeach
