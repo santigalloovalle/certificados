@@ -34,11 +34,11 @@ class HomeController extends Controller
                 $error = ['name'=>"423",'desc'=>"Locked"];
                 $people = DB::table('people')->where('id_users', $people->id)->first();
                 $users = Auth::user();
-                if ($people->doc == '1') {
+                if ($people->doc == '0') {
                     return redirect(route('people.edit',$people->id));
                 }
                 else{
-                    if ($people->id_contracts == '1'){
+                    if ($people->id_contracts == '0'){
                         return view('home');
                     }
                     elseif($users->id_roles == '1'){
