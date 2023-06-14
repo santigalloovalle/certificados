@@ -146,3 +146,7 @@
 .text-decoration-none{
     text-decoration: none;
 }
+
+.dataTables_filter{
+    margin-bottom: 1vh!important;
+}
