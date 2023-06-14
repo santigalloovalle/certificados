@@ -8,8 +8,6 @@ use App\Models\People;
 
 use App\Models\Role;
 
-use App\Models\Role;
-
 class SalariesController extends Controller
 {
     /**

@@ -21,7 +21,7 @@
     
       <!--Botón para volver-->
       <div class="d-grid gap-2 d-md-flex justify-content-end">
-        <a href="{{route('users.index')}}"><button class="btn btn-outline-danger" id=""><i class="fa-solid fa-arrow-left px-3 justify-content-center"></button></i></button></a>
+        <a href="{{route('admins.index')}}"><button class="btn btn-outline-danger" id=""><i class="fa-solid fa-arrow-left px-3 justify-content-center"></button></i></button></a>
       </div>
     <!--Tabla de historial de los certificados imprimidos o descargados-->
     <div class="container-fluid mt-4">

@@ -124,9 +124,7 @@
             </div>
         </nav>
         <div class="headerIng my-2 p-3">
-            <div>
-              <img src="{{asset('./img/LogoUECCB.png')}}" alt="Logo Uniempresarial y logo Cámara de comercio" class="container">
-            </div>
+              <img src="{{asset('./img/LogoUECCB.png')}}" alt="Logo Uniempresarial y logo Cámara de comercio" class="container w-50 ">
           </div>
 
         <main class="mt-2">
@@ -136,7 +134,7 @@
       <!--footer-->
   <footer>
     <div class="bg-blue text-center  text-light mt-5 p-4">
-            <img src="{{asset('img/LogoFooter.png')}}" alt="Logo uniempresarial y cámara de comercio" class="container">
+            <img src="{{asset('img/LogoFooter.png')}}" alt="Logo uniempresarial y cámara de comercio" class="container w-50 pb-2">
             <p class="mb-0">Institución de educación superior sujeta a la inspección y vigilancia del Ministerio de Educación / SNIES 2738</p>
         </div>
       
