@@ -112,11 +112,14 @@
                                 <input id="pay_per_hour" type="number" class="form-control @error('') is-invalid @enderror" name="pay_per_hour" value="@if($people->pay_per_hour == '0'){{""}}@else{{$people->pay_per_hour}}@endif" required autocomplete="pay_per_hour" autofocus placeholder="@if($people->pay_per_hour == '0'){{"Por Definir"}}@endif">
                                 </div>
                         </div>
-                        <div class="col-md-8 offset-md-4">
-                            <div class="col-md-8 offset-md-2">
-                                <button type="submit" class="btn btn-blue">
-                                    {{ __('Enviar') }}
+                        <div class="row">
+                            <div class="col text-end">
+                                <button type="submit" class="btn btn-blue px-3">
+                                        {{ __('Enviar') }}
                                 </button>
+                            </div>
+                            <div class="col ">
+                                <a class="btn btn-danger" href="{{route('users.index')}}">Cancelar</a>
                             </div>
                         </div>
                     </form>
