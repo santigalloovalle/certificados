@@ -46,16 +46,6 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-sm-12">
-            <div class="card w-75 mt-5 mx-auto">
-              <a href="#">
-                <img src="{{asset('img/Salario.jpg')}}"   class="card-img-top imgAdmin" alt="Salarios">
-              </a>
-              <div class="card-body bg-red">
-                <h5 class="card-title text-light text-center">Editar salarios por cargo</h5>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 

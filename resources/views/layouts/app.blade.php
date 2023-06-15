@@ -63,9 +63,6 @@
                                     <a class="nav-link active text-light rounded {{request()->routeIs('customers.index') ? 'active' : ''}}" aria-current="page" href="/histories">Historial Certificados</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active text-light rounded {{request()->routeIs('customers.index') ? 'active' : ''}}" aria-current="page" href="/salaries">Editar salario</a>
-                                </li>
-                                <li class="nav-item">
                                     <a class="nav-link active text-light rounded {{request()->routeIs('customers.index') ? 'active' : ''}}" aria-current="page" href="/users">Control usuarios</a>
                                 </li>
                                 <li class="nav-item">

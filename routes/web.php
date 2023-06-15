@@ -31,7 +31,6 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::resource('/users', UserController::class)->names('users');
 Route::resource('/people', PeopleController::class)->names('people');
 Route::resource('/admins', AdminController::class)->names('admins');
-Route::resource('/salaries', SalariesController::class)->names('salaries');
 
 Route::get('/histories', [AdminController::class, 'histories'])->name('histories');
 Route::get('/certificates/{id}', [AdminController::class, 'certificates'])->name('certificates');

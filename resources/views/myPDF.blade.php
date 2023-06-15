@@ -7,7 +7,6 @@
     <link href="\xampp\htdocs\certificados\public\css/pdf.css" rel="stylesheet">
 </head>
 <body>
-    <img src="img/header.png" alt="" class="img1">
     <!--"Header"-->
     <div class="container">
     <p class="title"> <b> LA FUNDACIÓN UNIVERSITARIA EMPRESARIAL DE LA CÁMARA DE COMERCIO DE BOGOTÁ
