@@ -8,7 +8,7 @@
     <!--Formulario de registro-->
     <div class="card">
       <div class="card-header text-md-center text-blue ">
-        <h1></h1>Tu infomación:</h1>
+        <h1>Tu infomación:</h1>
       </div>
       <div class="card-body text-center">
               <!--Botón para volver-->

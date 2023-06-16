@@ -5,9 +5,9 @@
     <section class="sectionTitulo2">
         <div class="divTitulo2">
           <div class="col-md-4 col-form-label text-md-end bg-red p-4 w-25 text-light">
-            <h2>Obten ahora tu </h2>
+            <h2>Obtén ahora tu </h2>
           </div>
-          <div class="col-md-4 col-form-label text-md-end bg-blue p-4 m-3 w-50 text-light">
+          <div class="col-md-4 col-form-label text-md-end bg-blue p-4 mt-3 w-50 text-light">
             <h2>Certificado laboral</h2>
           </div>
         </div>
@@ -57,7 +57,7 @@
                             </div>
                         @if (Route::has('password.request'))
                             <a class="btn btn-link col-md-12 mt-2" href="{{ route('password.request') }}">
-                                {{ __('Olvidaste tu contraseña?') }}
+                                {{ __('¿Olvidaste tu contraseña?') }}
                             </a>
                         @endif
                         </form>

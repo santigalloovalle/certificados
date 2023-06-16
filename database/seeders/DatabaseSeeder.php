@@ -23,10 +23,10 @@ class DatabaseSeeder extends Seeder
             'contract' => 'Por definir', 
         ]);
         \App\Models\Contract::factory()->create([
-            'contract' => 'Termino Fijo', 
+            'contract' => 'Término Fijo', 
         ]);
         \App\Models\Contract::factory()->create([
-            'contract' => 'Termino Indefinido', 
+            'contract' => 'Término Indefinido', 
         ]);
         \App\Models\Contract::factory()->create([
             'contract' => 'Obra o labor', 
@@ -41,7 +41,7 @@ class DatabaseSeeder extends Seeder
             'role' => 'Profesores de planta', 
         ]);
         \App\Models\Role::factory()->create([
-            'role' => 'Profesores de catedra', 
+            'role' => 'Profesores de cátedra', 
         ]);
         \App\Models\Role::factory()->create([
             'role' => 'Aprendices', 
@@ -56,13 +56,13 @@ class DatabaseSeeder extends Seeder
             'type' => 'Tarjeta de Identidad', 
         ]);
         \App\Models\Document::factory()->create([
-            'type' => 'Cedula de Ciudadania', 
+            'type' => 'Cédula de Ciudadanía', 
         ]);
         \App\Models\Document::factory()->create([
             'type' => 'Tarjeta de Extranjeria', 
         ]);
         \App\Models\Document::factory()->create([
-            'type' => 'Cedula de Extranjeria', 
+            'type' => 'Cédula de Extranjería', 
         ]);
         $this->call( Usersseeder::class);
         $this->call( Peopleseeder::class);

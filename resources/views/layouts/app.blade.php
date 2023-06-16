@@ -137,7 +137,7 @@
       
     </div>
     <div class="text-center p-2 bg-secondary text-light">
-      <p>Todos los derechos reservados © 2020 -2022 Fundación Universitaria de la Cámara de Comercio de Bogotá
+      <p>Todos los derechos reservados © 2020 -2023 Fundación Universitaria de la Cámara de Comercio de Bogotá
         Uniempresarial | Términos, politicas y Condiciones de Servicio Resolución 598 del Ministerio de Educación.
         Registro Icfes 2738.
       </p>
