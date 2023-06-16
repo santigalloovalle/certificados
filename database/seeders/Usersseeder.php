@@ -19,15 +19,15 @@ class Usersseeder extends Seeder
         $data = [
             [
                 "name"=>"Administrador",
-                "email"=>"admin@gmail.com",
+                "email"=>"admin@uniempresarial.edu.co",
                 "password"=>Hash::make("admin123"),
                 "id_roles"=>2
             ],
             [
                 "name"=>"user",
-                "email"=>"user@gmail.com",
+                "email"=>"user@uniempresarial.edu.co",
                 "password"=>Hash::make("user123"),
-                               "id_roles"=>3
+                "id_roles"=>3
             ],
             [
                 "name"=>"MARTINEZ TALERO YARLEYDI LEONOR",
@@ -879,6 +879,18 @@ class Usersseeder extends Seeder
                 "name"=>"GALINDO RINCON WILLIAM RAFAEL",
                 "email"=>"wgalindo@uniempresarial.edu.co",
                 "password"=>Hash::make("12345678"),
+                "id_roles"=>3
+            ],
+            [
+                "name"=>"Administrador",
+                "email"=>"admin@gmail.com",
+                "password"=>Hash::make("admin123"),
+                "id_roles"=>2
+            ],
+            [
+                "name"=>"user",
+                "email"=>"user@gmail.com",
+                "password"=>Hash::make("user123"),
                 "id_roles"=>3
             ],
 

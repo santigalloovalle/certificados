@@ -2033,6 +2033,33 @@ class Peopleseeder extends Seeder
                 "pay_per_hour"=>1200000,
                 "id_users"=>144,
             ],
+            [
+                "id_documents"=>3,
+                "doc"=>1234567890,
+                "date"=>date("y.m.d"),
+                "id_contracts"=>2,
+                "salary"=>123,
+                "date_i"=>date("y.m.d"),
+                "date_f"=>date("y.m.d"),
+                "onus"=>"Talento Humano",
+                "area"=>"area",
+                "pay_per_hour"=>123,
+                "id_users"=>145,
+            ],
+            [
+
+                "id_documents"=>1,
+                "doc"=>1234567890,
+                "date"=>date("y.m.d"),
+                "id_contracts"=>1,
+                "salary"=>1,
+                "date_i"=>date("y.m.d"),
+                "date_f"=>date("y.m.d"),
+                "onus"=>"cargo",
+                "area"=>"area",
+                "pay_per_hour"=>1,
+                "id_users"=>146,
+            ],
         ];
         
         
