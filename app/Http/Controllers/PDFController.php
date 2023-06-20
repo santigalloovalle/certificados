@@ -88,6 +88,7 @@ class PDFController extends Controller
 
 
         $user = DB::table('users')->where('id', $id)->first();
+        $people2 = DB::table('people')->where('id', $id)->first();
         $people = People::find($user->id);
         
         if($request->contract == "on" ){
@@ -136,10 +137,9 @@ class PDFController extends Controller
 
         $certificate = new Certificates();
         date_default_timezone_set("America/Bogota");
-        $certificate->fecha_descarga = date("y.m.d"); 
-        $certificate->hora_descarga = date("H:i:s"); 
-        $certificate->des_por = $user->name;
-        $certificate->id_roles = $user->id_roles;
+        $certificate->download_date = date("y.m.d"); 
+        $certificate->download_hour = date("H:i:s"); 
+        $certificate->id_people = $people2->id;
         $certificate->id_users = Auth::user()->id;
         $confirmdate = $request->confirmdate;
 

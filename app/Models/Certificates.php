@@ -15,9 +15,9 @@ class Certificates extends Model
         return $this->hasMany(Certificates::class,'id');
     }
 
-    public function roles()
+    public function people()
     {
-        return $this->belongsTo(Role::class, 'id_roles');
+        return $this->belongsTo(People::class, 'id_people');
     }
     public function users()
     {
