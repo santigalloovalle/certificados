@@ -38,11 +38,8 @@ class HomeController extends Controller
                     return redirect(route('people.edit',$people->id));
                 }
                 else{
-                    if ($people->id_contracts == '0'){
+                    if ($people->id_contracts == '1'){
                         return view('home');
-                    }
-                    elseif($users->id_roles == '1'){
-                        return redirect(route('auth.error', compact('error')));
                     }
                     else{
                         return redirect(route('users.index', compact('people')));
