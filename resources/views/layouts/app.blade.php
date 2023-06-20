@@ -66,7 +66,7 @@
                                     <a class="nav-link active text-light rounded {{request()->routeIs('customers.index') ? 'active' : ''}}" aria-current="page" href="/users">Control usuarios</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active text-light rounded {{request()->routeIs('customers.index') ? 'active' : ''}}" aria-current="page" href="{{route('certificates', Auth::user()->id)}}">Crear certificado</a>
+                                    <a class="nav-link active text-light rounded {{request()->routeIs('customers.index') ? 'active' : ''}}" aria-current="page" href="{{route('certificates', Auth::user()->id)}}">Generar certificado</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link active text-light rounded {{request()->routeIs('customers.index') ? 'active' : ''}}" aria-current="page" href="/admins">Inicio</a>

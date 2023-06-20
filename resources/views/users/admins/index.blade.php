@@ -22,7 +22,7 @@
                 <img src="{{asset('img/Certificado.jpg')}}" class="card-img-top imgAdmin" alt="Certificado">
               </a>
               <div class="card-body bg-red">
-                <h5 class="card-title text-light text-center">Historial de certificados</h5>
+                <h5 class="card-title text-light text-center">Historial certificados</h5>
               </div>
             </div>
           </div>
@@ -32,7 +32,7 @@
                 <img src="{{asset('img/Usuarios.jpg')}}" class="card-img-top imgAdmin " alt="Usuarios">
               </a>              
               <div class="card-body bg-red">
-                <h5 class="card-title text-light text-center">Usuarios registrados</h5>
+                <h5 class="card-title text-light text-center">Control usuarios</h5>
               </div>
             </div>
           </div>
