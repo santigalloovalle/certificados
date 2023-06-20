@@ -38,10 +38,10 @@ class DatabaseSeeder extends Seeder
             'role' => 'Administrativos', 
         ]);
         \App\Models\Role::factory()->create([
-            'role' => 'Profesores de planta', 
+            'role' => 'Docentes planta', 
         ]);
         \App\Models\Role::factory()->create([
-            'role' => 'Profesores de cátedra', 
+            'role' => 'Docentes cátedra', 
         ]);
         \App\Models\Role::factory()->create([
             'role' => 'Aprendices', 
