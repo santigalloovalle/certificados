@@ -15,13 +15,11 @@ class CreateCertificatesTable extends Migration
     {
         Schema::create('certificates', function (Blueprint $table) {
             $table->id();
-            $table->date('fecha_descarga')->nullable();
-            $table->char('hora_descarga')->nullable();
-            $table->foreignId('id_roles')->constrained('roles');
+            $table->date('download_date')->nullable();
+            $table->char('download_hour')->nullable();
+            $table->foreignId('id_people')->constrained('people');
             $table->foreignId('id_users')->constrained('users');
-            $table->string('des_por');
            
-
             $table->timestamps();
         });
     }

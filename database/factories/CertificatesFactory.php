@@ -16,11 +16,10 @@ class CertificatesFactory extends Factory
     {
         $faker = \Faker\Factory::create();
         return [
-            'fecha_descarga' => $faker->date($format = 'Y-m-d', $max = 'now'),
-            'hora_descarga' => $faker->time($format = 'H:i:s', $max = 'now'),
-            'id_roles' => $this->faker->randomElement(DB::table('roles')->pluck('id')),
+            'download_date' => $faker->date($format = 'Y-m-d', $max = 'now'),
+            'download_hour' => $faker->time($format = 'H:i:s', $max = 'now'),
+            'id_people' => $this->faker->randomElement(DB::table('people')->pluck('id')),
             'id_users' => $this->faker->randomElement(DB::table('users')->pluck('id')),
-            'des_por'=> $faker->name(),
         ];
     }
 }
