@@ -55,9 +55,22 @@
         @break
 
     @case('4')
-    <p class="textContent ">Que el señor(a) <b>{{ $name }}</b>, identificado(a) con<b> {{ $t_doc }}</b> No. <b>{{ $doc }}</b>, está vinculado(a) con la Fundación Universitaria Empresarial de la Cámara de Comercio de Bogotá Uniempresarial con NIT 830.084.876-6, desempeñando el cargo de DOCENTE HORA CATEDRA mediante contrato de {{ $contract }} en los siguientes periodos:</p>
-    <table>
-    </table>    
+    <p class="textContent "> Que el señor/a <b>{{ $name }}</b> identificado/a con <b> {{ $t_doc }} </b> No. <b>{{ $doc }}</b>, está vinculado/a con la Fundación Universitaria Empresarial de la Cámara de Comercio de Bogotá Uniempresarial con NIT 830.084.876-6, desempeñando el cargo de <b>{{ $onus }}</b>. 
+
+        @if ($contract != '0')
+            Mediante un contrato a <b>{{ $contract }}</b>.
+        @endif
+        @if ($date_i != '0')
+        Desde el <b>{{ $date_i }}</b> hasta el <b>{{$date_f}}</b>. 
+        @endif
+        @if ($pay_per_hour != '0')
+            Con un pago por hora de (letras y números) <b>{{ $pay_per_hour }}</b>. 
+        @endif
+        @if ($salary != '0')
+            Actualmente, devenga un salario de (letras y números) <b>{{ $salary }}</b>.
+        @endif
+        </p>   
+
         @break
 
     @case('5')
@@ -77,6 +90,25 @@
             @endif
     </p>
     @break
+
+    @case('6')
+    <p class="textContent "> Que el señor/a <b>{{ $name }}</b> identificado/a con <b> {{ $t_doc }} </b> No. <b>{{ $doc }}</b>, está vinculado/a con la Fundación Universitaria Empresarial de la Cámara de Comercio de Bogotá Uniempresarial con NIT 830.084.876-6, desempeñando el cargo de <b>{{ $onus }}</b>. 
+
+    @if ($contract != '0')
+        Mediante un contrato a <b>{{ $contract }}</b>.
+    @endif
+    @if ($date_i != '0')
+    Desde el <b>{{ $date_i }}</b> hasta el <b>{{$date_f}}</b>. 
+    @endif
+    @if ($pay_per_hour != '0')
+        Con un pago por hora de (letras y números) <b>{{ $pay_per_hour }}</b>. 
+    @endif
+    @if ($salary != '0')
+        Actualmente, devenga un salario de (letras y números) <b>{{ $salary }}</b>.
+    @endif
+    </p>   
+
+@break
 
     @default
 @endswitch
