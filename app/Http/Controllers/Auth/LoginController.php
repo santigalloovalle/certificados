@@ -45,19 +45,7 @@ class LoginController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8','max:15', 'confirmed'],
-        ],
-        [
-            'email.required' => 'Se requiere email',
-            'password.required' => 'Se requiere contraseña',
-            'password.min' => 'Caracteres mínimos:8',
-            'password.max' => 'Caracteres máximos:15'
-        ]);
-    }
+
     protected function validateLogin(Request $request)
     {
         $this->validate($request, [
