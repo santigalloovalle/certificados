@@ -16,8 +16,8 @@ class CertificatesFactory extends Factory
     {
         $faker = \Faker\Factory::create();
         return [
-            'download_date' => $faker->date($format = 'Y-m-d', $max = 'now'),
-            'download_hour' => $faker->time($format = 'H:i:s', $max = 'now'),
+            'download_date' => date("y.m.d"), 
+            'download_hour' => date("H:i:s"),
             'id_people' => $this->faker->randomElement(DB::table('people')->pluck('id')),
             'id_users' => $this->faker->randomElement(DB::table('users')->pluck('id')),
         ];

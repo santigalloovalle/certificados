@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Validator;
 
 class LoginController extends Controller
 {
@@ -36,5 +38,24 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+    /**
+     * Get a validator for an incoming registration request.
+     *
+     * @param  array  $data
+     * @return \Illuminate\Contracts\Validation\Validator
+     */
+
+    protected function validateLogin(Request $request)
+    {
+        $this->validate($request, [
+            $this->username() => 'required', 'string', 'email', 'max:255', 'unique:users',
+            'password' => 'required','string', 'min:8','max:15', 'confirmed',
+            ],[
+                'email.required' => 'Se requiere email',
+                'password.required' => 'Se requiere contraseña',
+                'password.min' => 'Caracteres mínimos:8',
+                'password.max' => 'Caracteres máximos:15'
+            ]);
     }
 }

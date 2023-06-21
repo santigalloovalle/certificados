@@ -31,7 +31,7 @@
                             <label for="CC" class="col-md-4 col-form-label text-md-end">{{ __('Documento') }}</label>
                             
                             <div class="col-md-6">    
-                                <input id="doc" type="number" class="form-control @error('') is-invalid @enderror" name="doc" value="{{ old('doc') }}" required autocomplete="doc" autofocus>
+                                <input id="doc" type="number" onkeydown="return event.keyCode !== 69"  class="form-control @error('') is-invalid @enderror" name="doc" value="{{ old('doc') }}" required autocomplete="doc" autofocus>
                             </div> 
                         </div> 
                         <div class="row mb-3">
