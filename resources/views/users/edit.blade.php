@@ -1,7 +1,5 @@
 @extends('layouts.app')
-
 @section('content')
-
     <div class=" col-form-label text-md-center text-blue ">
     <h1>A continuación, complete la siguiente información:</h1>
     <!--Formulario de registro-->
@@ -24,40 +22,21 @@
                               {{$document->type}}
                             </option>
                             @endforeach
-                            @error('t_doc')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
                          </select>
                         </div>
                     </div>
                         <div class="row mb-3">
                             <label for="CC" class="col-md-4 col-form-label text-md-end">{{ __('Documento') }}</label>
-                            
+
                             <div class="col-md-6">    
-                                <input id="doc" type="number" onkeydown="return event.keyCode !== 69"  class="form-control @error('') is-invalid @enderror" name="doc" value="{{ old('doc') }}" autocomplete="doc">
-                                @if ($errors->any())
-                                <div class="alert alert-danger">
-                                    <ul>
-                                        @foreach ($errors->all() as $error)
-                                            <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            @endif
+                                <input id="doc" type="number" onkeydown="return event.keyCode !== 69"  class="form-control @error('') is-invalid @enderror" name="doc" value="{{ old('doc') }}" required autocomplete="doc" autofocus>
                             </div> 
                         </div> 
                         <div class="row mb-3">
                             <label for="date" class="col-md-4 col-form-label text-md-end">{{ __('Fecha de Expedición') }}</label>
                             
                             <div class="col-md-6">    
-                                <input id="date" type="date" class="form-control @error('') is-invalid @enderror" name="date" value="{{$people->date}}" autocomplete="date">
-                                @error('date')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $error }}</strong>
-                                </span>
-                                @enderror
+                                <input id="date" type="date" class="form-control @error('') is-invalid @enderror" name="date" value="{{ old('date') }}" required autocomplete="date" autofocus>
                             </div> 
                         </div> 
                         <div class="col-md-8 offset-md-4">
