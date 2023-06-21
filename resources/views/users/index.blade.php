@@ -11,7 +11,7 @@
         <!--Generar certificado-->
         
         <section class="container mt-5 w-50 ">
-            <div class="card">
+            <div class="card crd-letter">
                 <div class="card-header text-center">
                     <h4> El certificado contendrá su nombre y documento de identidad. En caso de requerir algún dato adicional, seleccione a continuación.</h4>
                 </div>
@@ -22,20 +22,20 @@
                         @csrf
                         <div class="row  mt-2">
                         <div class="form-check">
-                                <input class="form-check-input col-2 rounded " name="salary" type="checkbox" id="salario">
-                                <label class="form-check-label col-7 ms-4 fs-5"  for="salario">Salario</label>
+                                <input class="form-check-input rounded " name="salary" type="checkbox" id="salario">
+                                <label class="form-check-label col-5 ms-4 fs-5"  for="salario">Salario</label>
                             </div>
                             <div class="form-check">  
-                                <input class="form-check-input col-2 rounded " name="contract" type="checkbox" id="tipoContrato">
-                                <label class="form-check-label col-7 ms-4 fs-5"  for="tipoContrato">Tipo de Contrato</label>
+                                <input class="form-check-input rounded " name="contract" type="checkbox" id="tipoContrato">
+                                <label class="form-check-label col-5 ms-4 fs-5"  for="tipoContrato">Tipo de Contrato</label>
                             </div> 
                             <div class="form-check">
-                                <input class="form-check-input col-2 rounded " name="date_i" type="checkbox" id="fecha">
-                                <label class="form-check-label col-7 ms-4 fs-5"  for="form-check-label">Fecha de Ingreso y Salida</label>
+                                <input class="form-check-input rounded " name="date_i" type="checkbox" id="fecha">
+                                <label class="form-check-label col-5 ms-4 fs-5"  for="form-check-label">Fecha de Ingreso y Salida</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input col-2 rounded" name="pay_per_hour" type="checkbox" id="pay_per_hour">
-                                <label class="form-check-label col-7 ms-4 fs-5"  for="Pago">Pago por hora</label>
+                                <input class="form-check-input rounded" name="pay_per_hour" type="checkbox" id="pay_per_hour">
+                                <label class="form-check-label col-5 ms-4 fs-5"  for="Pago">Pago por hora</label>
                             </div>
                         </div>
                         <div class="row mt-2"> 
@@ -48,7 +48,7 @@
                                 </div>
                             </div>    
                             <a href="#modal1" class="text-white bg-blue text-white border-none mt-4 w-100 ">
-                            <button type="button" class="btn btn-info btn-lg text-white bg-blue text-white border-none mt-4 w-50 m-auto" data-toggle="modal" data-target="#myModal">
+                            <button type="button" class="btn btn-info btn-lg text-white bg-blue text-white border-none mt-4 w-50 fs-6 m-auto" data-toggle="modal" data-target="#myModal">
                                 <a href="#modal1" class="text-white bg-blue text-white border-none"> Descargar </a><i class="fa-solid fa-download text-white"></i>
                             </button>
                         </a>
