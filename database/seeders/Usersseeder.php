@@ -20,7 +20,7 @@ class Usersseeder extends Seeder
             [
                 "name"=>"Administrador",
                 "email"=>"admin@uniempresarial.edu.co",
-                "password"=>Hash::make("admin123"),
+                "password"=>Hash::make("admin123*"),
                 "id_roles"=>2,
                 "created_at"=>date("Y-m-d H:i:s"),
                 "updated_at"=>date("Y-m-d H:i:s")
@@ -28,7 +28,7 @@ class Usersseeder extends Seeder
             [
                 "name"=>"user",
                 "email"=>"user@uniempresarial.edu.co",
-                "password"=>Hash::make("user123"),
+                "password"=>Hash::make("user123*"),
                 "id_roles"=>3,
                 "created_at"=>date("Y-m-d H:i:s"),
                 "updated_at"=>date("Y-m-d H:i:s")
@@ -1172,7 +1172,7 @@ class Usersseeder extends Seeder
             [
                 "name"=>"Administrador",
                 "email"=>"admin@gmail.com",
-                "password"=>Hash::make("admin123"),
+                "password"=>Hash::make("admin123*"),
                 "id_roles"=>2,
                 "created_at"=>date("Y-m-d H:i:s"),
                 "updated_at"=>date("Y-m-d H:i:s")
@@ -1180,7 +1180,7 @@ class Usersseeder extends Seeder
             [
                 "name"=>"user",
                 "email"=>"user@gmail.com",
-                "password"=>Hash::make("user123"),
+                "password"=>Hash::make("user123*"),
                 "id_roles"=>3,
                 "created_at"=>date("Y-m-d H:i:s"),
                 "updated_at"=>date("Y-m-d H:i:s")

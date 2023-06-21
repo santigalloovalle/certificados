@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 use App\Models\People;
 
@@ -101,6 +102,21 @@ class PeopleController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+        $request->validate([
+            'doc' => 'required|unique:people|min:10|min:12',
+            't_doc' => 'required',
+            'date' => 'required',
+        ],[
+            'doc.required' => 'Se requiere número de documento',
+            't_doc.required' => 'Se requiere tipo de documento',
+            'date.required' => 'Se requiere fecha de expedición del documento',
+            'doc.min' => 'Caracteres mínimos:10',
+            'doc.max' => 'Caracteres máximos:12',
+        ]);
+
+        dd($request->all());
+
         $people = People::find($id);
         $users = User::find($id);
         $people->id_documents = $request->type;

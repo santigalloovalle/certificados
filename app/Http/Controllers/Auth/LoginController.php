@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rules\Password;
+
 
 class LoginController extends Controller
 {
@@ -50,12 +52,16 @@ class LoginController extends Controller
     {
         $this->validate($request, [
             $this->username() => 'required', 'string', 'email', 'max:255', 'unique:users',
-            'password' => 'required','string', 'min:8','max:15', 'confirmed',
-            ],[
-                'email.required' => 'Se requiere email',
-                'password.required' => 'Se requiere contraseña',
-                'password.min' => 'Caracteres mínimos:8',
-                'password.max' => 'Caracteres máximos:15'
-            ]);
+            'password' => ['required', 'string','max:15', Password::min(8)->letters()->numbers()->symbols()],
+            
+        ],
+        [
+            'email.required' => 'Se requiere email',
+            'email.unique' => 'Email ya registrado',
+            'password.required' => 'Se requiere contraseña',
+            'password.min' => 'Caracteres mínimos:8',
+            'password.max' => 'Caracteres máximos:15',
+
+        ]);
     }
 }

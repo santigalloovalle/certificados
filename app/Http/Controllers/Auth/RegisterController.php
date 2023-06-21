@@ -9,6 +9,7 @@ use App\Models\People;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rules\Password;
 
 class RegisterController extends Controller
 {
@@ -52,14 +53,18 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8','max:15', 'confirmed'],
+            'password' => ['required', 'string','max:15', 'confirmed', Password::min(8)->letters()->numbers()->symbols()],
+            
         ],
         [
             'email.required' => 'Se requiere email',
+            'email.unique' => 'Email ya registrado',
             'password.required' => 'Se requiere contraseña',
             'password.min' => 'Caracteres mínimos:8',
-            'password.max' => 'Caracteres máximos:15'
+            'password.max' => 'Caracteres máximos:15',
+
         ]);
+
     }
 
     /**
@@ -82,7 +87,7 @@ class RegisterController extends Controller
         $people->id_documents = 1;
         $people->doc = 0;
         $people->date = date("Y-m-d");
-        $people->id_contracts =0
+        $people->id_contracts =1
         ;   
         $people->salary = 0;
         $people->date_i = date("Y-m-d");
