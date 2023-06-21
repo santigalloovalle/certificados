@@ -77,27 +77,27 @@
     pointer-events: auto;
 }
 .modalbox{
-    width: 22vw;
+    width: 50vw;
     position: relative;
-    padding: 2% 5%;
+    padding: 5% 5%;
     background: #fff;
     border-radius:3px;
-    -webkit-transition: all 500ms ease-in;
-    -moz-transition: all 500ms ease-in;
-    transition: all 500ms ease-in;
-    border: 30px solid #06357a;
+    border: 10px solid #06357a;
     text-align: center;
+    box-shadow: 1px 1px 30px 1px;
+    font-size: 1.2rem;
 }
 .modalbox h2, .modalbox h5,
 .modalbox input{
-    width: 15vw;
-    margin-left: -3vw;
+    width: 38vw;
+    margin-left: 1vw;
 }
 .modalbox h2{
     margin-top: -1.5vh;
 }
 .botonmodal{
-    margin-left: 1.5vw;
+    width: 20vw;
+    padding: 10px;
 }
 .movedown {
     margin: 0 auto;
@@ -149,4 +149,21 @@
 
 .dataTables_filter{
     margin-bottom: 1vh!important;
+}
+@media(max-width:700px){
+    .modalbox {
+    width: 60vw;
+    padding-top: 40px;
+    }   
+    .modalbox h2, .modalbox h5,
+    .modalbox input{
+    width: 45vw;
+    margin-left: 1vw;
+}
+
+}
+@media(max-width:480px){
+    .botonmodal{
+        width: 30vw;
+    }
 }
