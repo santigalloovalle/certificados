@@ -129,6 +129,37 @@ class AdminController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+        $request->validate([
+            'doc' => 'required|min:10|max:12',
+            'type' => 'required|in:2,3,4,5',
+            'role' => 'required|in:2,3,4,5,6',
+            'contract' => 'required|in:2,3,4',
+            'name' => 'required|min:10|max:100',
+            'date_i' => 'required',
+            'date_f' => 'required',
+            'onus' => 'required',
+            'area' => 'required',
+            'salary' => 'required',
+            'pay_per_hour' => 'required',
+        ],[
+            'doc.required' => 'Se requiere número de documento',
+            'type.in' => 'Se requiere tipo de documento',
+            'doc.min' => 'Caracteres mínimos:10',
+            'doc.max' => 'Caracteres máximos:12',
+            'name.min' => 'Caracteres mínimos:10',
+            'name.max' => 'Caracteres máximos:100',
+            'name.required' => 'Se requiere número',
+            'role.in' => 'Se requiere rol',
+            'contract.in' => 'Se requiere tipo de contrato',
+            'onus.required' => 'Se requiere cargo',
+            'area.required' => 'Se requiere área',
+            'date_f.required' => 'Se requiere fecha de fin',
+            'date:i.required' => 'Se requiere fecha de inicio',
+            'salary.required' => 'Se requiere salario',
+            'pay_per_hour.required' => 'Se requiere pago por hora',
+        ]);
+
         $people = People::find($id);
         $users = User::find($id);
         $users->name = $request->name;        
