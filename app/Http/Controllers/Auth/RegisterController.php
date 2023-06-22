@@ -60,11 +60,10 @@ class RegisterController extends Controller
             'email.required' => 'Se requiere email',
             'email.unique' => 'Email ya registrado',
             'password.required' => 'Se requiere contraseña',
-            'password.min' => 'Caracteres mínimos:8',
+            'password.confirmed' => 'Las contraseñas no coinciden',
             'password.max' => 'Caracteres máximos:15',
 
         ]);
-
     }
 
     /**

@@ -103,6 +103,19 @@ class PeopleController extends Controller
     public function update(Request $request, $id)
     {
 
+        $request->validate([
+            'doc' => 'required|min:10|max:12',
+            'type' => 'required|in:2,3,4,5',
+            'date' => 'required|before:date("Y-m-d")',
+        ],[
+            'doc.required' => 'Se requiere número de documento',
+            'type.in' => 'Se requiere tipo de documento',
+            'date.required' => 'Se requiere fecha de expedición del documento',
+            'date.before' => 'La fecha de expedición del documento no puede exceder la fecha actual',
+            'doc.min' => 'Caracteres mínimos:10',
+            'doc.max' => 'Caracteres máximos:12',
+        ]);
+
         $people = People::find($id);
         $users = User::find($id);
         $people->id_documents = $request->type;

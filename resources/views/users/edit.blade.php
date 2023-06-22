@@ -1,5 +1,7 @@
 @extends('layouts.app')
+
 @section('content')
+
     <div class=" col-form-label text-md-center text-blue ">
     <h1>A continuación, complete la siguiente información:</h1>
     <!--Formulario de registro-->
@@ -21,22 +23,31 @@
                             <option value="{{$document->id}}">
                               {{$document->type}}
                             </option>
-                            @endforeach
+                        @endforeach
                          </select>
+                         @foreach ($errors->get('type') as $error)
+                         <strong class="text-danger">{{ $error }}</strong>
+                     @endforeach
                         </div>
                     </div>
                         <div class="row mb-3">
-                            <label for="CC" class="col-md-4 col-form-label text-md-end">{{ __('Documento') }}</label>
-
+                            <label for="CC" class="col-md-4 col-form-label text-md-end">{{ __('Número de documento') }}</label>
+                            
                             <div class="col-md-6">    
-                                <input id="doc" type="number" onkeydown="return event.keyCode !== 69"  class="form-control @error('') is-invalid @enderror" name="doc" value="{{ old('doc') }}" required autocomplete="doc" autofocus>
+                                <input id="doc" type="number" onkeydown="return event.keyCode !== 69"  class="form-control @error('') is-invalid @enderror" name="doc" value="" autocomplete="doc">
+                                @foreach ($errors->get('doc') as $error)
+                                <strong class="text-danger">{{ $error }}</strong>
+                            @endforeach
                             </div> 
                         </div> 
                         <div class="row mb-3">
                             <label for="date" class="col-md-4 col-form-label text-md-end">{{ __('Fecha de Expedición') }}</label>
                             
                             <div class="col-md-6">    
-                                <input id="date" type="date" class="form-control @error('') is-invalid @enderror" name="date" value="{{ old('date') }}" required autocomplete="date" autofocus>
+                                <input id="date" type="date" class="form-control @error('') is-invalid @enderror" name="date" value="" autocomplete="date">
+                                @foreach ($errors->get('date') as $error)
+                                <strong class="text-danger">{{ $error }}</strong>
+                            @endforeach
                             </div> 
                         </div> 
                         <div class="col-md-8 offset-md-4">
