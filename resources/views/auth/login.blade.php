@@ -45,6 +45,7 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                     @enderror
+                                    <p class="fs-7 text-secondary">La contraseña debe contener mínimo 8 caracteres y máximo 15 caracteres, dentro de los cuales debe haber por lo menos una letra, un número y un carácter especial</p>
                                 </div>
                             </div>
                         <div class="row mb-3 ">

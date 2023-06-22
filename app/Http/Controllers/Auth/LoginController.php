@@ -59,6 +59,7 @@ class LoginController extends Controller
             'email.required' => 'Se requiere email',
             'email.unique' => 'Email ya registrado',
             'password.required' => 'Se requiere contraseña',
+            'password.confirmed' => 'Las contraseñas no coinciden',
             'password.min' => 'Caracteres mínimos:8',
             'password.max' => 'Caracteres máximos:15',
 

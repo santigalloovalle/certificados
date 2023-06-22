@@ -46,8 +46,10 @@
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" autocomplete="new-password">
+                                <p class="fs-7 text-secondary">La contraseña debe contener mínimo 8 caracteres y máximo 15 caracteres, dentro de los cuales debe haber por lo menos una letra, un número y un carácter especial</p>
                             </div>
                         </div>
+                       
                         <div class="col-md-8 offset-md-4">
                             <div class="col-md-8 offset-md-2">
                                 <button type="submit" class="btn btn-blue">

@@ -38,6 +38,7 @@
                                 @foreach ($errors->get('doc') as $error)
                                 <strong class="text-danger">{{ $error }}</strong>
                             @endforeach
+                            <p class="fs-7 text-secondary">El número de documento debe contener mínimo 8 caracteres y máximo 10 caracteres</p>
                             </div> 
                         </div> 
                         <div class="row mb-3">
@@ -48,6 +49,7 @@
                                 @foreach ($errors->get('date') as $error)
                                 <strong class="text-danger">{{ $error }}</strong>
                             @endforeach
+                            <p class="fs-7 text-secondary">La fecha de expedición no puede superar a la fecha actual</p>
                             </div> 
                         </div> 
                         <div class="col-md-8 offset-md-4">
