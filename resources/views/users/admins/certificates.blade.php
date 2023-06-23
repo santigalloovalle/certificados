@@ -42,7 +42,7 @@
                         </div>
                         </div>
                         <div class="row mt-2"> 
-                            <button type="submit" class="btn btn-info btn-lg text-white bg-blue text-white border-none mt-4 w-25 m-auto">
+                            <button type="submit" class="btn btn-info btn-lg text-white bg-blue text-white border-none my-4 w-25 m-auto">
                                 <a class="text-white bg-blue text-white border-none"> Descargar </a><i class="fa-solid fa-download text-white"></i>
                             </button>
                             </div>

@@ -13,7 +13,7 @@
     <p class="title"> <b> LA FUNDACIÓN UNIVERSITARIA EMPRESARIAL DE LA CÁMARA DE COMERCIO DE BOGOTÁ
     -UNIEMPRESARIAL-</b>
     </div>
-    <br>
+    {{-- <br> --}}
     <p class="title">  Personería Jurídica, Resolución 598 del 2 de abril de 2001 del Ministerio de Educación Nacional - Registro ICFES 2738</p>
   </p>
     <h3 class="titleCertificado">{{ $title }}</h3>

@@ -9,7 +9,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card mb-5">
                 <div class="card-body">
                     <form action="{{route('people.update',$people->id)}}" method="POST">
                         <input type="hidden" name="id_users" value="{{Auth::user()->id}}">
