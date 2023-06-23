@@ -62,6 +62,7 @@ class RegisterController extends Controller
             'password.required' => 'Se requiere contraseña',
             'password.confirmed' => 'Las contraseñas no coinciden',
             'password.max' => 'Caracteres máximos:15',
+            'password.min' => 'Caracteres mínimos:8',
 
         ]);
     }

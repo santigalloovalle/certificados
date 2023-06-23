@@ -47,11 +47,9 @@
                                         <button id="btn-cerrar-modal" class="mt-5"><a href="">Cerrar</a></button>
                                 </div>
                             </div>    
-                            <a href="#modal1" class="text-white bg-blue text-white border-none mt-4 w-100 ">
                             <button type="button" class="btn btn-info btn-lg text-white bg-blue text-white border-none mt-4 w-50 fs-6 m-auto" data-toggle="modal" data-target="#myModal">
                                 <a href="#modal1" class="text-white bg-blue text-white border-none"> Descargar </a><i class="fa-solid fa-download text-white"></i>
                             </button>
-                        </a>
                     <div id="modal1" class="modalmask p-5">
                         <div class="modalbox movedown">
                             <a href="#close" title="Close" class="close bg-white border-none"><i class="fa-solid fa-circle-xmark text-danger bg-white"></i></a>
