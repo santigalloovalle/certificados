@@ -31,6 +31,9 @@ class DatabaseSeeder extends Seeder
         \App\Models\Contract::factory()->create([
             'contract' => 'Obra o labor', 
         ]);
+        \App\Models\Contract::factory()->create([
+            'contract' => 'Aprendizaje', 
+        ]);
         \App\Models\Role::factory()->create([
             'role' => 'Por definir', 
         ]);
@@ -62,7 +65,10 @@ class DatabaseSeeder extends Seeder
             'type' => 'Tarjeta de Extranjeria', 
         ]);
         \App\Models\Document::factory()->create([
-            'type' => 'Cédula de Extranjería', 
+            'type' => 'Pasaporte', 
+        ]);
+        \App\Models\Document::factory()->create([
+            'type' => 'Permiso especial de permanencia', 
         ]);
         $this->call( Usersseeder::class);
         $this->call( Peopleseeder::class);

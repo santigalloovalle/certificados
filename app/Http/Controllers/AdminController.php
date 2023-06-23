@@ -131,7 +131,7 @@ class AdminController extends Controller
     {
 
         $request->validate([
-            'doc' => 'required|min:10|max:12',
+            'doc' => 'required|min:4|max:15',
             'type' => 'required|in:2,3,4,5',
             'role' => 'required|in:2,3,4,5,6',
             'contract' => 'required|in:2,3,4',
@@ -145,8 +145,8 @@ class AdminController extends Controller
         ],[
             'doc.required' => 'Se requiere número de documento',
             'type.in' => 'Se requiere tipo de documento',
-            'doc.min' => 'Caracteres mínimos:10',
-            'doc.max' => 'Caracteres máximos:12',
+            'doc.min' => 'Caracteres mínimos:4',
+            'doc.max' => 'Caracteres máximos:15',
             'name.min' => 'Caracteres mínimos:10',
             'name.max' => 'Caracteres máximos:100',
             'name.required' => 'Se requiere número',

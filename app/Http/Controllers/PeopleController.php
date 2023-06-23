@@ -104,7 +104,7 @@ class PeopleController extends Controller
     {
 
         $request->validate([
-            'doc' => 'required|min:10|max:12',
+            'doc' => 'required|min:4|max:15',
             'type' => 'required|in:2,3,4,5',
             'date' => 'required|before_or_equal:today',
         ],[
@@ -112,8 +112,8 @@ class PeopleController extends Controller
             'type.in' => 'Se requiere tipo de documento',
             'date.required' => 'Se requiere fecha de expedición del documento',
             'date.before' => 'La fecha de expedición del documento no puede exceder la fecha actual',
-            'doc.min' => 'Caracteres mínimos:10',
-            'doc.max' => 'Caracteres máximos:12',
+            'doc.min' => 'Caracteres mínimos:4',
+            'doc.max' => 'Caracteres máximos:15',
         ]);
 
         $people = People::find($id);
