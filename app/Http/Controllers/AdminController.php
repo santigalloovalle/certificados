@@ -62,7 +62,8 @@ class AdminController extends Controller
     {
         $people = new People();  
         $users = new User();
-        $users->name = $request->name;        
+        $users->id = $request->name; 
+        $users->last = $request->last;        
         $people->id_documents = $request->type;
         $people->doc = $request->doc;
         $people->id_roles = $request->role; 
@@ -135,7 +136,8 @@ class AdminController extends Controller
             'type' => 'required|in:2,3,4,5',
             'role' => 'required|in:2,3,4,5,6',
             'contract' => 'required|in:2,3,4',
-            'name' => 'required|min:10|max:100',
+            'name' => 'required|min:2|max:100',
+            'last' => 'required|min:2|max:100',
             'date_i' => 'required',
             'date_f' => 'required',
             'onus' => 'required',
@@ -147,9 +149,12 @@ class AdminController extends Controller
             'type.in' => 'Se requiere tipo de documento',
             'doc.min' => 'Caracteres mínimos:4',
             'doc.max' => 'Caracteres máximos:15',
-            'name.min' => 'Caracteres mínimos:10',
+            'name.min' => 'Caracteres mínimos:2',
             'name.max' => 'Caracteres máximos:100',
-            'name.required' => 'Se requiere número',
+            'name.required' => 'Se requiere nombre',
+            'last.min' => 'Caracteres mínimos:2',
+            'last.max' => 'Caracteres máximos:100',
+            'last.required' => 'Se requiere apellido',
             'role.in' => 'Se requiere rol',
             'contract.in' => 'Se requiere tipo de contrato',
             'onus.required' => 'Se requiere cargo',
@@ -162,7 +167,8 @@ class AdminController extends Controller
 
         $people = People::find($id);
         $users = User::find($id);
-        $users->name = $request->name;        
+        $users->name = $request->name;   
+        $users->last = $request->last;        
         $people->id_documents = $request->type;
         $people->doc = $request->doc; 
         $people->id_contracts = $request->contract;   

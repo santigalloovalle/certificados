@@ -12,13 +12,20 @@
         <h1>Tu infomación:</h1>
       </div>
       <div class="card-body">
-        <h2 class="py-2"><b class="pe-3">Nombre:</b>
+        <h2 class="py-2"><b class="pe-3">Nombres:</b>
           @if( $users->name == '0' )
               {{"Por definir"}}
           @else
               {{ $users->name }}
           @endif
               </h2>
+        <h2 class="py-2"><b class="pe-3">Apellidos:</b>
+                @if( $users->last == '0' )
+                    {{"Por definir"}}
+                @else
+                    {{ $users->last }}
+                @endif
+                    </h2>
             <h3 class="py-2"><b class="pe-3">Correo:</b> {{$users->email}}</h3>
             <h4 class="py-2"><b class="pe-3">Tipo de Documento:</b> {{$people->documents->type}}</h4>
             <h4 class="py-2"><b class="pe-3">Documento:</b>

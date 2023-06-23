@@ -47,6 +47,7 @@ class PeopleController extends Controller
         $people = new People();
         $user = new User();
         $user->id = $request->name;
+        $user->last = $request->last;
         $people->id_documents = $request->type;
         $people->doc = $request->doc;
         $people->id_roles = $request->role;

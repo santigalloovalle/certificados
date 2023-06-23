@@ -114,9 +114,11 @@ class PDFController extends Controller
             $salary = 0;
         }
 
+        $name = $user->name." ".$user->last;
+
         $data = [
             'title' => 'CERTIFICA',
-            'name' => $user->name,
+            'name' => $name,
             't_doc' => $people->documents->type,
             'contract' => $contract,
             'doc' => $people->doc,

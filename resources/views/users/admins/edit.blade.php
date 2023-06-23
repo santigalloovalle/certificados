@@ -16,15 +16,25 @@
                         @csrf
                         @method('PUT')
                         <div class="row mb-3">
-                                <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Nombre') }}</label>
+                                <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Nombres') }}</label>
                                 <div class="col-md-6">
                                     <input id="name" type="text" class="form-control" name="name" value="@if($users->name == '0'){{""}}@else{{$users->name}}@endif" placeholder="@if($users->name == '0'){{"Por Definir"}}@endif" autocomplete="name" autofocus>
                                     @foreach ($errors->get('name') as $error)
                                     <strong class="text-danger">{{ $error }}</strong>
                                 @endforeach
-                                <p class="fs-7 text-secondary">El nombre debe contener mínimo 10 caracteres y máximo 100 caracteres</p>
+                                <p class="fs-7 text-secondary">Los nombres deben contener mínimo 10 caracteres y máximo 100 caracteres</p>
                                 </div>
                                 </div>
+                        <div class="row mb-3">
+                                    <label for="last" class="col-md-4 col-form-label text-md-end">{{ __('Apellidos') }}</label>
+                                    <div class="col-md-6">
+                                        <input id="last" type="text" class="form-control" name="last" value="@if($users->last == '0'){{""}}@else{{$users->last}}@endif" placeholder="@if($users->last == '0'){{"Por Definir"}}@endif" autocomplete="last" autofocus>
+                                        @foreach ($errors->get('last') as $error)
+                                        <strong class="text-danger">{{ $error }}</strong>
+                                    @endforeach
+                                    <p class="fs-7 text-secondary">Los apellidos debe contener mínimo 10 caracteres y máximo 100 caracteres</p>
+                                    </div>
+                                    </div>
                         <div class="row mb-3">
                                 <label for="type" class="col-md-4 col-form-label text-md-end">{{ __('Tipo de Documento') }}</label>
                             <div class="col-md-6"> 

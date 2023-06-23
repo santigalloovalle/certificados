@@ -77,6 +77,7 @@ class RegisterController extends Controller
         
         $user = User::create([
             'name' => 0,
+            'last' => 0,
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'id_roles' => 1
@@ -86,8 +87,7 @@ class RegisterController extends Controller
         $people->id_documents = 1;
         $people->doc = 0;
         $people->date = date("Y-m-d");
-        $people->id_contracts =1
-        ;   
+        $people->id_contracts =1;   
         $people->salary = 0;
         $people->date_i = date("Y-m-d");
         $people->date_f = date("Y-m-d");
