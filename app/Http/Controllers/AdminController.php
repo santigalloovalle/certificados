@@ -62,7 +62,7 @@ class AdminController extends Controller
     {
         $people = new People();  
         $users = new User();
-        $users->id = $request->name;        
+        $users->name = $request->name;        
         $people->id_documents = $request->type;
         $people->doc = $request->doc;
         $people->id_roles = $request->role; 
