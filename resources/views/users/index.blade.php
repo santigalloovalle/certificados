@@ -31,7 +31,7 @@
                             </div> 
                             <div class="form-check">
                                 <input class="form-check-input rounded " name="date_i" type="checkbox" id="fecha">
-                                <label class="form-check-label col-5 ms-4 fs-5"  for="form-check-label">Fecha de Ingreso y Salida</label>
+                                <label class="form-check-label col-5 ms-4 fs-5"  for="form-check-label">Fechas(Inicio/Fin)</label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input rounded" name="pay_per_hour" type="checkbox" id="pay_per_hour">

@@ -53,7 +53,6 @@ class PeopleController extends Controller
         $people->id_roles = $request->role;
         $people->id_contracts = $request->contract;
         $people->date_i = $request->date_i;
-        $people->date_f = $request->date_f;
         $people->onus = $request->onus;
         $people->area = $request->area;
         $people->salary = $request->salary;

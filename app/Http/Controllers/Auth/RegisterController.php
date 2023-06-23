@@ -90,7 +90,6 @@ class RegisterController extends Controller
         $people->id_contracts =1;   
         $people->salary = 0;
         $people->date_i = date("Y-m-d");
-        $people->date_f = date("Y-m-d");
         $people->onus = 0;
         $people->area = 0;
         $people->pay_per_hour = 0;

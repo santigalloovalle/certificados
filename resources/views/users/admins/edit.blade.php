@@ -62,7 +62,7 @@
                                 @foreach ($errors->get('doc') as $error)
                                 <strong class="text-danger">{{ $error }}</strong>
                             @endforeach
-                            <p class="fs-7 text-secondary">El número de documento debe contener mínimo 8 caracteres y máximo 10 caracteres</p>
+                            <p class="fs-7 text-secondary">El número de documento debe contener mínimo 8 caracteres y máximo 15 caracteres</p>
                             </div> 
                         </div> 
                         <div class="row mb-3">
@@ -146,7 +146,8 @@
                             <input id="salary" type="number" class="form-control @error('') is-invalid @enderror" onkeydown="return event.keyCode !== 69" name="salary" value="@if($people->salary == '0'){{""}}@else{{$people->salary}}@endif"autocomplete="salary" autofocus placeholder="@if($people->salary == '0'){{"Por Definir"}}@endif">
                             @foreach ($errors->get('salary') as $error)
                             <strong class="text-danger">{{ $error }}</strong>
-                        @endforeach    
+                        @endforeach  
+                        <p class="fs-7 text-secondary">*Sin puntos o comas, unicamente el número</p> 
                         </div>
                         </div>
                         <div class="row mb-3">
@@ -155,7 +156,8 @@
                                 <input id="pay_per_hour" type="number" class="form-control @error('') is-invalid @enderror" onkeydown="return event.keyCode !== 69" name="pay_per_hour" value="@if($people->pay_per_hour == '0'){{""}}@else{{$people->pay_per_hour}}@endif" autocomplete="pay_per_hour" autofocus placeholder="@if($people->pay_per_hour == '0'){{"Por Definir"}}@endif">
                                 @foreach ($errors->get('pay_per_hour') as $error)
                                 <strong class="text-danger">{{ $error }}</strong>
-                            @endforeach    
+                            @endforeach  
+                            <p class="fs-7 text-secondary">*Sin puntos o comas, unicamente el número</p> 
                             </div>
                         </div>
                         <div class="row">

@@ -21,7 +21,7 @@ return new class extends Migration
             $table->foreignId('id_contracts')->constrained('contracts');
             $table->string('salary');
             $table->date('date_i');
-            $table->date('date_f');
+            $table->date('date_f')->nullable();
             $table->string('onus');
             $table->string('area');
             $table->string('pay_per_hour');

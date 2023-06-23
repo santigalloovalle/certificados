@@ -26,7 +26,10 @@
                 Mediante un contrato a <b>{{ $contract }}</b>.
             @endif
             @if ($date_i != '0')
+            @if ($date_f != null)
             Desde el <b>{{ $date_i }}</b> hasta el <b>{{$date_f}}</b>. 
+            @endif
+            Desde el <b>{{ $date_i }}</b>. 
             @endif
             @if ($pay_per_hour != '0')
                 Con un pago por hora de (letras y números) <b>{{ $pay_per_hour }}</b>. 
@@ -43,7 +46,10 @@
                 Mediante un contrato a <b>{{ $contract }}</b>.
             @endif
             @if ($date_i != '0')
-                Desde el <b>{{ $date_i }}</b> hasta el <b>{{$date_f}}</b>. 
+            @if ($date_f != null)
+            Desde el <b>{{ $date_i }}</b> hasta el <b>{{$date_f}}</b>. 
+            @endif
+            Desde el <b>{{ $date_i }}</b>. 
             @endif
             @if ($pay_per_hour != '0')
                 Con un pago por hora de (letras y números) <b>{{ $pay_per_hour }}</b>. 
@@ -61,7 +67,10 @@
             Mediante un contrato a <b>{{ $contract }}</b>.
         @endif
         @if ($date_i != '0')
+        @if ($date_f != null)
         Desde el <b>{{ $date_i }}</b> hasta el <b>{{$date_f}}</b>. 
+        @endif
+        Desde el <b>{{ $date_i }}</b>. 
         @endif
         @if ($pay_per_hour != '0')
             Con un pago por hora de (letras y números) <b>{{ $pay_per_hour }}</b>. 
@@ -80,7 +89,10 @@
                 Mediante un contrato a <b>{{ $contract }}</b>.
             @endif
             @if ($date_i != '0')
+            @if ($date_f != null)
             Desde el <b>{{ $date_i }}</b> hasta el <b>{{$date_f}}</b>. 
+            @endif
+            Desde el <b>{{ $date_i }}</b>. 
             @endif
             @if ($pay_per_hour != '0')
                 Con un pago por hora de (letras y números) <b>{{ $pay_per_hour }}</b>. 
@@ -98,7 +110,10 @@
         Mediante un contrato a <b>{{ $contract }}</b>.
     @endif
     @if ($date_i != '0')
+    @if ($date_f != null)
     Desde el <b>{{ $date_i }}</b> hasta el <b>{{$date_f}}</b>. 
+    @endif
+    Desde el <b>{{ $date_i }}</b>. 
     @endif
     @if ($pay_per_hour != '0')
         Con un pago por hora de (letras y números) <b>{{ $pay_per_hour }}</b>. 

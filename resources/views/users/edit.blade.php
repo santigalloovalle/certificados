@@ -38,7 +38,7 @@
                                 @foreach ($errors->get('doc') as $error)
                                 <strong class="text-danger">{{ $error }}</strong>
                             @endforeach
-                            <p class="fs-7 text-secondary">El número de documento debe contener mínimo 8 caracteres y máximo 10 caracteres</p>
+                            <p class="fs-7 text-secondary">El número de documento debe contener mínimo 8 caracteres y máximo 15 caracteres</p>
                             </div> 
                         </div> 
                         <div class="row mb-3">
