@@ -33,10 +33,10 @@ class Peopleseeder extends Seeder
 
             [
 
-                "id_documents"=>1,
+                "id_documents"=>2,
                 "doc"=>1234567890,
                 "date"=>date("y.m.d"),
-                "id_contracts"=>1,
+                "id_contracts"=>2,
                 "salary"=>1200000,
                 "date_i"=>date("y.m.d"),
                 "date_f"=>date("y.m.d"),
@@ -2048,10 +2048,10 @@ class Peopleseeder extends Seeder
             ],
             [
 
-                "id_documents"=>1,
+                "id_documents"=>2,
                 "doc"=>1234567890,
                 "date"=>date("y.m.d"),
-                "id_contracts"=>1,
+                "id_contracts"=>2,
                 "salary"=>1200000,
                 "date_i"=>date("y.m.d"),
                 "date_f"=>date("y.m.d"),

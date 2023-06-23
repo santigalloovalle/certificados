@@ -106,7 +106,7 @@ class PeopleController extends Controller
         $request->validate([
             'doc' => 'required|min:10|max:12',
             'type' => 'required|in:2,3,4,5',
-            'date' => 'required|before:date("Y-m-d")',
+            'date' => 'required|before_or_equal:today',
         ],[
             'doc.required' => 'Se requiere número de documento',
             'type.in' => 'Se requiere tipo de documento',
