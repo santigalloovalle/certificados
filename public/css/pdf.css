@@ -14,13 +14,13 @@ body{
     text-align: center;
 }
 .textContent{
-    margin-top: 6%;
+    margin-top: 3%;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 2em;
-    text-align: center;
+    text-align: justify;
 }
 .bodyText{
-   margin-top: 8%; 
+   margin-top: 3%; 
    font-family: Arial, Helvetica, sans-serif;
 }
 .foot{
@@ -48,7 +48,8 @@ img{
     width: 100vw;
 }
 .titleCertificado{
-    margin-top: 6%;
+    margin-top: 4%;
+    margin-bottom: 2%;
     text-align: center;
 }
 .info{
