@@ -36,7 +36,9 @@ Route::get('/histories', [AdminController::class, 'histories'])->name('histories
 Route::get('/certificates/{id}', [AdminController::class, 'certificates'])->name('certificates');
 Route::get('/error', [HomeController::class, 'error'])->name('error');
 Route::get('/users', [AdminController::class, 'show_users'])->name('users.index');
+
 Route::post('/generatePDF/{id}', [PDFController::class, 'generatePDF'])->name('generatePDF');
+
 
 Route::get('/prueba', function () {
     return view();

@@ -98,7 +98,7 @@
                 Con un pago por hora de (letras y números) <b>{{ $pay_per_hour }}</b>. 
             @endif
             @if ($salary != '0')
-                Actualmente, devenga un salario de (letras y números) <b>{{ $salary }}</b>.
+                Actualmente, devenga un apoyo de sostenimiento de (letras y números) <b>{{ $salary }}</b>.
             @endif
     </p>
     @break
