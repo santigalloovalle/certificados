@@ -37,6 +37,9 @@ Route::get('/certificates/{id}', [AdminController::class, 'certificates'])->name
 Route::get('/error', [HomeController::class, 'error'])->name('error');
 Route::get('/users', [AdminController::class, 'show_users'])->name('users.index');
 
+Route::resource('/areas', AreaController::class)->names('areas');
+Route::resource('/posts', PostController::class)->names('posts');
+
 Route::post('/generatePDF/{id}', [PDFController::class, 'generatePDF'])->name('generatePDF');
 Route::post('/generateWord/{id}', [HomeController::class, 'generateWord'])->name('generateWord');
 
