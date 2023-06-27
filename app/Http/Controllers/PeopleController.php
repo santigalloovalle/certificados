@@ -111,7 +111,7 @@ class PeopleController extends Controller
             'doc.required' => 'Se requiere número de documento',
             'type.in' => 'Se requiere tipo de documento',
             'date.required' => 'Se requiere fecha de expedición del documento',
-            'date.before' => 'La fecha de expedición del documento no puede exceder la fecha actual',
+            'date.before_or_equal' => 'La fecha de expedición del documento no puede exceder la fecha actual',
             'doc.min' => 'Caracteres mínimos:4',
             'doc.max' => 'Caracteres máximos:15',
         ]);
