@@ -41,19 +41,25 @@
                             </div>
                         </div>
                         </div>
-                                <div class="form-check">
+                                {{-- <div class="form-check">
                                 <input class="form-check-input col-2 rounded" name="word" type="checkbox" id="word">
                                 <label class="form-check-label col-4 ms-4 fs-5"  for="Pago">Descargar en Word</label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input col-2 rounded" name="pdf" type="checkbox" id="pdf">
                                 <label class="form-check-label col-4 ms-4 fs-5"  for="Pago">Descargar en PDF</label>
-                            </div>
+                            </div> --}}
                         </div>
                         </div>
                         <div class="row mt-2"> 
-                            <input type="submit" value="Descargar" class="btn btn-info btn-lg text-white bg-blue text-white border-none my-4 w-25 m-auto"><i class="fa-solid fa-download text-white"></i>
+                            <div class="col-6 text-end">
+                                <input type="submit" value="Descargar PDF" class="btn btn-info btn-lg text-white bg-danger text-white border-none my-4 w-50 m-auto "><i class="fa-solid fa-download text-white"></i>
                             </div>
+                            <div class="col-6">
+                                <input type="submit" value="Descargar Word" class="btn btn-info btn-lg text-white bg-blue text-white border-none my-4 w-50 m-auto"><i class="fa-solid fa-download text-white"></i>
+                            </div>
+                        </div>
+                        </div>
                     </form>
                 </div>
             </div>
