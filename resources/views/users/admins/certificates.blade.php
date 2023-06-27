@@ -43,7 +43,34 @@
                         </div>
                         <div class="row mt-2"> 
                             <button type="submit" class="btn btn-info btn-lg text-white bg-blue text-white border-none my-4 w-25 m-auto">
-                                <a class="text-white bg-blue text-white border-none"> Descargar </a><i class="fa-solid fa-download text-white"></i>
+                                <a class="text-white bg-blue text-white border-none"> Descargar PDF</a><i class="fa-solid fa-download text-white"></i>
+                            </button>
+                            </div>
+                    </form>
+                    <form action="{{route('generateWord', $users->id)}}" class="mt-4 d-grid m-auto" method="POST">
+                        @csrf
+                        <div class="row">
+                            <div class="form-check">
+                                <input class="form-check-input col-2 rounded " name="salary" type="checkbox" id="salario">
+                                <label class="form-check-label col-4 ms-4 fs-5"  for="salario">Salario</label>
+                            </div>
+                            <div class="form-check">  
+                                <input class="form-check-input col-2 rounded " name="contract" type="checkbox" id="tipoContrato">
+                                <label class="form-check-label col-4 ms-4 fs-5"  for="tipoContrato">Tipo de Contrato</label>
+                            </div> 
+                            <div class="form-check">
+                                <input class="form-check-input col-2 rounded " name="date_i" type="checkbox" id="fecha">
+                                <label class="form-check-label col-4 ms-4 fs-5"  for="form-check-label">Fechas(Inicio/Fin)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input col-2 rounded" name="pay_per_hour" type="checkbox" id="pay_per_hour">
+                                <label class="form-check-label col-4 ms-4 fs-5"  for="Pago">Pago por hora</label>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="row mt-2"> 
+                            <button type="submit" class="btn btn-info btn-lg text-white bg-blue text-white border-none my-4 w-25 m-auto">
+                                <a class="text-white bg-blue text-white border-none"> Descargar Word </a><i class="fa-solid fa-download text-white"></i>
                             </button>
                             </div>
                     </form>

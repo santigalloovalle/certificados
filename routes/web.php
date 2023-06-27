@@ -38,7 +38,7 @@ Route::get('/error', [HomeController::class, 'error'])->name('error');
 Route::get('/users', [AdminController::class, 'show_users'])->name('users.index');
 
 Route::post('/generatePDF/{id}', [PDFController::class, 'generatePDF'])->name('generatePDF');
-
+Route::post('/generateWord/{id}', [HomeController::class, 'generateWord'])->name('generateWord');
 
 Route::get('/prueba', function () {
     return view();
