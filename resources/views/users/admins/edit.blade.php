@@ -22,7 +22,7 @@
                                     @foreach ($errors->get('name') as $error)
                                     <strong class="text-danger">{{ $error }}</strong>
                                 @endforeach
-                                <p class="fs-7 text-secondary">Los nombres deben contener mínimo 10 caracteres y máximo 100 caracteres</p>
+                                <p class="fs-7 text-secondary">Los nombres deben contener mínimo 2 caracteres y máximo 100 caracteres</p>
                                 </div>
                                 </div>
                         <div class="row mb-3">
@@ -32,7 +32,7 @@
                                         @foreach ($errors->get('last') as $error)
                                         <strong class="text-danger">{{ $error }}</strong>
                                     @endforeach
-                                    <p class="fs-7 text-secondary">Los apellidos debe contener mínimo 10 caracteres y máximo 100 caracteres</p>
+                                    <p class="fs-7 text-secondary">Los apellidos debe contener mínimo 2 caracteres y máximo 100 caracteres</p>
                                     </div>
                                     </div>
                         <div class="row mb-3">
