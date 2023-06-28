@@ -42,13 +42,10 @@ Route::get('/generatePDF/{id}', [PDFController::class, 'generatePDF'])->name('ge
 Route::post('/generateWord/{id}', [HomeController::class, 'generateWord'])->name('generateWord');
 
 Route::post('/generate/{id}', function (Request $request, $id) {
-    if ($request->word == 'on') {
-        return redirect(route('generateWord', $id, $request));
-    }else if ($request->pdf == 'on') {
-        return redirect(route('generatePDF'));
-    }else if ($request->pdf == 'on' and $request->word == 'on') {
-        return redirect(route('generatePDF'));
-        return redirect(route('generateWord'));
-    } else {
+    if ($request->opc == 'word') {
+        return HomeController::generateWord($request, $id);
+    }else if ($request->opc == 'pdf') {
+        return redirect(route('generatePDF', $id));
+    }else {
         return '<script language="javascript">alert("Selecciona una forma de descargar el certificado(Word/Pdf)");</script>';
     }})->name('generate');
