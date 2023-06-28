@@ -38,14 +38,14 @@ Route::get('/certificates/{id}', [AdminController::class, 'certificates'])->name
 Route::get('/error', [HomeController::class, 'error'])->name('error');
 Route::get('/users', [AdminController::class, 'show_users'])->name('users.index');
 
-Route::get('/generatePDF/{id}', [PDFController::class, 'generatePDF'])->name('generatePDF');
+Route::post('/generatePDF/{id}', [PDFController::class, 'generatePDF'])->name('generatePDF');
 Route::post('/generateWord/{id}', [HomeController::class, 'generateWord'])->name('generateWord');
 
 Route::post('/generate/{id}', function (Request $request, $id) {
     if ($request->opc == 'word') {
         return HomeController::generateWord($request, $id);
     }else if ($request->opc == 'pdf') {
-        return redirect(route('generatePDF', $id));
+        return PDFController::generatePDF($request, $id);
     }else {
         return '<script language="javascript">alert("Selecciona una forma de descargar el certificado(Word/Pdf)");</script>';
     }})->name('generate');
