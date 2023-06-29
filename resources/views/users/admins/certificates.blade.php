@@ -24,19 +24,19 @@
                         @csrf
                         <div class="row">
                             <div class="col-lg-7 col-md-12 py-4">
-                                <div class="form-check">
+                                <div class="form-check mb-2">
                                     <input class="form-check-input col-2 rounded " name="salary" type="checkbox" id="salario">
                                     <label class="form-check-label col-4 ms-4 fs-5 w-75"  for="salario">Salario</label>
                                 </div>
-                                <div class="form-check">  
+                                <div class="form-check mb-2">  
                                     <input class="form-check-input col-2 rounded " name="contract" type="checkbox" id="tipoContrato">
                                     <label class="form-check-label col-4 ms-4 fs-5 w-75"  for="tipoContrato">Tipo de Contrato</label>
                                 </div> 
-                                <div class="form-check">
+                                <div class="form-check mb-2">
                                     <input class="form-check-input col-2 rounded " name="date_i" type="checkbox" id="fecha">
                                     <label class="form-check-label col-4 ms-4 fs-5 w-75"  for="form-check-label">Fechas(Inicio/Fin)</label>
                                 </div>
-                                <div class="form-check">
+                                <div class="form-check mb-2">
                                     <input class="form-check-input col-2 rounded" name="pay_per_hour" type="checkbox" id="pay_per_hour">
                                     <label class="form-check-label col-4 ms-4 fs-5 w-75"  for="Pago">Pago por hora</label>
                                 </div>
