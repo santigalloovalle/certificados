@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('title')
+  Inicio sesión
+@endsection
 @section('content')
     <!--encabezado titulo-->
     <section class="sectionTitulo2">
@@ -49,7 +51,7 @@
                                 </div>
                             </div>
                         <div class="row mb-3 ">
-                            <div class="col-md-8 offset-md-4">
+                            <div class="col-md-8 offset-md-4 mt-2">
                                 <div class="col-md-8 offset-md-2">
                                     <button type="submit" class="btn btn-blue">
                                         {{ __('Iniciar Sesión') }}
@@ -60,6 +62,10 @@
                             <a class="btn btn-link col-md-12 mt-2" href="{{ route('password.request') }}">
                                 {{ __('¿Olvidaste tu contraseña?') }}
                             </a>
+                        @endif
+
+                        @if (Route::has('register'))
+                            <a class="btn btn-link col-md-12 mt-2" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
                         @endif
                         </form>
                     </div>

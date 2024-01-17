@@ -1,13 +1,17 @@
 @extends('layouts.app')
 
+@section('title')
+  Recuperar Contraseña
+@endsection
+
 @section('content')
 <div class="container">
     <section class="inicioSesion">
-        <h3 class="d-flex justify-content-center">Recuperar contraseña</h3>
+        <h3 class="d-flex justify-content-center mt-5">Recuperar contraseña</h3>
         <br><br>
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
+        <div class="col-md-8 mb-6">
+            <div class="card my-2">
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">

@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('title')
+  Datos personales
+@endsection
 @section('content')
   <div class="d-grid gap-2 d-md-flex justify-content-md-end me-5">
     <a href="{{asset('/admins')}}"><button class="btn btn-outline-danger" id=""><i class="fa-solid fa-arrow-left px-3 justify-content-center"></button></i></button></a>
@@ -56,7 +58,7 @@
       </div>
       <div class="col-10 offset-4 mb-4">
         <div class="col-md-8 offset-md-2">
-            <a href="{{route('admins.edit', $people->id)}}"><button type="submit" class="btn btn-blue">
+            <a href="{{route('admins.edit', $people->id)}}"><button type="submit" class="btn btn-blue ">
                 {{ __('Editar') }}
             </button></a>
         </div>

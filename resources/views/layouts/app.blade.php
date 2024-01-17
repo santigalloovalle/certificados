@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title')</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -86,10 +86,10 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-light rounded" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <li class="nav-item dropdown me-2">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-light rounded px-3" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     @if( Auth::user()->name == '0' )
-                                        {{ Auth::user()->email }}
+                                        
                                     @else
                                         {{ Auth::user()->name }}
                                     @endif
@@ -100,6 +100,8 @@
                                     <a class="dropdown-item rounded" href="{{ route('admins.show', Auth::user()->id) }}">
                                         {{ __('Mi Info') }}
                                     </a> 
+                                    @elseif(Auth::user()->id_roles =='1')         
+                                    {{-- Agregar informaciòn para usuarios recien registrados --}}
                                     @else
                                     <a class="dropdown-item rounded" href="{{ route('people.show', Auth::user()->id) }}">
                                         {{ __('Mi Info') }}

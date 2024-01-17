@@ -1,12 +1,14 @@
 @extends('layouts.app')
-
+@section('title')
+  Generar Certificado 
+@endsection
 @section('content')
     <body>
         <!--encabezado titulo-->
         <section class="sectionTitulo">
 
             <div class="divTitulo col-md-4 col-form-label text-md-end bg-red p-3 w-50 text-light">
-                <h3>Genera tu certificado</h3>
+                <h3>Genere su certificado</h3>
             </div>
         </section> 
         <!--Boton regresar-->

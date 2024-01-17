@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('title')
+  Registro
+@endsection
 @section('content')
 
 <section class="registro"></section>
@@ -41,7 +43,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="row mb-3">
+                        <div class="row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirmar Contraseña') }}</label>
 
                             <div class="col-md-6">
@@ -57,6 +59,7 @@
                                 </button>
                             </div>
                         </div>
+                        <a class="btn btn-link col-md-12 mt-2" href="{{ route('login') }}">{{ __('¿Ya tiene una cuenta? Inicie sesión') }}</a>
                     </form>
                 </div>
             </div>

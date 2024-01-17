@@ -2,7 +2,9 @@
 @section('head')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
-
+@section('title')
+  Usuarios
+@endsection
 <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
 @endsection
 @section('content')
